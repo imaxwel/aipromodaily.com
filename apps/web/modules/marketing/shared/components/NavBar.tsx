@@ -114,7 +114,7 @@ export function NavBar() {
 					</div>
 
 					<div className="hidden flex-1 items-center justify-center lg:flex">
-						{menuItems.map((menuItem) => (
+						{/* {menuItems.map((menuItem) => (
 							<LocaleLink
 								key={menuItem.href}
 								href={menuItem.href}
@@ -127,7 +127,7 @@ export function NavBar() {
 							>
 								{menuItem.label}
 							</LocaleLink>
-						))}
+						))} */}
 					</div>
 
 					<div className="flex flex-1 items-center justify-end gap-3">
