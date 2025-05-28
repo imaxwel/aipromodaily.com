@@ -9,13 +9,13 @@ export function Footer() {
 					<Logo className="opacity-70 grayscale" />
 					<p className="mt-3 text-sm opacity-70">
 						<a href="https://supastarter.dev">
-							Built with supastarter
+							Crafted with passion by the HOPE.DO team
 						</a>
 					</p>
 				</div>
 
 				<div className="flex flex-col gap-2">
-					<LocaleLink href="/blog" className="block">
+					{/* <LocaleLink href="/blog" className="block">
 						Blog
 					</LocaleLink>
 
@@ -25,7 +25,7 @@ export function Footer() {
 
 					<a href="/#pricing" className="block">
 						Pricing
-					</a>
+					</a> */}
 				</div>
 
 				<div className="flex flex-col gap-2">

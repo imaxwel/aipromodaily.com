@@ -18,7 +18,7 @@ export function Hero() {
 							New:
 						</span>
 						<span className="ml-1 block font-medium text-foreground">
-							Amazing feature of your SaaS
+							Try our brand-new service FREE during the introductory period!
 						</span>
 					</div>
 				</div>
