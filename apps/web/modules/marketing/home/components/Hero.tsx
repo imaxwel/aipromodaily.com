@@ -24,13 +24,13 @@ export function Hero() {
 				</div>
 
 				<h1 className="mx-auto max-w-3xl text-balance font-bold text-5xl lg:text-7xl">
-					Your revolutionary Next.js SaaS
+					When feeling hopeless, find your hope at <span className="text-primary"> HOPE.DO</span>
 				</h1>
 
-				<p className="mx-auto mt-4 max-w-lg text-balance text-foreground/60 text-lg">
+				{/* <p className="mx-auto mt-4 max-w-lg text-balance text-foreground/60 text-lg">
 					This is a demo application built with supastarter. It will
 					save you a lot of time and effort building your next SaaS.
-				</p>
+				</p> */}
 
 				<div className="mt-6 flex flex-col items-center justify-center gap-3 md:flex-row">
 					<Button size="lg" variant="primary" asChild>
@@ -39,12 +39,12 @@ export function Hero() {
 							<ArrowRightIcon className="ml-2 size-4" />
 						</Link>
 					</Button>
-					<Button variant="light" size="lg" asChild>
+					{/* <Button variant="light" size="lg" asChild>
 						<LocaleLink href="/docs">Documentation</LocaleLink>
-					</Button>
+					</Button> */}
 				</div>
 
-				<div className="mt-16 px-8 text-center">
+				{/* <div className="mt-16 px-8 text-center">
 					<h5 className="font-semibold text-foreground/50 text-xs uppercase tracking-wider">
 						Built & shipped with these awesome tools
 					</h5>
@@ -158,7 +158,7 @@ export function Hero() {
 							</svg>
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 				<div className="mx-auto mt-16 max-w-5xl rounded-2xl border bg-card/50 p-2 shadow-lg dark:shadow-foreground/10">
 					<Image

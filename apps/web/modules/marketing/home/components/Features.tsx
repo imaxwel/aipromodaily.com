@@ -135,12 +135,10 @@ export function Features() {
 			<div className="container max-w-5xl">
 				<div className="mx-auto mb-6 lg:mb-0 lg:max-w-5xl lg:text-center">
 					<h2 className="font-bold text-4xl lg:text-5xl">
-						Features your clients will love
+						Professional Mental Health Support to Rekindle Hope
 					</h2>
 					<p className="mt-6 text-balance text-lg opacity-50">
-						In this section you can showcase all the features of
-						your SaaS provides and how they can benefit your
-						clients.
+						When feeling hopeless, find your hope at hope.do. Our AI mental health counselors are here 24/7 to help you overcome challenges and rediscover meaning in life.
 					</p>
 				</div>
 
