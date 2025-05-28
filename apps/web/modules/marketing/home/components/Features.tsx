@@ -3,11 +3,11 @@
 import { MobileIcon } from "@radix-ui/react-icons";
 import { cn } from "@ui/lib";
 import {
-	CloudIcon,
-	ComputerIcon,
-	PaperclipIcon,
-	StarIcon,
-	WandIcon,
+	// CloudIcon,
+	// ComputerIcon,
+	// PaperclipIcon,
+	// StarIcon,
+	// WandIcon,
 	MessageCircleIcon,
 	HeartHandshakeIcon,
 	ShieldCheckIcon,
@@ -20,9 +20,13 @@ import {
 } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import { type JSXElementConstructor, type ReactNode, useState } from "react";
-import heroImage from "../../../../public/images/hero.svg";
-
-export const featureTabs: Array<{
+// import heroImage from "../../../../public/images/hero.svg";
+import aimsDarkImage from "../../../../public/images/aims-dark.svg";
+import aimsImage from "../../../../public/images/aims.svg";
+import personDarkImage from "../../../../public/images/person-dark.svg";
+import personImage from "../../../../public/images/person.svg";
+import secuDarkImage from "../../../../public/images/secu-dark.svg";
+import secuImage from "../../../../public/images/secu.svg";export const featureTabs: Array<{
 	id: string;
 	title: string;
 	icon: JSXElementConstructor<any>;
@@ -51,7 +55,7 @@ export const featureTabs: Array<{
 		description:
 			"Our AI counselors are trained on professional psychology theories and can provide personalized psychological support and guidance. Whenever and wherever you feel lost or in pain, professional companionship and guidance are always available.",
 		stack: [],
-		image: heroImage,
+		image: aimsImage,
 		imageBorder: false,
 		highlights: [
 			{
@@ -81,7 +85,7 @@ export const featureTabs: Array<{
 		subtitle: "Absolutely secure anonymous environment for safe, authentic expression",
 		description: "We understand the sensitivity of mental health topics and provide a completely anonymous consultation environment. Your privacy and data security are our top priority, allowing you to open up without any concerns.",
 		stack: [],
-		image: heroImage,
+		image: personImage,
 		imageBorder: false,
 		highlights: [
 			{
@@ -112,7 +116,7 @@ export const featureTabs: Array<{
 		description:
 			"hope.do provides not only psychological counseling but also warm companionship on your emotional growth journey. We help you find hope in despair and discover the strength to grow through difficulties.",
 		stack: [],
-		image: heroImage,
+		image: secuImage,
 		imageBorder: false,
 		highlights: [
 			{
