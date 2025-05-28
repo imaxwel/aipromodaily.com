@@ -17,8 +17,8 @@ export default async function Home({
 		<>
 			<Hero />
 			<Features />
-			<PricingSection />
-			<FaqSection />
+			{/* <PricingSection /> */}
+			{/* <FaqSection /> */}
 			<Newsletter />
 		</>
 	);

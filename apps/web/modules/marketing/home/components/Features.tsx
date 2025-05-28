@@ -8,6 +8,15 @@ import {
 	PaperclipIcon,
 	StarIcon,
 	WandIcon,
+	MessageCircleIcon,
+	HeartHandshakeIcon,
+	ShieldCheckIcon,
+	BrainIcon,
+	ClockIcon,
+	UsersIcon,
+	SparklesIcon,
+	LockIcon,
+	TrendingUpIcon,
 } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import { type JSXElementConstructor, type ReactNode, useState } from "react";
@@ -35,94 +44,94 @@ export const featureTabs: Array<{
 	}[];
 }> = [
 	{
-		id: "feature1",
-		title: "Feature 1",
-		icon: StarIcon,
-		subtitle: "Do more with our amazing SaaS.",
+		id: "ai-counseling",
+		title: "AI智能心理咨询",
+		icon: MessageCircleIcon,
+		subtitle: "24/7专业AI心理咨询师，随时倾听您的心声",
 		description:
-			"This is a brilliant feature. And below you can see some reasons why. This is basically just a dummy text.",
+			"我们的AI心理咨询师基于专业心理学理论训练，能够提供个性化的心理支持和建议。无论何时何地，当您感到迷茫或痛苦时，都有专业的陪伴与指导。",
 		stack: [],
 		image: heroImage,
 		imageBorder: false,
 		highlights: [
 			{
-				title: "Benefit 1",
+				title: "即时响应",
 				description:
-					"This is an awesome benefit. And below you can see some reasons why. This is basically just a dummy text.",
-				icon: WandIcon,
+					"无需预约等待，24小时全天候服务。当您需要帮助时，AI心理咨询师立即为您提供专业支持。",
+				icon: ClockIcon,
 			},
 			{
-				title: "Benefit 2",
+				title: "个性化对话",
 				description:
-					"This is an awesome benefit. And below you can see some reasons why. This is basically just a dummy text.",
-				icon: ComputerIcon,
+					"基于您的情况和需求，提供量身定制的心理疏导方案，让每一次对话都更贴合您的内心世界。",
+				icon: BrainIcon,
 			},
 			{
-				title: "Benefit 3",
+				title: "专业可靠",
 				description:
-					"This is an awesome benefit. And below you can see some reasons why. This is basically just a dummy text.",
-				icon: MobileIcon,
+					"融合认知行为疗法、正念疗法等多种心理治疗方法，为您提供科学有效的心理健康支持。",
+				icon: ShieldCheckIcon,
 			},
 		],
 	},
 	{
-		id: "feature2",
-		title: "Feature 2",
-		icon: CloudIcon,
-		subtitle: "Your SaaS can also do this.",
-		description: "Another dummy text for another feature.",
+		id: "privacy-security",
+		title: "隐私安全保护",
+		icon: ShieldCheckIcon,
+		subtitle: "绝对安全的匿名环境，让您安心表达真实感受",
+		description: "我们深知心理健康话题的敏感性，提供完全匿名的咨询环境。您的隐私和数据安全是我们的首要承诺，让您能够毫无顾虑地敞开心扉。",
 		stack: [],
 		image: heroImage,
 		imageBorder: false,
 		highlights: [
 			{
-				title: "Benefit 1",
+				title: "完全匿名",
 				description:
-					"This is an awesome benefit. And below you can see some reasons why. This is basically just a dummy text.",
-				icon: WandIcon,
+					"无需注册个人信息，完全匿名使用。您可以自由表达内心想法，无需担心身份暴露或社会评判。",
+				icon: UsersIcon,
 			},
 			{
-				title: "Benefit 2",
+				title: "数据加密",
 				description:
-					"This is an awesome benefit. And below you can see some reasons why. This is basically just a dummy text.",
-				icon: ComputerIcon,
+					"采用银行级别的数据加密技术，确保您的对话内容绝对安全，任何第三方都无法获取您的隐私信息。",
+				icon: LockIcon,
 			},
 			{
-				title: "Benefit 3",
+				title: "无痕浏览",
 				description:
-					"This is an awesome benefit. And below you can see some reasons why. This is basically just a dummy text.",
-				icon: MobileIcon,
+					"支持无痕模式使用，不留任何使用记录。您的心理健康之路，只有您自己知道。",
+				icon: SparklesIcon,
 			},
 		],
 	},
 	{
-		id: "feature3",
-		title: "Feature 3",
-		icon: PaperclipIcon,
-		subtitle: "We even got a third one.",
+		id: "emotional-support",
+		title: "情感陪伴成长",
+		icon: HeartHandshakeIcon,
+		subtitle: "不只是解决问题，更是陪伴您重新找回生活的希望",
 		description:
-			"Of course your SaaS will have more features than this, but this is just a dummy text.",
+			"hope.do不仅提供心理咨询，更是您情感成长路上的温暖陪伴。我们帮助您从绝望中找到希望，从困境中发现成长的力量。",
 		stack: [],
 		image: heroImage,
 		imageBorder: false,
 		highlights: [
 			{
-				title: "Benefit 1",
+				title: "情感陪伴",
 				description:
-					"This is an awesome benefit. And below you can see some reasons why. This is basically just a dummy text.",
-				icon: WandIcon,
+					"提供温暖的情感支持和理解，让您在最黑暗的时刻也能感受到被关怀和接纳的温暖。",
+				icon: HeartHandshakeIcon,
 			},
 			{
-				title: "Benefit 2",
+				title: "成长追踪",
 				description:
-					"This is an awesome benefit. And below you can see some reasons why. This is basically just a dummy text.",
-				icon: ComputerIcon,
+					"记录您的心理健康成长轨迹，见证每一个小进步，帮助您看到自己的积极变化。",
+				icon: TrendingUpIcon,
 			},
 			{
-				title: "Benefit 3",
+				title: "希望重燃",
 				description:
-					"This is an awesome benefit. And below you can see some reasons why. This is basically just a dummy text.",
-				icon: MobileIcon,
+					"通过专业的心理疏导和积极的认知重构，帮助您重新发现生活的意义和价值，点燃内心的希望之光。",
+				icon: SparklesIcon,
 			},
 		],
 	},
@@ -135,10 +144,10 @@ export function Features() {
 			<div className="container max-w-5xl">
 				<div className="mx-auto mb-6 lg:mb-0 lg:max-w-5xl lg:text-center">
 					<h2 className="font-bold text-4xl lg:text-5xl">
-						Professional Mental Health Support to Rekindle Hope
+						专业心理健康支持，重燃生活希望
 					</h2>
 					<p className="mt-6 text-balance text-lg opacity-50">
-						When feeling hopeless, find your hope at hope.do. Our AI mental health counselors are here 24/7 to help you overcome challenges and rediscover meaning in life.
+						当感到绝望时，在hope.do找回您的希望。我们的AI心理咨询师24/7在线，帮助您克服挑战，重新发现生活的意义。
 					</p>
 				</div>
 

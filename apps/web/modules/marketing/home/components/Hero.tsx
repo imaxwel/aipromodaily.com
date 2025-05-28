@@ -160,7 +160,7 @@ export function Hero() {
 					</div>
 				</div> */}
 
-				<div className="mx-auto mt-16 max-w-5xl rounded-2xl border bg-card/50 p-2 shadow-lg dark:shadow-foreground/10">
+				{/* <div className="mx-auto mt-16 max-w-5xl rounded-2xl border bg-card/50 p-2 shadow-lg dark:shadow-foreground/10">
 					<Image
 						src={heroImage}
 						alt="Our application"
@@ -173,7 +173,7 @@ export function Hero() {
 						className="hidden rounded-xl dark:block"
 						priority
 					/>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
