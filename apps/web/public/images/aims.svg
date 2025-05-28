@@ -1,0 +1,96 @@
+<svg width="1875" height="1060" viewBox="0 0 1875 1060" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Device Frame -->
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M221.003 0H1651C1675.3 0 1695 19.6995 1695 44V1000C1695 1024.3 1675.3 1044 1651 1044H221.003C196.702 1044 177.003 1024.3 177.003 1000V44C177.003 19.6995 196.702 0 221.003 0Z" fill="#DEDEDE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M221.003 4H1651C1673.09 4 1691 21.9086 1691 44V1000C1691 1022.09 1673.09 1040 1651 1040H221.003C198.912 1040 181.003 1022.09 181.003 1000V44C181.003 21.9086 198.912 4 221.003 4Z" fill="white"/>
+  
+  <!-- Stand Base -->
+  <path d="M0.00292969 1021C0.00292969 1016.58 3.58465 1013 8.00293 1013H1866C1870.42 1013 1874 1016.58 1874 1021V1043H0.00292969V1021Z" fill="#DEDEDE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00293 1021C4.00293 1018.79 5.79379 1017 8.00293 1017H1866C1868.21 1017 1870 1018.79 1870 1021V1039H4.00293V1021Z" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00292969 1043H1874L1866.06 1047.24C1851.58 1054.96 1835.42 1059 1819 1059H55.003C38.5889 1059 22.4271 1054.96 7.94411 1047.24L0.00292969 1043Z" fill="#DEDEDE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00293 1043H1868L1858.87 1046.92C1846.42 1052.25 1833.02 1055 1819.48 1055H54.5287C40.986 1055 27.5845 1052.25 15.1368 1046.92L6.00293 1043Z" fill="white"/>
+  <path d="M803.003 1013H1072V1014C1072 1025.05 1063.05 1034 1052 1034H823.003C811.957 1034 803.003 1025.05 803.003 1014V1013Z" fill="#DEDEDE"/>
+  
+  <!-- Screen Background -->
+  <rect x="216.003" y="63.002" width="1440" height="900" fill="#F8FAFC"/>
+  
+  <!-- 24/7 Clock Icon -->
+  <circle cx="450" cy="200" r="60" fill="#3B82F6" fill-opacity="0.1"/>
+  <circle cx="450" cy="200" r="45" stroke="#3B82F6" stroke-width="3" fill="none"/>
+  <line x1="450" y1="170" x2="450" y2="200" stroke="#3B82F6" stroke-width="3" stroke-linecap="round"/>
+  <line x1="450" y1="200" x2="470" y2="220" stroke="#3B82F6" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Chat Interface -->
+  <rect x="300" y="320" width="1200" height="500" rx="20" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- Chat Header -->
+  <rect x="300" y="320" width="1200" height="60" rx="20" fill="#3B82F6" fill-opacity="0.05"/>
+  <circle cx="340" cy="350" r="15" fill="#10B981"/>
+  <rect x="370" y="340" width="120" height="8" rx="4" fill="#10B981"/>
+  <rect x="370" y="355" width="80" height="6" rx="3" fill="#9CA3AF"/>
+  
+  <!-- AI Assistant Avatar -->
+  <circle cx="360" cy="450" r="25" fill="#3B82F6"/>
+  <path d="M350 445 L360 440 L370 445 L365 455 L355 455 Z" fill="white"/>
+  <circle cx="357" cy="447" r="2" fill="white"/>
+  <circle cx="363" cy="447" r="2" fill="white"/>
+  
+  <!-- AI Messages -->
+  <rect x="400" y="430" width="300" height="40" rx="20" fill="#F3F4F6"/>
+  <rect x="420" y="440" width="200" height="6" rx="3" fill="#6B7280"/>
+  <rect x="420" y="450" width="150" height="6" rx="3" fill="#6B7280"/>
+  
+  <rect x="400" y="490" width="250" height="40" rx="20" fill="#F3F4F6"/>
+  <rect x="420" y="500" width="180" height="6" rx="3" fill="#6B7280"/>
+  <rect x="420" y="510" width="120" height="6" rx="3" fill="#6B7280"/>
+  
+  <!-- User Message -->
+  <rect x="900" y="430" width="200" height="40" rx="20" fill="#3B82F6"/>
+  <rect x="920" y="440" width="120" height="6" rx="3" fill="white"/>
+  <rect x="920" y="450" width="80" height="6" rx="3" fill="white"/>
+  
+  <!-- Heart Symbol for Emotional Support -->
+  <path d="M1200 480 C1200 470, 1210 460, 1225 460 C1240 460, 1250 470, 1250 480 C1250 490, 1225 520, 1225 520 C1225 520, 1200 490, 1200 480 Z" fill="#EF4444" fill-opacity="0.8"/>
+  
+  <!-- Typing Indicator -->
+  <rect x="400" y="550" width="100" height="40" rx="20" fill="#F3F4F6"/>
+  <circle cx="430" cy="570" r="3" fill="#9CA3AF">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="450" cy="570" r="3" fill="#9CA3AF">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="470" cy="570" r="3" fill="#9CA3AF">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Instant Response Indicators -->
+  <circle cx="1400" cy="180" r="8" fill="#10B981">
+    <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1430" cy="180" r="8" fill="#10B981">
+    <animate attributeName="r" values="8;12;8" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1460" cy="180" r="8" fill="#10B981">
+    <animate attributeName="r" values="8;12;8" dur="2s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Support Icons -->
+  <!-- Brain Icon for AI -->
+  <path d="M1350 250 C1340 240, 1340 220, 1360 220 C1380 220, 1400 230, 1400 250 C1400 270, 1390 280, 1380 285 C1370 290, 1350 280, 1350 270 C1340 260, 1340 250, 1350 250 Z" fill="#8B5CF6" fill-opacity="0.7"/>
+  <circle cx="1365" cy="245" r="3" fill="#8B5CF6"/>
+  <circle cx="1375" cy="255" r="3" fill="#8B5CF6"/>
+  <circle cx="1385" cy="245" r="3" fill="#8B5CF6"/>
+  
+  <!-- Moon and Stars for 24/7 -->
+  <path d="M1200 300 C1200 285, 1210 275, 1225 275 C1215 275, 1210 285, 1210 300 C1210 315, 1215 325, 1225 325 C1210 325, 1200 315, 1200 300 Z" fill="#F59E0B"/>
+  <path d="M1250 280 L1255 290 L1265 285 L1255 295 L1250 305 L1245 295 L1235 285 L1245 290 Z" fill="#F59E0B"/>
+  <path d="M1270 320 L1273 325 L1278 323 L1273 328 L1270 333 L1267 328 L1262 323 L1267 325 Z" fill="#F59E0B"/>
+  
+  <!-- Connection Lines -->
+  <line x1="1225" y1="480" x2="1300" y2="450" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+  <line x1="1400" y1="200" x2="1380" y2="250" stroke="#10B981" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+  <line x1="1225" y1="300" x2="1350" y2="270" stroke="#F59E0B" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+</svg>

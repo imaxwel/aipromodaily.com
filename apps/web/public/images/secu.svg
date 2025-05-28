@@ -1,0 +1,124 @@
+<svg width="1875" height="1060" viewBox="0 0 1875 1060" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Laptop frame -->
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M221.003 0H1651C1675.3 0 1695 19.6995 1695 44V1000C1695 1024.3 1675.3 1044 1651 1044H221.003C196.702 1044 177.003 1024.3 177.003 1000V44C177.003 19.6995 196.702 0 221.003 0Z" fill="#DEDEDE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M221.003 4H1651C1673.09 4 1691 21.9086 1691 44V1000C1691 1022.09 1673.09 1040 1651 1040H221.003C198.912 1040 181.003 1022.09 181.003 1000V44C181.003 21.9086 198.912 4 221.003 4Z" fill="white"/>
+  
+  <!-- Laptop base -->
+  <path d="M0.00292969 1021C0.00292969 1016.58 3.58465 1013 8.00293 1013H1866C1870.42 1013 1874 1016.58 1874 1021V1043H0.00292969V1021Z" fill="#DEDEDE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00293 1021C4.00293 1018.79 5.79379 1017 8.00293 1017H1866C1868.21 1017 1870 1018.79 1870 1021V1039H4.00293V1021Z" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00292969 1043H1874L1866.06 1047.24C1851.58 1054.96 1835.42 1059 1819 1059H55.003C38.5889 1059 22.4271 1054.96 7.94411 1047.24L0.00292969 1043Z" fill="#DEDEDE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00293 1043H1868L1858.87 1046.92C1846.42 1052.25 1833.02 1055 1819.48 1055H54.5287C40.986 1055 27.5845 1052.25 15.1368 1046.92L6.00293 1043Z" fill="white"/>
+  <path d="M803.003 1013H1072V1014C1072 1025.05 1063.05 1034 1052 1034H823.003C811.957 1034 803.003 1025.05 803.003 1014V1013Z" fill="#DEDEDE"/>
+  
+  <!-- Screen background - Light -->
+  <rect x="216.003" y="63.002" width="1440" height="900" fill="#f8fafc"/>
+  
+  <defs>
+    <linearGradient id="shieldGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1d4ed8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glowLight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="smallGlowLight" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main security shield -->
+  <path d="M936 200 L836 230 L836 350 Q836 410 936 460 Q1036 410 1036 350 L1036 230 Z" 
+        fill="url(#shieldGradientLight)" 
+        stroke="#3b82f6" 
+        stroke-width="2" 
+        filter="url(#glowLight)"/>
+  
+  <!-- Lock symbol inside shield -->
+  <rect x="906" y="320" width="60" height="45" rx="6" fill="#ffffff" opacity="0.95"/>
+  <circle cx="936" cy="300" r="18" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.95"/>
+  
+  <!-- Encryption data streams -->
+  <g opacity="0.8">
+    <!-- Left side data flow -->
+    <path d="M300 300 Q500 250 700 300 Q750 320 800 330" 
+          fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="6,4">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M300 380 Q500 330 700 380 Q750 400 800 410" 
+          fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4,3">
+      <animate attributeName="stroke-dashoffset" values="0;7" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Right side data flow -->
+    <path d="M1072 330 Q1120 320 1170 300 Q1370 250 1572 300" 
+          fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="6,4">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1072 410 Q1120 400 1170 380 Q1370 330 1572 380" 
+          fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4,3">
+      <animate attributeName="stroke-dashoffset" values="0;7" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Anonymous user silhouettes -->
+  <g transform="translate(350, 550)" opacity="0.6">
+    <circle cx="40" cy="40" r="35" fill="#94a3b8"/>
+    <ellipse cx="40" cy="100" rx="50" ry="70" fill="#94a3b8"/>
+    <!-- Anonymous mask -->
+    <rect x="15" y="25" width="50" height="20" rx="10" fill="#64748b"/>
+  </g>
+  
+  <g transform="translate(1350, 550)" opacity="0.6">
+    <circle cx="40" cy="40" r="35" fill="#94a3b8"/>
+    <ellipse cx="40" cy="100" rx="50" ry="70" fill="#94a3b8"/>
+    <!-- Anonymous mask -->
+    <rect x="15" y="25" width="50" height="20" rx="10" fill="#64748b"/>
+  </g>
+  
+  <!-- Security indicators -->
+  <g opacity="0.7">
+    <!-- Encrypted connection nodes -->
+    <circle cx="400" cy="200" r="6" fill="#3b82f6" filter="url(#smallGlowLight)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1472" cy="200" r="6" fill="#3b82f6" filter="url(#smallGlowLight)">
+      <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Military-grade encryption pattern -->
+    <g opacity="0.5">
+      <rect x="300" y="150" width="3" height="25" fill="#3b82f6"/>
+      <rect x="308" y="160" width="3" height="15" fill="#3b82f6"/>
+      <rect x="316" y="145" width="3" height="30" fill="#3b82f6"/>
+      <rect x="324" y="155" width="3" height="20" fill="#3b82f6"/>
+      
+      <rect x="1540" y="150" width="3" height="25" fill="#3b82f6"/>
+      <rect x="1548" y="160" width="3" height="15" fill="#3b82f6"/>
+      <rect x="1556" y="145" width="3" height="30" fill="#3b82f6"/>
+      <rect x="1564" y="155" width="3" height="20" fill="#3b82f6"/>
+    </g>
+  </g>
+  
+  <!-- Protective barrier -->
+  <g opacity="0.3">
+    <line x1="250" y1="180" x2="1622" y2="180" stroke="#3b82f6" stroke-width="1"/>
+    <line x1="250" y1="680" x2="1622" y2="680" stroke="#3b82f6" stroke-width="1"/>
+  </g>
+  
+  <!-- End-to-end encryption visualization -->
+  <g opacity="0.6">
+    <circle cx="300" cy="330" r="20" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="1572" cy="330" r="20" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <path d="M 288 318 L 312 342 M 288 342 L 312 318" stroke="#3b82f6" stroke-width="2"/>
+    <path d="M 1560 318 L 1584 342 M 1560 342 L 1584 318" stroke="#3b82f6" stroke-width="2"/>
+  </g>
+</svg>

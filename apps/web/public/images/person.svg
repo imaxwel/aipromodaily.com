@@ -1,0 +1,160 @@
+<svg width="1875" height="1060" viewBox="0 0 1875 1060" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Device Frame -->
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M221.003 0H1651C1675.3 0 1695 19.6995 1695 44V1000C1695 1024.3 1675.3 1044 1651 1044H221.003C196.702 1044 177.003 1024.3 177.003 1000V44C177.003 19.6995 196.702 0 221.003 0Z" fill="#DEDEDE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M221.003 4H1651C1673.09 4 1691 21.9086 1691 44V1000C1691 1022.09 1673.09 1040 1651 1040H221.003C198.912 1040 181.003 1022.09 181.003 1000V44C181.003 21.9086 198.912 4 221.003 4Z" fill="white"/>
+  
+  <!-- Stand Base -->
+  <path d="M0.00292969 1021C0.00292969 1016.58 3.58465 1013 8.00293 1013H1866C1870.42 1013 1874 1016.58 1874 1021V1043H0.00292969V1021Z" fill="#DEDEDE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.00293 1021C4.00293 1018.79 5.79379 1017 8.00293 1017H1866C1868.21 1017 1870 1018.79 1870 1021V1039H4.00293V1021Z" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00292969 1043H1874L1866.06 1047.24C1851.58 1054.96 1835.42 1059 1819 1059H55.003C38.5889 1059 22.4271 1054.96 7.94411 1047.24L0.00292969 1043Z" fill="#DEDEDE"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00293 1043H1868L1858.87 1046.92C1846.42 1052.25 1833.02 1055 1819.48 1055H54.5287C40.986 1055 27.5845 1052.25 15.1368 1046.92L6.00293 1043Z" fill="white"/>
+  <path d="M803.003 1013H1072V1014C1072 1025.05 1063.05 1034 1052 1034H823.003C811.957 1034 803.003 1025.05 803.003 1014V1013Z" fill="#DEDEDE"/>
+  
+  <!-- Screen Background -->
+  <rect x="216.003" y="63.002" width="1440" height="900" fill="#F8FAFC"/>
+  
+  <!-- AI Brain Analysis Center -->
+  <circle cx="936" cy="300" r="80" fill="#8B5CF6" fill-opacity="0.1"/>
+  
+  <!-- Central Brain Icon -->
+  <path d="M900 260 C890 250, 890 230, 910 230 C930 230, 950 240, 950 260 C950 280, 940 290, 930 295 C920 300, 900 290, 900 280 C890 270, 890 260, 900 260 Z" fill="#8B5CF6"/>
+  
+  <!-- Neural Network Connections -->
+  <circle cx="920" cy="265" r="3" fill="#8B5CF6"/>
+  <circle cx="935" cy="275" r="3" fill="#8B5CF6"/>
+  <circle cx="945" cy="265" r="3" fill="#8B5CF6"/>
+  <circle cx="925" cy="285" r="3" fill="#8B5CF6"/>
+  
+  <!-- Data Input Streams -->
+  <g opacity="0.7">
+    <!-- Mood Data -->
+    <rect x="350" y="150" width="120" height="60" rx="10" fill="#10B981" fill-opacity="0.1" stroke="#10B981" stroke-width="2"/>
+    <circle cx="380" cy="170" r="8" fill="#10B981"/>
+    <path d="M375 165 Q380 160 385 165 Q380 170 375 165" fill="white"/>
+    <rect x="400" y="165" width="50" height="4" rx="2" fill="#10B981"/>
+    <rect x="400" y="175" width="35" height="4" rx="2" fill="#10B981"/>
+    <rect x="360" y="190" width="80" height="3" rx="1.5" fill="#10B981" opacity="0.6"/>
+    
+    <!-- Behavior Patterns -->
+    <rect x="1400" y="150" width="120" height="60" rx="10" fill="#3B82F6" fill-opacity="0.1" stroke="#3B82F6" stroke-width="2"/>
+    <rect x="1420" y="165" width="15" height="20" rx="2" fill="#3B82F6"/>
+    <rect x="1440" y="170" width="15" height="15" rx="2" fill="#3B82F6"/>
+    <rect x="1460" y="175" width="15" height="10" rx="2" fill="#3B82F6"/>
+    <rect x="1480" y="180" width="15" height="5" rx="2" fill="#3B82F6"/>
+    <rect x="1410" y="190" width="90" height="3" rx="1.5" fill="#3B82F6" opacity="0.6"/>
+    
+    <!-- Personal History -->
+    <rect x="350" y="450" width="120" height="60" rx="10" fill="#F59E0B" fill-opacity="0.1" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="370" y="465" width="80" height="8" rx="4" fill="#F59E0B"/>
+    <rect x="370" y="478" width="60" height="6" rx="3" fill="#F59E0B"/>
+    <rect x="370" y="488" width="70" height="6" rx="3" fill="#F59E0B"/>
+    <rect x="360" y="500" width="90" height="3" rx="1.5" fill="#F59E0B" opacity="0.6"/>
+    
+    <!-- Goals & Preferences -->
+    <rect x="1400" y="450" width="120" height="60" rx="10" fill="#EF4444" fill-opacity="0.1" stroke="#EF4444" stroke-width="2"/>
+    <circle cx="1430" cy="475" r="6" fill="#EF4444"/>
+    <path d="M1427 472 L1430 475 L1433 472" stroke="white" stroke-width="2" fill="none"/>
+    <circle cx="1460" cy="475" r="6" fill="#EF4444"/>
+    <path d="M1457 472 L1460 475 L1463 472" stroke="white" stroke-width="2" fill="none"/>
+    <circle cx="1490" cy="475" r="6" fill="#EF4444"/>
+    <path d="M1487 472 L1490 475 L1493 472" stroke="white" stroke-width="2" fill="none"/>
+    <rect x="1410" y="490" width="90" height="3" rx="1.5" fill="#EF4444" opacity="0.6"/>
+  </g>
+  
+  <!-- Data Flow Lines to Brain -->
+  <path d="M470 180 Q700 150 850 280" stroke="#10B981" stroke-width="2" fill="none" stroke-dasharray="5,5" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M1400 180 Q1150 150 1020 280" stroke="#3B82F6" stroke-width="2" fill="none" stroke-dasharray="5,5" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M470 480 Q700 450 850 320" stroke="#F59E0B" stroke-width="2" fill="none" stroke-dasharray="5,5" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" begin="1s" repeatCount="indefinite"/>
+  </path>
+  <path d="M1400 480 Q1150 450 1020 320" stroke="#EF4444" stroke-width="2" fill="none" stroke-dasharray="5,5" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;-20" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Treatment Plan Output -->
+  <rect x="650" y="500" width="600" height="280" rx="15" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- Plan Header -->
+  <rect x="670" y="520" width="560" height="40" rx="8" fill="#8B5CF6" fill-opacity="0.1"/>
+  <circle cx="690" cy="540" r="8" fill="#8B5CF6"/>
+  <path d="M686 536 L690 533 L694 536 L692 542 L688 542 Z" fill="white"/>
+  <rect x="710" y="535" width="120" height="5" rx="2.5" fill="#8B5CF6"/>
+  <rect x="710" y="545" width="80" height="4" rx="2" fill="#8B5CF6" opacity="0.7"/>
+  
+  <!-- CBT Section -->
+  <rect x="670" y="580" width="180" height="80" rx="8" fill="#10B981" fill-opacity="0.05" stroke="#10B981" stroke-width="1"/>
+  <circle cx="690" cy="600" r="6" fill="#10B981"/>
+  <path d="M687 597 L689 599 L693 595" stroke="white" stroke-width="2" fill="none"/>
+  <rect x="710" y="595" width="80" height="4" rx="2" fill="#10B981"/>
+  <rect x="710" y="605" width="60" height="3" rx="1.5" fill="#10B981" opacity="0.7"/>
+  <rect x="680" y="620" width="60" height="3" rx="1.5" fill="#10B981" opacity="0.5"/>
+  <rect x="680" y="630" width="80" height="3" rx="1.5" fill="#10B981" opacity="0.5"/>
+  <rect x="680" y="640" width="50" height="3" rx="1.5" fill="#10B981" opacity="0.5"/>
+  
+  <!-- Mindfulness Section -->
+  <rect x="870" y="580" width="180" height="80" rx="8" fill="#3B82F6" fill-opacity="0.05" stroke="#3B82F6" stroke-width="1"/>
+  <circle cx="890" cy="600" r="8" fill="#3B82F6"/>
+  <circle cx="890" cy="600" r="4" fill="white"/>
+  <rect x="910" y="595" width="80" height="4" rx="2" fill="#3B82F6"/>
+  <rect x="910" y="605" width="60" height="3" rx="1.5" fill="#3B82F6" opacity="0.7"/>
+  <rect x="880" y="620" width="70" height="3" rx="1.5" fill="#3B82F6" opacity="0.5"/>
+  <rect x="880" y="630" width="90" height="3" rx="1.5" fill="#3B82F6" opacity="0.5"/>
+  <rect x="880" y="640" width="60" height="3" rx="1.5" fill="#3B82F6" opacity="0.5"/>
+  
+  <!-- Custom Techniques Section -->
+  <rect x="1070" y="580" width="180" height="80" rx="8" fill="#F59E0B" fill-opacity="0.05" stroke="#F59E0B" stroke-width="1"/>
+  <rect x="1085" y="595" width="12" height="12" rx="2" fill="#F59E0B"/>
+  <rect x="1103" y="599" width="12" height="8" rx="2" fill="#F59E0B"/>
+  <rect x="1121" y="603" width="12" height="4" rx="2" fill="#F59E0B"/>
+  <rect x="1110" y="615" width="80" height="3" rx="1.5" fill="#F59E0B" opacity="0.7"/>
+  <rect x="1080" y="625" width="90" height="3" rx="1.5" fill="#F59E0B" opacity="0.5"/>
+  <rect x="1080" y="635" width="70" height="3" rx="1.5" fill="#F59E0B" opacity="0.5"/>
+  <rect x="1080" y="645" width="85" height="3" rx="1.5" fill="#F59E0B" opacity="0.5"/>
+  
+  <!-- Progress Tracking -->
+  <rect x="670" y="680" width="560" height="80" rx="8" fill="#EF4444" fill-opacity="0.05" stroke="#EF4444" stroke-width="1"/>
+  <rect x="690" y="700" width="100" height="8" rx="4" fill="#EF4444"/>
+  <rect x="690" y="715" width="120" height="6" rx="3" fill="#EF4444" opacity="0.8"/>
+  <rect x="690" y="730" width="80" height="6" rx="3" fill="#EF4444" opacity="0.6"/>
+  
+  <!-- Progress Chart -->
+  <g transform="translate(900, 690)">
+    <rect width="200" height="60" fill="none"/>
+    <path d="M10 50 L30 40 L50 35 L70 25 L90 20 L110 15 L130 10 L150 8 L170 5 L190 3" 
+          stroke="#EF4444" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="10" cy="50" r="3" fill="#EF4444"/>
+    <circle cx="50" cy="35" r="3" fill="#EF4444"/>
+    <circle cx="90" cy="20" r="3" fill="#EF4444"/>
+    <circle cx="130" cy="10" r="3" fill="#EF4444"/>
+    <circle cx="170" cy="5" r="3" fill="#EF4444"/>
+    <circle cx="190" cy="3" r="3" fill="#EF4444"/>
+  </g>
+  
+  <!-- Personalization Indicators -->
+  <circle cx="1300" cy="300" r="25" fill="#8B5CF6" fill-opacity="0.2">
+    <animate attributeName="r" values="25;35;25" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.1;0.2" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1300" cy="300" r="15" fill="#8B5CF6">
+    <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="1295" y="295" width="10" height="10" rx="2" fill="white"/>
+  
+  <!-- AI Processing Animation -->
+  <g transform="translate(936, 300)">
+    <circle r="5" fill="#8B5CF6" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="8" fill="none" stroke="#8B5CF6" stroke-width="2" opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="12" fill="none" stroke="#8B5CF6" stroke-width="1" opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
