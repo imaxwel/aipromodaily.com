@@ -45,92 +45,92 @@ export const featureTabs: Array<{
 }> = [
 	{
 		id: "ai-counseling",
-		title: "AI智能心理咨询",
+		title: "AI Smart Counseling",
 		icon: MessageCircleIcon,
-		subtitle: "24/7专业AI心理咨询师，随时倾听您的心声",
+		subtitle: "24/7 professional AI counselors, always ready to listen",
 		description:
-			"我们的AI心理咨询师基于专业心理学理论训练，能够提供个性化的心理支持和建议。无论何时何地，当您感到迷茫或痛苦时，都有专业的陪伴与指导。",
+			"Our AI counselors are trained on professional psychology theories and can provide personalized psychological support and guidance. Whenever and wherever you feel lost or in pain, professional companionship and guidance are always available.",
 		stack: [],
 		image: heroImage,
 		imageBorder: false,
 		highlights: [
 			{
-				title: "即时响应",
+				title: "Instant Response",
 				description:
-					"无需预约等待，24小时全天候服务。当您需要帮助时，AI心理咨询师立即为您提供专业支持。",
+					"No appointment needed, 24-hour round-the-clock service. When you need help, AI counselors immediately provide professional support.",
 				icon: ClockIcon,
 			},
 			{
-				title: "个性化对话",
+				title: "Personalized Conversations",
 				description:
-					"基于您的情况和需求，提供量身定制的心理疏导方案，让每一次对话都更贴合您的内心世界。",
+					"Based on your situation and needs, we provide tailored psychological guidance solutions, making every conversation more aligned with your inner world.",
 				icon: BrainIcon,
 			},
 			{
-				title: "专业可靠",
+				title: "Professional & Reliable",
 				description:
-					"融合认知行为疗法、正念疗法等多种心理治疗方法，为您提供科学有效的心理健康支持。",
+					"Integrating multiple psychological therapy methods including Cognitive Behavioral Therapy and Mindfulness Therapy to provide scientifically effective mental health support.",
 				icon: ShieldCheckIcon,
 			},
 		],
 	},
 	{
 		id: "privacy-security",
-		title: "隐私安全保护",
+		title: "Privacy & Security Protection",
 		icon: ShieldCheckIcon,
-		subtitle: "绝对安全的匿名环境，让您安心表达真实感受",
-		description: "我们深知心理健康话题的敏感性，提供完全匿名的咨询环境。您的隐私和数据安全是我们的首要承诺，让您能够毫无顾虑地敞开心扉。",
+		subtitle: "Absolutely secure anonymous environment for safe, authentic expression",
+		description: "We understand the sensitivity of mental health topics and provide a completely anonymous consultation environment. Your privacy and data security are our top priority, allowing you to open up without any concerns.",
 		stack: [],
 		image: heroImage,
 		imageBorder: false,
 		highlights: [
 			{
-				title: "完全匿名",
+				title: "Complete Anonymity",
 				description:
-					"无需注册个人信息，完全匿名使用。您可以自由表达内心想法，无需担心身份暴露或社会评判。",
+					"No personal information registration required, completely anonymous usage. You can freely express your inner thoughts without worrying about identity exposure or social judgment.",
 				icon: UsersIcon,
 			},
 			{
-				title: "数据加密",
+				title: "Data Encryption",
 				description:
-					"采用银行级别的数据加密技术，确保您的对话内容绝对安全，任何第三方都无法获取您的隐私信息。",
+					"Using bank-level data encryption technology to ensure your conversations are absolutely secure. No third party can access your private information.",
 				icon: LockIcon,
 			},
 			{
-				title: "无痕浏览",
+				title: "Private Browsing",
 				description:
-					"支持无痕模式使用，不留任何使用记录。您的心理健康之路，只有您自己知道。",
+					"Supports incognito mode usage, leaving no usage records. Your mental health journey is known only to you.",
 				icon: SparklesIcon,
 			},
 		],
 	},
 	{
 		id: "emotional-support",
-		title: "情感陪伴成长",
+		title: "Emotional Support & Growth",
 		icon: HeartHandshakeIcon,
-		subtitle: "不只是解决问题，更是陪伴您重新找回生活的希望",
+		subtitle: "More than problem-solving - accompanying you to rediscover hope in life",
 		description:
-			"hope.do不仅提供心理咨询，更是您情感成长路上的温暖陪伴。我们帮助您从绝望中找到希望，从困境中发现成长的力量。",
+			"hope.do provides not only psychological counseling but also warm companionship on your emotional growth journey. We help you find hope in despair and discover the strength to grow through difficulties.",
 		stack: [],
 		image: heroImage,
 		imageBorder: false,
 		highlights: [
 			{
-				title: "情感陪伴",
+				title: "Emotional Companionship",
 				description:
-					"提供温暖的情感支持和理解，让您在最黑暗的时刻也能感受到被关怀和接纳的温暖。",
+					"Providing warm emotional support and understanding, so you can feel cared for and accepted even in your darkest moments.",
 				icon: HeartHandshakeIcon,
 			},
 			{
-				title: "成长追踪",
+				title: "Growth Tracking",
 				description:
-					"记录您的心理健康成长轨迹，见证每一个小进步，帮助您看到自己的积极变化。",
+					"Recording your mental health growth journey, witnessing every small progress, and helping you see your positive changes.",
 				icon: TrendingUpIcon,
 			},
 			{
-				title: "希望重燃",
+				title: "Hope Renewed",
 				description:
-					"通过专业的心理疏导和积极的认知重构，帮助您重新发现生活的意义和价值，点燃内心的希望之光。",
+					"Through professional psychological guidance and positive cognitive restructuring, helping you rediscover life's meaning and value, igniting the light of hope within.",
 				icon: SparklesIcon,
 			},
 		],
@@ -144,10 +144,10 @@ export function Features() {
 			<div className="container max-w-5xl">
 				<div className="mx-auto mb-6 lg:mb-0 lg:max-w-5xl lg:text-center">
 					<h2 className="font-bold text-4xl lg:text-5xl">
-						专业心理健康支持，重燃生活希望
+						Professional Mental Health Support, Reigniting Hope in Life
 					</h2>
 					<p className="mt-6 text-balance text-lg opacity-50">
-						当感到绝望时，在hope.do找回您的希望。我们的AI心理咨询师24/7在线，帮助您克服挑战，重新发现生活的意义。
+						When feeling hopeless, find your hope at hope.do. Our AI counselors are available 24/7 to help you overcome challenges and rediscover meaning in life.
 					</p>
 				</div>
 
