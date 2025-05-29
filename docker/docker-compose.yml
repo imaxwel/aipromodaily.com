@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  supastarter:
+    image: supastarter-docker
+    container_name: supastarter-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    volumes:
+      - ./data:/app/data
