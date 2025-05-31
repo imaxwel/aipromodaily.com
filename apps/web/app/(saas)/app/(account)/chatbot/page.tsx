@@ -32,13 +32,15 @@ export default async function AiDemoPage() {
         const chats = data.chats;
         
         // ... 其余代码
-    } catch (error) {
-        console.error("Full error details:", {
-            name: error.name,
-            message: error.message,
-            stack: error.stack,
-            cause: error.cause
-        });
-        throw error;
-    }
+	} catch (error) {
+		console.error("Full error details:", {
+			error: error instanceof Error ? {
+				name: error.name,
+				message: error.message,
+				stack: error.stack,
+				cause: error.cause
+			} : error
+		});
+		throw error;
+	}
 }
