@@ -4,43 +4,51 @@ import { PageHeader } from "@saas/shared/components/PageHeader";
 import { getServerApiClient, getServerQueryClient } from "@shared/lib/server";
 
 export default async function AiDemoPage() {
-    const queryClient = getServerQueryClient();
-    const apiClient = await getServerApiClient();
-    
-    console.log("=== Debug Info ===");
-    console.log("Environment:", process.env.NODE_ENV);
-    console.log("Vercel URL:", process.env.VERCEL_URL);
-    console.log("API Base URL:", apiClient.ai.chats.$url());
-    
-    try {
-        console.log("Making API request...");
-        const response = await apiClient.ai.chats.$get({});
-        
-        console.log("Response received:");
-        console.log("- Status:", response.status);
-        console.log("- OK:", response.ok);
-        console.log("- Headers:", Object.fromEntries(response.headers));
-        
-        if (!response.ok) {
-            const errorText = await response.text();
-            console.error("Response error body:", errorText);
-            throw new Error(`Failed to fetch chats: ${response.status} - ${errorText}`);
-        }
-        
-        const data = await response.json();
-        console.log("Response data:", data);
-        const chats = data.chats;
-        
-        // ... 其余代码
-	} catch (error) {
-		console.error("Full error details:", {
-			error: error instanceof Error ? {
-				name: error.name,
-				message: error.message,
-				stack: error.stack,
-				cause: error.cause
-			} : error
+	const queryClient = getServerQueryClient();
+	const apiClient = await getServerApiClient();
+
+	const chats = await (async () => {
+		const response = await apiClient.ai.chats.$get({});
+
+		if (!response.ok) {
+			throw new Error("Failed to fetch chats");
+		}
+
+		return response.json().then((data) => data.chats);
+	})();
+
+	await queryClient.prefetchQuery({
+		queryKey: aiChatListQueryKey(),
+		queryFn: async () => chats,
+	});
+
+	if (chats.length > 0) {
+		await queryClient.prefetchQuery({
+			queryKey: aiChatQueryKey(chats[0].id),
+			queryFn: async () => {
+				const response = await apiClient.ai.chats[":id"].$get({
+					param: {
+						id: chats[0].id,
+					},
+				});
+
+				if (!response.ok) {
+					throw new Error("Failed to fetch chat");
+				}
+
+				return response.json();
+			},
 		});
-		throw error;
 	}
+
+	return (
+		<>
+			<PageHeader
+				title="AI Chatbot"
+				subtitle="This is an example chatbot built with the ClaudeAI API"
+			/>
+
+			<AiChat />
+		</>
+	);
 }
