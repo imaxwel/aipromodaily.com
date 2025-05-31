@@ -8,7 +8,7 @@ export function Footer() {
 				<div>
 					<Logo className="opacity-70 grayscale" />
 					<p className="mt-3 text-sm opacity-70">
-						<a href="https://supastarter.dev">
+						<a href="https://hope.do">
 							Crafted with passion by the HOPE.DO team
 						</a>
 					</p>

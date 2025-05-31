@@ -153,7 +153,7 @@ export function UserMenu({ showUserName }: { showUserName?: boolean }) {
 				</DropdownMenuItem>
 
 				<DropdownMenuItem asChild>
-					<a href="https://supastarter.dev/docs/nextjs">
+					<a href="https://hope.do/docs/nextjs">
 						<BookIcon className="mr-2 size-4" />
 						{t("app.userMenu.documentation")}
 					</a>

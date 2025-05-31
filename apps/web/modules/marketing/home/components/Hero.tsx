@@ -50,7 +50,7 @@ export function Hero() {
 					</h5>
 
 					<div className="mt-4 flex flex-col-reverse items-center justify-center gap-4 text-foreground/50 md:flex-row md:gap-8">
-						<a href="https://supastarter.dev">
+						<a href="https://hope.do">
 							<svg
 								viewBox="0 0 631 236"
 								className="h-8"
