@@ -27,7 +27,7 @@ export const config = {
 	// Organizations
 	organizations: {
 		// Whether organizations are enabled in general
-		enable: true,
+		enable: false,
 		// Whether billing for organizations should be enabled (below you can enable it for users instead)
 		enableBilling: true,
 		// Whether the organization should be hidden from the user (use this for multi-tenant applications)
@@ -48,7 +48,7 @@ export const config = {
 	// Users
 	users: {
 		// Whether billing should be enabled for users (above you can enable it for organizations instead)
-		enableBilling: true,
+		enableBilling: false,
 		// Whether you want the user to go through an onboarding form after signup (can be defined in the OnboardingForm.tsx)
 		enableOnboarding: true,
 	},
@@ -61,11 +61,11 @@ export const config = {
 		// Whether users should be able to sign in with a social provider
 		enableSocialLogin: true,
 		// Whether users should be able to sign in with a passkey
-		enablePasskeys: true,
+		enablePasskeys: false,
 		// Whether users should be able to sign in with a password
 		enablePasswordLogin: true,
 		// where users should be redirected after the sign in
-		redirectAfterSignIn: "/app",
+		redirectAfterSignIn: "/app/chatbot",
 		// where users should be redirected after logout
 		redirectAfterLogout: "/",
 		// how long a session should be valid
@@ -106,7 +106,7 @@ export const config = {
 		// whether the contact form should be enabled
 		enabled: true,
 		// the email to which the contact form messages should be sent
-		to: "hello@your-domain.com",
+		to: "hello@hope.do",
 		// the subject of the email
 		subject: "Contact form message",
 	},

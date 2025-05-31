@@ -63,7 +63,7 @@ export default async function AiDemoPage({
 		<>
 			<PageHeader
 				title="AI Chatbot"
-				subtitle="This is an example chatbot built with the OpenAI API"
+				subtitle="This is an example chatbot built with the ClaudeAI API"
 			/>
 
 			<AiChat organizationId={organizationId} />
