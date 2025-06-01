@@ -264,6 +264,11 @@ export const aiRouter = new Hono()
 			const { messages } = c.req.valid("json");
 			const user = c.get("user");
 
+			console.log('Processing chat:', id);
+			console.log('Messages count:', messages.length);
+			console.log('User ID:', user.id);
+
+
 			const chat = await getAiChatById(id);
 
 			if (!chat) {
@@ -279,6 +284,7 @@ export const aiRouter = new Hono()
 				throw new HTTPException(403, { message: "Forbidden" });
 			}
 
+			console.log('maxwell textModel config:', textModel);
 			const response = streamText({
 				model: textModel,
 				messages,
@@ -300,4 +306,64 @@ export const aiRouter = new Hono()
 				sendUsage: true,
 			});
 		},
-	);
+	)
+	// 添加测试端点在这里
+	.get(
+		"/test-claude",
+		describeRoute({
+			tags: ["AI"],
+			summary: "Test Claude API",
+			description: "Test connection to Claude API",
+			responses: {
+				200: {
+					description: "Claude API test result",
+					content: {
+						"application/json": {
+							schema: resolver(
+								z.object({ 
+									status: z.string(),
+									message: z.string().optional()
+								}),
+							),
+						},
+					},
+				},
+			},
+		}),
+		async (c) => {
+			try {
+				console.log('Testing Claude API connection...');
+				
+				const response = await streamText({
+					model: textModel,
+					messages: [{ role: "user", content: "Hello, can you respond with just 'OK'?" }],
+					maxTokens: 10,
+				});
+				
+				// 读取流式响应的第一部分来验证
+				const stream = response.textStream;
+				const reader = stream.getReader();
+				const { value } = await reader.read();
+				reader.releaseLock();
+				
+				console.log('Claude API test successful, response:', value);
+				
+				return c.json({ 
+					status: "success", 
+					message: "Claude API working properly" 
+				});
+			} catch (error) {
+				console.error('Claude test failed:', error);
+				
+				// 类型安全的错误处理
+				const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+				
+				return c.json({ 
+					status: "error",
+					message: "Claude API connection failed",
+					details: errorMessage 
+				}, 500);
+			}
+		}
+	)
+	;
