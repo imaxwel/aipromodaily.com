@@ -131,7 +131,7 @@ export function AiChat({ organizationId }: { organizationId?: string }) {
 				</div>
 			}
 		>
-			<div className="-mt-8 flex h-[calc(100vh-10rem)] flex-col">
+			<div className="-mt-8 flex h-[calc(100dvh-10rem)] flex-col">
 				<div className="flex flex-1 flex-col gap-2 overflow-y-auto py-8">
 					{messages.map((message, index) => (
 						<div
