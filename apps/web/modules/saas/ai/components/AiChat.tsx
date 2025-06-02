@@ -131,8 +131,9 @@ export function AiChat({ organizationId }: { organizationId?: string }) {
 				</div>
 			}
 		>
-			<div className="-mt-8 flex h-[calc(100vh-12rem)] md:h-[calc(100vh-10rem)] flex-col">
-				<div className="flex flex-1 flex-col gap-2 overflow-y-auto py-8">
+			{/* 主要修改在这里：调整高度计算，考虑导航栏高度 */}
+			<div className="-mt-8 flex h-[calc(100vh-16rem)] md:h-[calc(100vh-10rem)] flex-col">
+				<div className="flex flex-1 flex-col gap-2 overflow-y-auto py-8 min-h-0">
 					{messages.map((message, index) => (
 						<div
 							key={index}
@@ -165,34 +166,37 @@ export function AiChat({ organizationId }: { organizationId?: string }) {
 					)}
 				</div>
 
-				<form
-					onSubmit={handleSubmit}
-					className="relative shrink-0 rounded-lg border-none bg-card py-6 pr-14 pl-6 text-lg shadow-sm focus:outline-hidden focus-visible:ring-0"
-				>
-					<Textarea
-						value={input}
-						onChange={handleInputChange}
-						disabled={!hasChat}
-						placeholder="Chat with your AI..."
-						className="min-h-8 rounded-none border-none bg-transparent p-0 focus:outline-hidden focus-visible:ring-0 shadow-none"
-						onKeyDown={(e) => {
-							if (e.key === "Enter" && !e.shiftKey) {
-								e.preventDefault();
-								handleSubmit(e);
-							}
-						}}
-					/>
-
-					<Button
-						type="submit"
-						size="icon"
-						variant="secondary"
-						className="absolute right-3 bottom-3"
-						disabled={!hasChat}
+				{/* 输入框区域 */}
+				<div className="shrink-0">
+					<form
+						onSubmit={handleSubmit}
+						className="relative rounded-lg border-none bg-card py-6 pr-14 pl-6 text-lg shadow-sm focus:outline-hidden focus-visible:ring-0"
 					>
-						<SendIcon className="size-4" />
-					</Button>
-				</form>
+						<Textarea
+							value={input}
+							onChange={handleInputChange}
+							disabled={!hasChat}
+							placeholder="Chat with your AI..."
+							className="min-h-8 rounded-none border-none bg-transparent p-0 focus:outline-hidden focus-visible:ring-0 shadow-none resize-none"
+							onKeyDown={(e) => {
+								if (e.key === "Enter" && !e.shiftKey) {
+									e.preventDefault();
+									handleSubmit(e);
+								}
+							}}
+						/>
+
+						<Button
+							type="submit"
+							size="icon"
+							variant="secondary"
+							className="absolute right-3 bottom-3"
+							disabled={!hasChat}
+						>
+							<SendIcon className="size-4" />
+						</Button>
+					</form>
+				</div>
 			</div>
 		</SidebarContentLayout>
 	);
