@@ -68,8 +68,8 @@ export default async function AiDemoPage() {
   return (
     <>
       <PageHeader
-        title="AI Chatbot"
-        subtitle="This is an example chatbot built with the ClaudeAI API"
+        title="Caring Assistant"
+        subtitle="I'm always glad to be here to support you."
       />
       <AiChat />
     </>

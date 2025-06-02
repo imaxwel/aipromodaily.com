@@ -17,10 +17,10 @@ export default async function AppStartPage() {
 		<div className="">
 			<PageHeader
 				title={t("start.welcome", { name: session?.user.name })}
-				subtitle={t("start.subtitle")}
+				// subtitle={t("start.subtitle")}
 			/>
 
-			<UserStart />
+			{/* <UserStart /> */}
 		</div>
 	);
 }
