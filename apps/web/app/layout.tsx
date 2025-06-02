@@ -5,9 +5,9 @@ import "cropperjs/dist/cropper.css";
 
 export const metadata: Metadata = {
 	title: {
-		absolute: "hope.do - Application",
-		default: "hope.do- Application",
-		template: "%s | hope.do - Application",
+		absolute: "Hope.do - Application",
+		default: "Hope.do- Application",
+		template: "%s | Hope.do - Application",
 	},
 };
 

@@ -241,17 +241,17 @@
 			"subject": "Passwort zurücksetzen"
 		},
 		"magicLink": {
-			"body": "Hey,\ndu hast eine Anmelde-E-Mail von hope.do angefordert.\n\nKlicke auf den unten stehenden Link, um dich anzumelden.",
+			"body": "Hey,\ndu hast eine Anmelde-E-Mail von Hope.do angefordert.\n\nKlicke auf den unten stehenden Link, um dich anzumelden.",
 			"login": "Login",
-			"subject": "Login bei hope.do"
+			"subject": "Login bei Hope.do"
 		},
 		"newUser": {
-			"body": "Hallo,\n\nVielen Dank, dass du dich bei hope.do angemeldet hast.\n\n\nUm mit der Nutzung unserer App zu beginnen, bestätige bitte deine E-Mail-Adresse, indem du auf den untenstehenden Link klickst.",
+			"body": "Hallo,\n\nVielen Dank, dass du dich bei Hope.do angemeldet hast.\n\n\nUm mit der Nutzung unserer App zu beginnen, bestätige bitte deine E-Mail-Adresse, indem du auf den untenstehenden Link klickst.",
 			"confirmEmail": "E-Mail bestätigen",
 			"subject": "E-Mail bestätigen"
 		},
 		"newsletterSignup": {
-			"body": "Vielen Dank, dass du dich für den hope.do-Newsletter angemeldet hast. \nWir halten dich mit den neuesten Nachrichten und Updates auf dem Laufenden.",
+			"body": "Vielen Dank, dass du dich für den Hope.do-Newsletter angemeldet hast. \nWir halten dich mit den neuesten Nachrichten und Updates auf dem Laufenden.",
 			"subject": "Willkommen bei unserem Newsletter"
 		},
 		"organizationInvitation": {
@@ -273,7 +273,7 @@
 			}
 		},
 		"submit": "Abonnieren",
-		"subtitle": "Gehöre zu den Ersten, die Zugriff auf hope.do erhalten.",
+		"subtitle": "Gehöre zu den Ersten, die Zugriff auf Hope.do erhalten.",
 		"title": "Erhalte frühen Zugang"
 	},
 	"onboarding": {
