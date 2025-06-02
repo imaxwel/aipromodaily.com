@@ -147,11 +147,11 @@ export function Features() {
 		<section id="features" className="scroll-my-20 pt-12 lg:pt-16">
 			<div className="container max-w-5xl">
 				<div className="mx-auto mb-6 lg:mb-0 lg:max-w-5xl lg:text-center">
-					<h2 className="font-bold text-4xl lg:text-5xl">
+					<h2 className="font-bold text-2xl lg:text-5xl">
 						Professional Mental Health Support, Reigniting Hope in Life
 					</h2>
 					<p className="mt-6 text-balance text-lg opacity-50">
-						When feeling lost, chat your way back to HOPE.DO. Our AI counselors are available 24/7 to help you overcome challenges and rediscover meaning in life.
+						When feeling lost, chat your way back at HOPE.DO. Our AI counselors are available 24/7 to help you overcome challenges and rediscover meaning in life.
 					</p>
 				</div>
 

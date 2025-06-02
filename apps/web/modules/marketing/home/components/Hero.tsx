@@ -18,13 +18,13 @@ export function Hero() {
 							New:
 						</span>
 						<span className="ml-1 block font-medium text-foreground">
-							Try our brand-new service FREE during the introductory period!
+							Try our brand-new service FREE now!
 						</span>
 					</div>
 				</div>
 
-				<h1 className="mx-auto max-w-3xl text-balance font-bold text-5xl lg:text-7xl">
-					Feeling lost? Chat your way back to  <span className="text-primary"> HOPE.DO</span>
+				<h1 className="mx-auto max-w-3xl text-balance font-bold text-3xl lg:text-7xl">
+					Feeling lost? Chat your way back at  <span className="text-primary"> HOPE.DO</span>
 				</h1>
 
 				{/* <p className="mx-auto mt-4 max-w-lg text-balance text-foreground/60 text-lg">
