@@ -55,8 +55,8 @@ export async function BlogListWithPagination({
 		<div className="container max-w-6xl pt-32 pb-16">
 			{showTitle && (
 				<div className="mb-12 pt-8 text-center">
-					<h1 className="mb-2 font-bold text-5xl">{t("blog.title")}</h1>
-					<p className="text-lg opacity-50">{t("blog.description")}</p>
+					<h1 className="mb-2 font-bold text-2xl md:text-4xl lg:text-5xl">{t("blog.title")}</h1>
+					<p className="text-sm md:text-base lg:text-lg opacity-50">{t("blog.description")}</p>
 					{totalPosts > 0 && (
 						<p className="mt-2 text-sm opacity-40">
 							{totalPosts} {totalPosts === 1 ? 'article' : 'articles'}
