@@ -25,7 +25,7 @@ export function Logo({
         <circle cx="256" cy="128" r="48" fill="white" />
         <path d="M256 384 L128 256 L384 256 Z" fill="white" />
       </svg>
-      {withLabel && <span className="ml-3 text-lg">HOPE.DO</span>}
+      {withLabel && <span className="ml-3 text-lg">AIPROMODAILY.COM</span>}
     </span>
   );
 }

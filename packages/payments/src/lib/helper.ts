@@ -62,13 +62,35 @@ function getActivePlanFromPurchases(purchases?: PurchaseWithoutTimestamps[]) {
 export function createPurchasesHelper(purchases: PurchaseWithoutTimestamps[]) {
 	const activePlan = getActivePlanFromPurchases(purchases);
 
-	const hasSubscription = (planIds?: PlanId[] | PlanId) => {
-		return (
-			!!activePlan &&
-			(Array.isArray(planIds)
-				? planIds.includes(activePlan.id)
-				: planIds === activePlan.id)
+	function getPlanIdByProductId(productId: string): PlanId | undefined {
+		const entry = Object.entries(plans).find(([_id, plan]) =>
+			plan.prices?.some((price) => price.productId === productId),
 		);
+		return entry?.[0] as PlanId | undefined;
+	}
+
+	const isActiveSubscription = (purchase: PurchaseWithoutTimestamps) => {
+		if (purchase.type !== "SUBSCRIPTION") return false;
+		const status = purchase.status ?? "active";
+		return status === "active" || status === "trialing";
+	};
+
+	const hasSubscription = (planIds?: PlanId[] | PlanId) => {
+		const eligible = purchases?.filter(isActiveSubscription) ?? [];
+
+		// Require explicit plan ids for subscription checks
+		if (!planIds) {
+			return false;
+		}
+
+		if (Array.isArray(planIds)) {
+			return eligible.some((p) => {
+				const planId = getPlanIdByProductId(p.productId);
+				return !!planId && planIds.includes(planId);
+			});
+		}
+
+		return eligible.some((p) => getPlanIdByProductId(p.productId) === planIds);
 	};
 
 	const hasPurchase = (planId: PlanId) => {

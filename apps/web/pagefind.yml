@@ -1,0 +1,21 @@
+# Pagefind 配置文件
+source: .next
+output_path: public/pagefind
+exclude_selectors:
+  - "[data-pagefind-ignore]"
+  - "nav"
+  - "footer"
+  - "script"
+  - "style"
+  - ".no-search"
+
+# 为搜索结果添加元数据
+meta:
+  title: "h1, article h2:first-of-type, title"
+  author: "[data-author]"
+  date: "time[datetime]"
+  tags: "[data-tags]"
+  access: "[data-access-level]"  # 权限级别标记
+  
+# 支持中文搜索
+language: zh

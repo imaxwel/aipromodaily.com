@@ -18,9 +18,9 @@
 				"deleting": "Löschung der Organisation...",
 				"notDeleted": "Organisation konnte nicht gelöscht werden. Bitte versuche es erneut."
 			},
-			"edit": "bearbeiten",
+			"edit": "Bearbeiten",
 			"form": {
-				"createTitle": "Erstellen eine Organisation",
+				"createTitle": "Eine Organisation erstellen",
 				"name": "Name der Organisation",
 				"notifications": {
 					"error": "Die Organisation konnte nicht gespeichert werden. Bitte versuche es später noch einmal.",
@@ -48,10 +48,10 @@
 				"notDeleted": "Der Benutzer konnte nicht gelöscht werden. \nBitte versuche es erneut."
 			},
 			"emailVerified": {
-				"verified": "Email verifiziert",
+				"verified": "E-Mail verifiziert",
 				"waiting": "E-Mail wartet auf Verifizierung"
 			},
-			"impersonate": "Imitieren",
+			"impersonate": "Als Benutzer ausgeben",
 			"impersonation": {
 				"impersonating": "Ich gebe mich als {name} aus..."
 			},
@@ -64,8 +64,8 @@
 			},
 			"search": "Nach Name oder E-Mail suchen...",
 			"title": "Benutzer verwalten",
-			"assignAdminRole": "Administration-Rolle zuweisen",
-			"removeAdminRole": "Adminstrator-Rolle entfernen"
+			"assignAdminRole": "Admin-Rolle zuweisen",
+			"removeAdminRole": "Administrator-Rolle entfernen"
 		},
 		"description": "Verwalte deine Anwendung."
 	},
@@ -153,7 +153,7 @@
 			"sendMagicLink": "Anmelde-Link senden"
 		},
 		"resetPassword": {
-			"backToSignin": "Zurück zu Signin",
+			"backToSignin": "Zurück zum Login",
 			"hints": {
 				"error": "Es tut uns leid, aber wir konnten dein Passwort nicht zurücksetzen. Bitte versuche es erneut.",
 				"success": "Dein Passwort wurde erfolgreich zurückgesetzt."
@@ -179,15 +179,41 @@
 		}
 	},
 	"blog": {
-		"description": "In diesem Blog schreibe ich über alles mögliche.",
-		"title": "Mein toller Blog",
-		"back": "Zurück zum Blog"
+		"description": "Tägliche Updates zu KI-Tools und -Diensten: Einladungs- und Registrierungscodes, Studentenrabatte, Preisnachlässe und exklusive Angebote weltweit.",
+		"title": "AI Promo Daily",
+		"back": "Zurück zum Blog",
+		"loginRequired": {
+			"title": "Zum Weiterlesen bitte anmelden",
+			"description": "Dieser Inhalt erfordert eine Anmeldung. Bitte melde dich an oder erstelle ein Konto, um fortzufahren."
+		},
+		"premium": {
+			"badge": "Premium-Inhalt",
+			"title": "Premium-Inhalte freischalten",
+			"loginTitle": "Nur für Premium-Mitglieder",
+			"loginDescription": "Melde dich an, um deinen Abostatus zu prüfen",
+			"articleTitle": "Du versuchst zuzugreifen auf",
+			"upgradeCTA": "Auf Premium upgraden",
+			"comparePlans": "Pläne vergleichen",
+			"activeSubscription": "Du hast ein aktives {plan}-Abo",
+			"pricing": "Ab {price}/Monat",
+			"benefits": {
+				"unlimited": "Unbegrenzter Zugriff",
+				"unlimitedDesc": "Alle Premium-Artikel und Tutorials lesen",
+				"exclusive": "Exklusive Inhalte",
+				"exclusiveDesc": "Zugang zu Inhalten nur für Mitglieder",
+				"priority": "Priorisierter Support",
+				"priorityDesc": "Schnellere Antwort und Lösung",
+				"resources": "Ressourcen herunterladen",
+				"resourcesDesc": "Zugriff auf Codebeispiele und Tools"
+			}
+		}
 	},
 	"changelog": {
 		"description": "Bleibe über die neuesten Änderungen in unserem Produkt auf dem Laufenden.",
 		"title": "Changelog"
 	},
 	"common": {
+		"cancel": "Abbrechen",
 		"confirmation": {
 			"cancel": "Abbrechen",
 			"confirm": "Bestätigen"
@@ -221,8 +247,33 @@
 		"title": "Kontakt"
 	},
 	"faq": {
-		"description": "Hast du irgendwelche Fragen? \nWir sind für dich da.",
+		"description": "Hast du Fragen? Wir sind für dich da.",
 		"title": "Häufig gestellte Fragen"
+	},
+	"search": {
+		"button": {
+			"label": "Artikel suchen",
+			"text": "Artikel suchen..."
+		},
+		"input": {
+			"placeholder": "Titel, Inhalte, Tags suchen..."
+		},
+		"error": {
+			"failed": "Suche fehlgeschlagen",
+			"unavailable": "Suchdienst ist vorübergehend nicht verfügbar"
+		},
+		"membership": {
+			"premium": "Premium-Mitglied — Vollzugriff auf alle Inhalte",
+			"regular": "Reguläres Mitglied — Zugriff auf öffentliche Inhalte"
+		},
+		"results": {
+			"count": "{count} {count, plural, one {Suchergebnis} other {Suchergebnisse}}"
+		},
+		"shortcuts": {
+			"navigate": "↑↓ Navigieren",
+			"select": "↵ Auswählen",
+			"close": "ESC Schließen"
+		}
 	},
 	"mail": {
 		"common": {
@@ -241,17 +292,17 @@
 			"subject": "Passwort zurücksetzen"
 		},
 		"magicLink": {
-			"body": "Hey,\ndu hast eine Anmelde-E-Mail von Hope.do angefordert.\n\nKlicke auf den unten stehenden Link, um dich anzumelden.",
+			"body": "Hey,\ndu hast eine Anmelde-E-Mail von AIPromoDaily.com angefordert.\n\nKlicke auf den unten stehenden Link, um dich anzumelden.",
 			"login": "Login",
-			"subject": "Login bei Hope.do"
+			"subject": "Login bei AIPromoDaily.com"
 		},
 		"newUser": {
-			"body": "Hallo,\n\nVielen Dank, dass du dich bei Hope.do angemeldet hast.\n\n\nUm mit der Nutzung unserer App zu beginnen, bestätige bitte deine E-Mail-Adresse, indem du auf den untenstehenden Link klickst.",
+			"body": "Hallo,\n\nVielen Dank, dass du dich bei AIPromoDaily.com angemeldet hast.\n\n\nUm mit der Nutzung unserer App zu beginnen, bestätige bitte deine E-Mail-Adresse, indem du auf den untenstehenden Link klickst.",
 			"confirmEmail": "E-Mail bestätigen",
 			"subject": "E-Mail bestätigen"
 		},
 		"newsletterSignup": {
-			"body": "Vielen Dank, dass du dich für den Hope.do-Newsletter angemeldet hast. \nWir halten dich mit den neuesten Nachrichten und Updates auf dem Laufenden.",
+			"body": "Vielen Dank, dass du dich für den AIPromoDaily.com-Newsletter angemeldet hast. \nWir halten dich mit den neuesten Nachrichten und Updates auf dem Laufenden.",
 			"subject": "Willkommen bei unserem Newsletter"
 		},
 		"organizationInvitation": {
@@ -273,7 +324,7 @@
 			}
 		},
 		"submit": "Abonnieren",
-		"subtitle": "Gehöre zu den Ersten, die Zugriff auf Hope.do erhalten.",
+		"subtitle": "Gehöre zu den Ersten, die Zugriff auf AIPromoDaily.com erhalten.",
 		"title": "Erhalte frühen Zugang"
 	},
 	"onboarding": {
@@ -302,8 +353,8 @@
 			"title": "Erstelle eine Organisation"
 		},
 		"invitationAlert": {
-			"description": "Du bist eingeladen worden, einer Organisation beizutreten. Wenn du dich anmeldest oder registrierst, akzeptierst du automatisch die Einladung und trittst der Organisation bei.",
-			"title": "Einladung der Organisation annehmen"
+			"description": "Du musst dich anmelden oder ein Konto erstellen, um der Organisation beizutreten.",
+			"title": "Du wurdest eingeladen, einer Organisation beizutreten."
 		},
 		"invitationModal": {
 			"accept": "Annehmen",
@@ -321,7 +372,7 @@
 			"title": "Deine Organisationen"
 		},
 		"roles": {
-			"admin": "Administration",
+			"admin": "Admin",
 			"member": "Mitglied",
 			"owner": "Eigentümer"
 		},
@@ -443,7 +494,7 @@
 		"contactSales": "Vertrieb kontaktieren",
 		"description": "Wähle das passende Paket für dich aus.",
 		"getStarted": "Jetzt loslegen",
-		"month": "Monat",
+		"month": "{count, plural, one {Monat} other {{count} Monate}}",
 		"monthly": "Monatlich",
 		"products": {
 			"basic": {
@@ -493,7 +544,7 @@
 		"subscribe": "Abonnieren",
 		"title": "Preise",
 		"trialPeriod": "{days} {days, plural, one {Tag} other {Tage}} kostenlose Testphase",
-		"year": "Jahr",
+		"year": "{count, plural, one {Jahr} other {{count} Jahre}}",
 		"yearly": "Jährlich",
 		"perSeat": "Sitz"
 	},

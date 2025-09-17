@@ -11,10 +11,37 @@ export const config = {
 			en: {
 				currency: "USD",
 				label: "English",
+				direction: "ltr",
+			},
+			zh: {
+				currency: "CNY",
+				label: "中文",
+				direction: "ltr",
+			},
+			fr: {
+				currency: "EUR",
+				label: "Français",
+				direction: "ltr",
+			},
+			es: {
+				currency: "EUR",
+				label: "Español",
+				direction: "ltr",
+			},
+			ru: {
+				currency: "RUB",
+				label: "Русский",
+				direction: "ltr",
+			},
+			ar: {
+				currency: "USD",
+				label: "العربية",
+				direction: "rtl",
 			},
 			de: {
-				currency: "USD",
+				currency: "EUR",
 				label: "Deutsch",
+				direction: "ltr",
 			},
 		},
 		// The default locale is used if no locale is provided
@@ -23,6 +50,15 @@ export const config = {
 		defaultCurrency: "USD",
 		// The name of the cookie that is used to determine the locale
 		localeCookieName: "NEXT_LOCALE",
+		// IP-based language detection settings
+		ipDetection: {
+			// Whether IP-based language detection should be enabled (default: false)
+			enabled: false,
+			// Detection delay in milliseconds (default: 1000ms)
+			detectionDelay: 1000,
+			// Whether to show language suggestions on all pages (default: false, only homepage)
+			showOnAllPages: false,
+		},
 	},
 	// Organizations
 	organizations: {
@@ -126,20 +162,20 @@ export const config = {
 						productId: process.env
 							.NEXT_PUBLIC_PRICE_ID_PRO_MONTHLY as string,
 						interval: "month",
-						amount: 29,
+						amount: 1.0,
 						currency: "USD",
-						seatBased: true,
-						trialPeriodDays: 7,
+						seatBased: false,
+						trialPeriodDays: 0,
 					},
 					{
 						type: "recurring",
 						productId: process.env
 							.NEXT_PUBLIC_PRICE_ID_PRO_YEARLY as string,
 						interval: "year",
-						amount: 290,
+						amount: 9,
 						currency: "USD",
-						seatBased: true,
-						trialPeriodDays: 7,
+						seatBased: false,
+						trialPeriodDays: 0,
 					},
 				],
 			},
@@ -149,7 +185,7 @@ export const config = {
 						type: "one-time",
 						productId: process.env
 							.NEXT_PUBLIC_PRICE_ID_LIFETIME as string,
-						amount: 799,
+						amount: 18,
 						currency: "USD",
 					},
 				],

@@ -3,10 +3,6 @@ import { aiChatListQueryKey, aiChatQueryKey } from "@saas/ai/lib/api";
 import { PageHeader } from "@saas/shared/components/PageHeader";
 import { getServerApiClient, getServerQueryClient } from "@shared/lib/server";
 
-// 更新 page.tsx
-import { VoiceChat } from "@saas/ai/components/VoiceChat";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 interface Chat {
   id: string;
   createdAt: string;
@@ -69,45 +65,13 @@ export default async function AiDemoPage() {
     }
   }
 
-//   return (
-//     <>
-//       <PageHeader
-//         title="Caring Assistant"
-//         subtitle="I'm always glad to be here to support you."
-//       />
-//       <AiChat />
-//     </>
-//   );
-
-const currentChatId = chats.length > 0 ? chats[0].id : '';
-
   return (
     <>
       <PageHeader
         title="Caring Assistant"
         subtitle="I'm always glad to be here to support you."
       />
-      
-      <Tabs defaultValue="text" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="text">Text Chat</TabsTrigger>
-          <TabsTrigger value="voice">Voice Chat</TabsTrigger>
-        </TabsList>
-        
-        <TabsContent value="text" className="space-y-4">
-          <AiChat />
-        </TabsContent>
-        
-        <TabsContent value="voice" className="space-y-4">
-          {currentChatId ? (
-            <VoiceChat chatId={currentChatId} />
-          ) : (
-            <div className="text-center p-8">
-              <p className="text-gray-600">Please create a chat first to use voice chat.</p>
-            </div>
-          )}
-        </TabsContent>
-      </Tabs>
+      <AiChat />
     </>
   );
 }

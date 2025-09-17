@@ -67,12 +67,14 @@ export const createCheckoutLink: CreateCheckoutLink = async (options) => {
 					},
 					customer_creation: "always",
 				}
-			: {
-					subscription_data: {
-						metadata,
-						trial_period_days: trialPeriodDays,
-					},
-				}),
+		: {
+				subscription_data: {
+					metadata,
+					...(trialPeriodDays && trialPeriodDays > 0
+						? { trial_period_days: trialPeriodDays }
+						: {}),
+				},
+			}),
 		metadata,
 	});
 
@@ -188,6 +190,7 @@ export const webhookHandler: WebhookHandler = async (req) => {
 					});
 				}
 
+				// Create Purchase record
 				await createPurchase({
 					subscriptionId: id,
 					organizationId: metadata?.organization_id || null,
@@ -198,6 +201,64 @@ export const webhookHandler: WebhookHandler = async (req) => {
 					status: event.data.object.status,
 				});
 
+				// Also create or update UserSubscription for consistency
+				if (metadata?.user_id) {
+					try {
+						const { db } = await import("@repo/database");
+						
+						// Find or create a default subscription plan
+						let plan = await db.subscriptionPlan.findFirst({
+							where: { active: true }
+						});
+						
+						if (!plan) {
+							// Create a default plan if none exists
+							plan = await db.subscriptionPlan.create({
+								data: {
+									name: "Premium Monthly",
+									slug: "premium-monthly",
+									description: "Premium subscription plan",
+									price: 29.99,
+									currency: "USD",
+									interval: "MONTH",
+									features: { access: "premium", downloads: "unlimited" },
+								}
+							});
+						}
+						
+						// Create UserSubscription
+						await db.userSubscription.upsert({
+							where: {
+								userId_planId_status: {
+									userId: metadata.user_id,
+									planId: plan.id,
+									status: "ACTIVE"
+								}
+							},
+							update: {
+								status: "ACTIVE",
+								paymentId: id,
+								paymentMethod: "stripe",
+								amount: plan.price,
+								autoRenew: true,
+							},
+							create: {
+								userId: metadata.user_id,
+								planId: plan.id,
+								status: "ACTIVE",
+								paymentId: id,
+								paymentMethod: "stripe",
+								amount: plan.price,
+								autoRenew: true,
+								startDate: new Date(),
+							}
+						});
+					} catch (error) {
+						logger.error("Failed to create UserSubscription:", error);
+						// Don't fail the webhook if UserSubscription creation fails
+					}
+				}
+
 				await setCustomerIdToEntity(customer as string, {
 					organizationId: metadata?.organization_id,
 					userId: metadata?.user_id,
@@ -207,6 +268,7 @@ export const webhookHandler: WebhookHandler = async (req) => {
 			}
 			case "customer.subscription.updated": {
 				const subscriptionId = event.data.object.id;
+				const { metadata } = event.data.object;
 
 				const existingPurchase =
 					await getPurchaseBySubscriptionId(subscriptionId);
@@ -217,6 +279,34 @@ export const webhookHandler: WebhookHandler = async (req) => {
 						status: event.data.object.status,
 						productId: event.data.object.items?.data[0].price?.id,
 					});
+					
+					// Also update UserSubscription status
+					if (metadata?.user_id || existingPurchase.userId) {
+						try {
+							const { db } = await import("@repo/database");
+							const userId = metadata?.user_id || existingPurchase.userId;
+							
+							if (userId) {
+								// Map Stripe status to our enum
+								const status = event.data.object.status === "active" ? "ACTIVE" : 
+													 event.data.object.status === "canceled" ? "CANCELLED" :
+													 "EXPIRED";
+								
+								await db.userSubscription.updateMany({
+									where: {
+										userId: userId,
+										paymentId: subscriptionId,
+									},
+									data: {
+										status,
+										...(status === "CANCELLED" ? { cancelledAt: new Date() } : {}),
+									}
+								});
+							}
+						} catch (error) {
+							logger.error("Failed to update UserSubscription:", error);
+						}
+					}
 				}
 
 				break;

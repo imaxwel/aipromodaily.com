@@ -1,0 +1,22 @@
+{
+  "name": "markdown-auto-translator",
+  "version": "1.0.0",
+  "description": "Auto-translate markdown files to UN 6 official languages",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "TRANSLATOR_PROVIDER=mock node index.js",
+    "install-deps": "npm install"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "axios": "^1.6.2",
+    "openai": "^4.20.0",
+    "@google-cloud/translate": "^8.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

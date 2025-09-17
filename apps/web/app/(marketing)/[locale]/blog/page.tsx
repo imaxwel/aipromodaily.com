@@ -1,6 +1,5 @@
-import { PostListItem } from "@marketing/blog/components/PostListItem";
-import { getAllPosts } from "@marketing/blog/utils/lib/posts";
-import { getLocale, getTranslations } from "next-intl/server";
+import { BlogListWithPagination } from "@marketing/blog/components/BlogListWithPagination";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata() {
 	const t = await getTranslations();
@@ -9,31 +8,18 @@ export async function generateMetadata() {
 	};
 }
 
-export default async function BlogListPage() {
-	const locale = await getLocale();
-	const t = await getTranslations();
+interface BlogListPageProps {
+	searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
 
-	const posts = await getAllPosts();
+export default async function BlogListPage({ searchParams }: BlogListPageProps) {
+	const params = await searchParams;
 
 	return (
-		<div className="container max-w-6xl pt-32 pb-16">
-			<div className="mb-12 pt-8 text-center">
-				<h1 className="mb-2 font-bold text-5xl">{t("blog.title")}</h1>
-				<p className="text-lg opacity-50">{t("blog.description")}</p>
-			</div>
-
-			<div className="grid gap-8 md:grid-cols-2">
-				{posts
-					.filter((post) => post.published && locale === post.locale)
-					.sort(
-						(a, b) =>
-							new Date(b.date).getTime() -
-							new Date(a.date).getTime(),
-					)
-					.map((post) => (
-						<PostListItem post={post} key={post.path} />
-					))}
-			</div>
-		</div>
+		<BlogListWithPagination 
+			searchParams={params}
+			basePath="/blog"
+			showTitle={true}
+		/>
 	);
 }

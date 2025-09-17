@@ -17,6 +17,8 @@
 		"drizzle-kit": "^0.30.5",
 		"prisma": "^6.6.0",
 		"prisma-json-types-generator": "^3.2.3",
+		"tsx": "^4.19.3",
+		"typescript": "^5.9.2",
 		"zod-prisma-types": "^3.2.4"
 	},
 	"main": "./index.ts",
@@ -26,6 +28,7 @@
 		"push": "dotenv -c -e ../../.env -- prisma db push --skip-generate --schema=./prisma/schema.prisma",
 		"migrate": "dotenv -c -e ../../.env -- prisma migrate dev --schema=./prisma/schema.prisma",
 		"studio": "dotenv -c -e ../../.env -- prisma studio --schema=./prisma/schema.prisma",
+		"seed": "dotenv -c -e ../../.env -- tsx prisma/seed.ts",
 		"type-check": "tsc --noEmit"
 	},
 	"types": "./**/.tsx",

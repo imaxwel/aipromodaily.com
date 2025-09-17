@@ -11,7 +11,7 @@ export function Logo({
     <span
       className={`text-primary flex items-center font-semibold leading-none ${className || ''}`}
     >
-      {withLabel && <span className="text-lg">HOPE.DO</span>}
+      {withLabel && <span className="text-lg">AIPROMODAILY.COM</span>}
     </span>
   );
 }

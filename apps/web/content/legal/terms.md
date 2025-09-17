@@ -6,7 +6,7 @@ title: Terms and conditions
 
 ## 1. Acceptance of Terms
 
-By accessing or using **Hope.do**'s services, you agree to be bound by these **Terms of Service** and all applicable laws and regulations.
+By accessing or using **AIPromoDaily.com**'s services, you agree to be bound by these **Terms of Service** and all applicable laws and regulations.
 
 ## 2. Use of Service
 
@@ -14,7 +14,7 @@ You agree to use our service only for lawful purposes and in accordance with the
 
 ## 3. Intellectual Property
 
-The content, features, and functionality of our service are owned by **Hope.do** and are protected by international copyright, trademark, and other intellectual property laws.
+The content, features, and functionality of our service are owned by **AIPromoDaily.com** and are protected by international copyright, trademark, and other intellectual property laws.
 
 ## 4. Limitation of Liability
 

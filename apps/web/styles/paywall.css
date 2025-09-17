@@ -1,0 +1,149 @@
+/* 付费墙样式优化 */
+
+/* 价格卡片容器 */
+.paywall-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  align-items: stretch;
+}
+
+/* 响应式布局 */
+@media (min-width: 768px) {
+  .paywall-pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 价格卡片基础样式 */
+.paywall-price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px;
+  padding: 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.paywall-price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 推荐卡片样式 */
+.paywall-price-card.recommended {
+  border: 2px solid var(--primary);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.paywall-price-card.recommended:hover {
+  transform: scale(1.08) translateY(-4px);
+}
+
+/* 推荐标签 */
+.paywall-recommended-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 16px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* 价格显示 */
+.paywall-price-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 1rem 0;
+}
+
+.paywall-price-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.paywall-price-period {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+
+/* 功能列表 */
+.paywall-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  flex-grow: 1;
+}
+
+.paywall-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.paywall-feature-check {
+  color: #10b981;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* 按钮对齐 */
+.paywall-select-button {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* 确保所有卡片内容垂直对齐 */
+.paywall-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.paywall-card-header {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.paywall-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* 修复文字对齐 */
+.paywall-main-title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.paywall-subtitle {
+  text-align: center;
+  color: var(--muted-foreground);
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}

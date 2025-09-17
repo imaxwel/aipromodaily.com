@@ -12,6 +12,7 @@ import { cookies } from "next/headers";
 import NextTopLoader from "nextjs-toploader";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import type { PropsWithChildren } from "react";
+import { DirSync } from "@shared/components/DirSync";
 
 export async function Document({
 	children,
@@ -20,9 +21,13 @@ export async function Document({
 	const cookieStore = await cookies();
 	const consentCookie = cookieStore.get("consent");
 
+	const cfg = config.i18n.locales as Record<string, { direction?: "ltr" | "rtl" }>;
+	const dir = cfg?.[locale]?.direction ?? (["ar", "he", "fa", "ur"].includes(locale) ? "rtl" : "ltr");
+
 	return (
 		<html
 			lang={locale}
+			dir={dir}
 			suppressHydrationWarning
 			className={GeistSans.variable}
 		>
@@ -31,6 +36,7 @@ export async function Document({
 					"min-h-screen bg-background text-foreground antialiased",
 				)}
 			>
+				<DirSync locale={locale} />
 				<NuqsAdapter>
 					<ConsentProvider
 						initialConsent={consentCookie?.value === "true"}

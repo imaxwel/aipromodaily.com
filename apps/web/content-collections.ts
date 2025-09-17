@@ -39,6 +39,9 @@ const posts = defineCollection({
 		excerpt: z.string().optional(),
 		tags: z.array(z.string()),
 		published: z.boolean(),
+		// 添加访问级别控制
+		accessLevel: z.enum(["PUBLIC", "REGISTERED", "PREMIUM"]).default("PUBLIC"),
+		previewContent: z.string().optional(), // 付费内容的预览部分
 	}),
 	transform: async (document, context) => {
 		const body = await compileMDX(context, document, {
@@ -52,9 +55,33 @@ const posts = defineCollection({
 			],
 		});
 
+		// 如果有预览内容，也需要编译
+		let compiledPreviewContent = undefined;
+		if (document.previewContent) {
+			const previewDoc = {
+				...document,
+				_meta: {
+					...document._meta,
+					filePath: document._meta.filePath.replace(/\.mdx?$/, '-preview.mdx'),
+				},
+				content: document.previewContent,
+			};
+			compiledPreviewContent = await compileMDX(context, previewDoc, {
+				rehypePlugins: [
+					[
+						rehypeShiki,
+						{
+							theme: "nord",
+						},
+					],
+				],
+			});
+		}
+
 		return {
 			...document,
 			body,
+			previewContent: compiledPreviewContent,
 			locale: getLocaleFromFilePath(document._meta.filePath),
 			path: sanitizePath(document._meta.path),
 		};

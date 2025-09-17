@@ -10,5 +10,14 @@ export async function getUserLocale() {
 }
 
 export async function setLocaleCookie(locale: Locale) {
-	(await cookies()).set(config.i18n.localeCookieName, locale);
+	// 设置cookie，过期时间为1年，确保语言选择被长期记住
+	const cookieOptions = {
+		maxAge: 365 * 24 * 60 * 60, // 1年 (秒)
+		httpOnly: false, // 允许客户端JavaScript访问
+		secure: process.env.NODE_ENV === 'production',
+		sameSite: 'lax' as const,
+		path: '/', // 全站有效
+	};
+	
+	(await cookies()).set(config.i18n.localeCookieName, locale, cookieOptions);
 }

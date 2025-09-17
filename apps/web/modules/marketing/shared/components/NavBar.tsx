@@ -15,6 +15,7 @@ import {
 } from "@ui/components/sheet";
 import { cn } from "@ui/lib";
 import { MenuIcon } from "lucide-react";
+import { useIsRTL } from "@shared/hooks/use-is-rtl";
 import { useTranslations } from "next-intl";
 import NextLink from "next/link";
 import { Suspense, useEffect, useState } from "react";
@@ -26,6 +27,7 @@ export function NavBar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const localePathname = useLocalePathname();
 	const [isTop, setIsTop] = useState(true);
+	const isRTL = useIsRTL();
 
 	const debouncedScrollHandler = useDebounceCallback(
 		() => {
@@ -152,7 +154,7 @@ export function NavBar() {
 									<MenuIcon className="size-4" />
 								</Button>
 							</SheetTrigger>
-							<SheetContent className="w-[280px]" side="right">
+							<SheetContent className="w-[280px]" side={isRTL ? "left" : "right"}>
 								<SheetTitle />
 								<div className="flex flex-col items-start justify-center">
 									{menuItems.map((menuItem) => (

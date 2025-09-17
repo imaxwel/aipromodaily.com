@@ -1,10 +1,16 @@
 export type Config = {
 	i18n: {
 		enabled: boolean;
-		locales: { [locale: string]: { currency: string; label: string } };
+		locales: { [locale: string]: { currency: string; label: string; direction?: "ltr" | "rtl" } };
 		defaultLocale: string;
 		defaultCurrency: string;
 		localeCookieName: string;
+		// IP-based language detection settings
+		ipDetection: {
+			enabled: boolean;
+			detectionDelay?: number; // milliseconds
+			showOnAllPages?: boolean; // if true, show on all pages; if false, only on homepage
+		};
 	};
 	organizations: {
 		enable: boolean;

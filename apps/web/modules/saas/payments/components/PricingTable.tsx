@@ -26,11 +26,13 @@ export function PricingTable({
 	userId,
 	organizationId,
 	activePlanId,
+	hideEnterprise = false,
 }: {
 	className?: string;
 	userId?: string;
 	organizationId?: string;
 	activePlanId?: string;
+	hideEnterprise?: boolean;
 }) {
 	const t = useTranslations();
 	const router = useRouter();
@@ -45,6 +47,17 @@ export function PricingTable({
 	const onSelectPlan = async (planId: PlanId, productId?: string) => {
 		if (!(userId || organizationId)) {
 			router.push("/auth/signup");
+			return;
+		}
+
+		// Check for active subscription
+		if (activePlanId) {
+			const confirmUpgrade = window.confirm(
+				`You currently have an active subscription plan.\n\nSelecting a new plan will replace your current subscription.\n\nDo you want to continue?`
+			);
+			if (!confirmUpgrade) {
+				return;
+			}
 		}
 
 		const plan = plans[planId];
@@ -77,8 +90,10 @@ export function PricingTable({
 	};
 
 	const filteredPlans = Object.entries(plans).filter(
-		([planId]) =>
-			planId !== activePlanId && (!activePlanId || planId !== "free"),
+		([planId, plan]) =>
+			planId !== activePlanId && 
+			(!activePlanId || planId !== "free") &&
+			(!hideEnterprise || !plan.isEnterprise),
 	);
 
 	const hasSubscriptions = filteredPlans.some(([_, plan]) =>
@@ -282,9 +297,25 @@ export function PricingTable({
 												}
 												loading={loading === planId}
 											>
-												{userId || organizationId
-													? t("pricing.choosePlan")
-													: t("pricing.getStarted")}
+												{(() => {
+													if (!userId && !organizationId) {
+														return t("pricing.getStarted");
+													}
+													if (activePlanId) {
+													const activePlan = plans[activePlanId as keyof typeof plans];
+													const currentPrice = activePlan?.prices?.find(p => !p.hidden);
+													if (currentPrice && price) {
+														if (price.amount > currentPrice.amount) {
+															return "Upgrade Plan";
+														} else if (price.amount < currentPrice.amount) {
+															return "Downgrade Plan";
+														} else {
+															return "Switch Plan";
+														}
+													}
+													}
+													return t("pricing.choosePlan");
+												})()}
 												<ArrowRightIcon className="ml-2 size-4" />
 											</Button>
 										)}

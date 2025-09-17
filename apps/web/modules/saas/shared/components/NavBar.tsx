@@ -4,6 +4,8 @@ import { useSession } from "@saas/auth/hooks/use-session";
 import { useActiveOrganization } from "@saas/organizations/hooks/use-active-organization";
 import { UserMenu } from "@saas/shared/components/UserMenu";
 import { Logo } from "@shared/components/Logo";
+import { LocaleSwitch } from "@shared/components/LocaleSwitch";
+import { ColorModeToggle } from "@shared/components/ColorModeToggle";
 import { cn } from "@ui/lib";
 import {
 	BotMessageSquareIcon,
@@ -37,14 +39,15 @@ export function NavBar() {
 			icon: HomeIcon,
 			isActive: pathname === basePath,
 		},
-		{
-			label: t("app.menu.aiChatbot"),
-			href: activeOrganization
-				? `/app/${activeOrganization.slug}/chatbot`
-				: "/app/chatbot",
-			icon: BotMessageSquareIcon,
-			isActive: pathname.includes("/chatbot"),
-		},
+		// Hidden: Caring Assistant (AI Chatbot)
+		// {
+		// 	label: t("app.menu.aiChatbot"),
+		// 	href: activeOrganization
+		// 		? `/app/${activeOrganization.slug}/chatbot`
+		// 		: "/app/chatbot",
+		// 	icon: BotMessageSquareIcon,
+		// 	isActive: pathname.includes("/chatbot"),
+		// },
 		...(activeOrganization
 			? [
 					{
@@ -130,6 +133,8 @@ export function NavBar() {
 							},
 						)}
 					>
+						<ColorModeToggle />
+						{config.i18n.enabled && <LocaleSwitch withLocaleInUrl={false} />}
 						<UserMenu />
 					</div>
 				</div>
@@ -181,6 +186,10 @@ export function NavBar() {
 						},
 					)}
 				>
+					<div className="flex items-center gap-2 mb-3">
+						<ColorModeToggle />
+						{config.i18n.enabled && <LocaleSwitch withLocaleInUrl={false} />}
+					</div>
 					<UserMenu showUserName />
 				</div>
 			</div>

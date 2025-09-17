@@ -1,5 +1,7 @@
+"use client";
 import { Button } from "@ui/components/button";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { useIsRTL } from "@shared/hooks/use-is-rtl";
 
 export type PaginatioProps = {
 	className?: string;
@@ -17,6 +19,7 @@ const Pagination = ({
 	onChangeCurrentPage,
 }: PaginatioProps) => {
 	const numberOfPages = Math.ceil(totalItems / itemsPerPage);
+	const isRTL = useIsRTL();
 
 	return (
 		<div className={className}>
@@ -27,7 +30,7 @@ const Pagination = ({
 					disabled={currentPage === 1}
 					onClick={() => onChangeCurrentPage(currentPage - 1)}
 				>
-					<ChevronLeftIcon />
+					{isRTL ? <ChevronRightIcon /> : <ChevronLeftIcon />}
 				</Button>
 				<span className="text-gray-500 text-sm">
 					{currentPage * itemsPerPage - itemsPerPage + 1} -{" "}
@@ -42,7 +45,7 @@ const Pagination = ({
 					disabled={currentPage === numberOfPages}
 					onClick={() => onChangeCurrentPage(currentPage + 1)}
 				>
-					<ChevronRightIcon />
+					{isRTL ? <ChevronLeftIcon /> : <ChevronRightIcon />}
 				</Button>
 			</div>
 		</div>

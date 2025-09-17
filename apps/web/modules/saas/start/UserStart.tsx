@@ -2,10 +2,17 @@
 import { config } from "@repo/config";
 import { useSession } from "@saas/auth/hooks/use-session";
 import { OrganizationsGrid } from "@saas/organizations/components/OrganizationsGrid";
-import { Card } from "@ui/components/card";
+import { ActivePlan } from "@saas/payments/components/ActivePlan";
+import { ChangePlan } from "@saas/payments/components/ChangePlan";
 import { useTranslations } from "next-intl";
 
-export default function UserStart() {
+export default function UserStart({
+	userId,
+	activePlanId,
+}: {
+	userId?: string;
+	activePlanId?: string;
+}) {
 	const t = useTranslations();
 	const { user } = useSession();
 
@@ -13,11 +20,14 @@ export default function UserStart() {
 		<div>
 			{config.organizations.enable && <OrganizationsGrid />}
 
-			<Card className="mt-6">
-				<div className="flex h-64 items-center justify-center p-8 text-foreground/60">
-					Place your content here...
-				</div>
-			</Card>
+			<div className="mt-6">
+				<ActivePlan />
+				<ChangePlan 
+					userId={userId || user?.id} 
+					activePlanId={activePlanId}
+					hideEnterprise={true}
+				/>
+			</div>
 		</div>
 	);
 }

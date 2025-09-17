@@ -7,10 +7,12 @@ export function ChangePlan({
 	organizationId,
 	userId,
 	activePlanId,
+	hideEnterprise = false,
 }: {
 	organizationId?: string;
 	userId?: string;
 	activePlanId?: string;
+	hideEnterprise?: boolean;
 }) {
 	const t = useTranslations();
 
@@ -23,6 +25,7 @@ export function ChangePlan({
 				organizationId={organizationId}
 				userId={userId}
 				activePlanId={activePlanId}
+				hideEnterprise={hideEnterprise}
 			/>
 		</SettingsItem>
 	);

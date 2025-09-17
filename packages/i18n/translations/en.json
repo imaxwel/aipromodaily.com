@@ -179,15 +179,41 @@
 		}
 	},
 	"blog": {
-		"description": "Read the latest news from our company",
-		"title": "My awesome blog",
-		"back": "Back to blog"
+		"description": "Daily updates on AI tools and services: invitation and registration codes, student promo codes, discounts, and exclusive offers worldwide.",
+		"title": "AI Promo Daily",
+		"back": "Back to blog",
+		"loginRequired": {
+			"title": "Sign in to continue reading",
+			"description": "This content requires authentication. Please sign in or create an account to continue."
+		},
+		"premium": {
+			"badge": "Premium Content",
+			"title": "Unlock Premium Content",
+			"loginTitle": "Premium Members Only",
+			"loginDescription": "Sign in to check your membership status",
+			"articleTitle": "You're trying to access",
+			"upgradeCTA": "Upgrade to Premium",
+			"comparePlans": "Compare Plans",
+			"activeSubscription": "You have an active {plan} subscription",
+			"pricing": "Starting at {price}/month",
+			"benefits": {
+				"unlimited": "Unlimited Access",
+				"unlimitedDesc": "Read all premium articles and tutorials",
+				"exclusive": "Exclusive Content",
+				"exclusiveDesc": "Get access to members-only resources",
+				"priority": "Priority Support",
+				"priorityDesc": "Get faster response and resolution",
+				"resources": "Download Resources",
+				"resourcesDesc": "Access code samples and tools"
+			}
+		}
 	},
 	"changelog": {
 		"description": "Stay up to date with the latest changes in our product.",
 		"title": "Changelog"
 	},
 	"common": {
+		"cancel": "Cancel",
 		"confirmation": {
 			"cancel": "Cancel",
 			"confirm": "Confirm"
@@ -244,17 +270,17 @@
 			"subject": "Reset your password"
 		},
 		"magicLink": {
-			"body": "Hey,\nyou requested a login email from Hope.do.\n\nClick the link below to login.",
+			"body": "Hey,\nyou requested a login email from AIPromoDaily.com.\n\nClick the link below to login.",
 			"login": "Login",
-			"subject": "Login to Hope.do"
+			"subject": "Login to AIPromoDaily.com"
 		},
 		"newUser": {
-			"body": "Hey,\nthanks for signing up for Hope.do.\n\nTo start using our app, please confirm your email address by clicking the link below.",
+			"body": "Hey,\nthanks for signing up for AIPromoDaily.com.\n\nTo start using our app, please confirm your email address by clicking the link below.",
 			"confirmEmail": "Confirm email",
 			"subject": "Confirm your email"
 		},
 		"newsletterSignup": {
-			"body": "Thank you for signing up for the Hope.do newsletter. We will keep you updated with the latest news and updates.",
+			"body": "Thank you for signing up for the AIPromoDaily.com newsletter. We will keep you updated with the latest news and updates.",
 			"subject": "Welcome to our newsletter"
 		},
 		"organizationInvitation": {
@@ -276,7 +302,7 @@
 			}
 		},
 		"submit": "Subscribe",
-		"subtitle": "Be among the first to get access to Hope.do new features.",
+		"subtitle": "Be among the first to get access to AIPromoDaily.com new features.",
 		"title": "Get early access"
 	},
 	"onboarding": {
@@ -439,6 +465,31 @@
 		},
 		"start": {
 			"subtitle": "Welcome to the start page of this organization!"
+		}
+	},
+	"search": {
+		"button": {
+			"label": "Search articles",
+			"text": "Search articles..."
+		},
+		"input": {
+			"placeholder": "Search article titles, content, tags..."
+		},
+		"error": {
+			"failed": "Search failed",
+			"unavailable": "Search service is temporarily unavailable"
+		},
+		"membership": {
+			"premium": "Premium Member - Full access to all content",
+			"regular": "Regular Member - Access to public content"
+		},
+		"results": {
+			"count": "{count} search {count, plural, one {result} other {results}}"
+		},
+		"shortcuts": {
+			"navigate": "↑↓ Navigate",
+			"select": "↵ Select",
+			"close": "ESC Close"
 		}
 	},
 	"pricing": {

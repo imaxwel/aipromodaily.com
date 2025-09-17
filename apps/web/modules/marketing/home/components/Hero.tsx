@@ -24,11 +24,11 @@ export function Hero() {
 				</div>
 
 				<h1 className="mx-auto max-w-3xl text-balance font-bold text-3xl lg:text-7xl">
-					Feeling lost? Chat your way back at  <span className="text-primary"> HOPE.DO</span>
+					Feeling lost? Chat your way back at  <span className="text-primary"> AIPROMODAILY.COM</span>
 				</h1>
 
 				{/* <p className="mx-auto mt-4 max-w-lg text-balance text-foreground/60 text-lg">
-					This is a demo application built with supastarter. It will
+					This is a demo application built with passion! It will
 					save you a lot of time and effort building your next SaaS.
 				</p> */}
 
@@ -50,7 +50,7 @@ export function Hero() {
 					</h5>
 
 					<div className="mt-4 flex flex-col-reverse items-center justify-center gap-4 text-foreground/50 md:flex-row md:gap-8">
-						<a href="https://hope.do">
+						<a href="https://aipromodaily.com">
 							<svg
 								viewBox="0 0 631 236"
 								className="h-8"

@@ -264,6 +264,11 @@ export const aiRouter = new Hono()
 			const { messages } = c.req.valid("json");
 			const user = c.get("user");
 
+			// console.log('Processing chat:', id);
+			// console.log('Messages count:', messages.length);
+			// console.log('User ID:', user.id);
+
+
 			const chat = await getAiChatById(id);
 
 			if (!chat) {
@@ -279,8 +284,10 @@ export const aiRouter = new Hono()
 				throw new HTTPException(403, { message: "Forbidden" });
 			}
 
+			// console.log('maxwell textModel config:', textModel);
 			const response = streamText({
 				model: textModel,
+// 在这里添加系统提示词
 				system: `
 				You are to take on the role of Dr. Hope, a Clinical Psychologist with over 10 years of experience. Dr. Hope is known for his warm therapeutic approach and his passion for helping people work towards their individual goals. He has extensive experience in various mental health settings and locations, including forensic settings, public mental health, community, and private practice. Dr. Hope is also a lecturer in psychology and an active researcher.
 
@@ -391,99 +398,63 @@ Here is the user's message to respond to:
 			});
 		},
 	)
-	// 添加语音聊天的 WebSocket 端点
-	.get(
-		"/chats/:id/voice-ws",
-		describeRoute({
-			tags: ["AI"],
-			summary: "Voice chat WebSocket",
-			description: "WebSocket endpoint for voice chat with Gemini Live API",
-			responses: {
-				101: {
-					description: "WebSocket connection established",
-				},
-			},
-		}),
-		async (c) => {
-			const { id } = c.req.param();
-			const user = c.get("user");
-
-			// 验证聊天权限
-			const chat = await getAiChatById(id);
-			if (!chat) {
-				throw new HTTPException(404, { message: "Chat not found" });
-			}
-
-			if (chat.organizationId) {
-				await verifyOrganizationMembership(chat.organizationId, user.id);
-			} else if (chat.userId !== c.get("user").id) {
-				throw new HTTPException(403, { message: "Forbidden" });
-			}
-
-			// 检查是否为 WebSocket 升级请求
-			const upgrade = c.req.header("upgrade");
-			if (upgrade !== "websocket") {
-				throw new HTTPException(400, { message: "Expected WebSocket upgrade" });
-			}
-
-			// 返回 WebSocket 升级响应
-			return new Response(null, {
-				status: 101,
-				headers: {
-					"Upgrade": "websocket",
-					"Connection": "Upgrade",
-					"Sec-WebSocket-Accept": c.req.header("sec-websocket-key") || "",
-				},
-			});
-		},
-	)
-	// 添加语音聊天初始化端点
-	.post(
-		"/chats/:id/voice",
-		describeRoute({
-			tags: ["AI"],
-			summary: "Initialize voice chat",
-			description: "Initialize voice chat session for WebSocket connection",
-			responses: {
-				200: {
-					description: "Voice chat session initialized",
-					content: {
-						"application/json": {
-							schema: resolver(
-								z.object({ 
-									wsUrl: z.string(),
-									chatId: z.string() 
-								}),
-							),
-						},
-					},
-				},
-			},
-		}),
-		async (c) => {
-			const { id } = c.req.param();
-			const user = c.get("user");
-
-			// 验证聊天权限
-			const chat = await getAiChatById(id);
-			if (!chat) {
-				throw new HTTPException(404, { message: "Chat not found" });
-			}
-
-			if (chat.organizationId) {
-				await verifyOrganizationMembership(chat.organizationId, user.id);
-			} else if (chat.userId !== c.get("user").id) {
-				throw new HTTPException(403, { message: "Forbidden" });
-			}
-
-			// 构建 WebSocket URL
-			const protocol = c.req.header("x-forwarded-proto") === "https" ? "wss:" : "ws:";
-			const host = c.req.header("host");
-			const wsUrl = `${protocol}//${host}/api/ai/chats/${id}/voice-ws`;
-
-			return c.json({ 
-				wsUrl,
-				chatId: id 
-			});
-		},
-	);
+	// // 添加测试端点在这里
+	// .get(
+	// 	"/test-claude",
+	// 	describeRoute({
+	// 		tags: ["AI"],
+	// 		summary: "Test Claude API",
+	// 		description: "Test connection to Claude API",
+	// 		responses: {
+	// 			200: {
+	// 				description: "Claude API test result",
+	// 				content: {
+	// 					"application/json": {
+	// 						schema: resolver(
+	// 							z.object({ 
+	// 								status: z.string(),
+	// 								message: z.string().optional()
+	// 							}),
+	// 						),
+	// 					},
+	// 				},
+	// 			},
+	// 		},
+	// 	}),
+	// 	async (c) => {
+	// 		try {
+	// 			console.log('Testing Claude API connection...');
+				
+	// 			const response = await streamText({
+	// 				model: textModel,
+	// 				messages: [{ role: "user", content: "Hello, can you respond with just 'OK'?" }],
+	// 				maxTokens: 10,
+	// 			});
+				
+	// 			// 读取流式响应的第一部分来验证
+	// 			const stream = response.textStream;
+	// 			const reader = stream.getReader();
+	// 			const { value } = await reader.read();
+	// 			reader.releaseLock();
+				
+	// 			console.log('Claude API test successful, response:', value);
+				
+	// 			return c.json({ 
+	// 				status: "success", 
+	// 				message: "Claude API working properly" 
+	// 			});
+	// 		} catch (error) {
+	// 			console.error('Claude test failed:', error);
+				
+	// 			// 类型安全的错误处理
+	// 			const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+				
+	// 			return c.json({ 
+	// 				status: "error",
+	// 				message: "Claude API connection failed",
+	// 				details: errorMessage 
+	// 			}, 500);
+	// 		}
+	// 	}
+	// )
+	;

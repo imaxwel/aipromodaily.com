@@ -19,12 +19,19 @@ export function CustomerPortalButton({ purchaseId }: { purchaseId: string }) {
 				});
 
 			window.location.href = customerPortalLink;
-		} catch {
-			toast.error(
-				t(
-					"settings.billing.createCustomerPortal.notifications.error.title",
-				),
-			);
+		} catch (error: any) {
+			// Check if this is a Stripe configuration error
+			if (error?.message?.includes("customer portal") || error?.message?.includes("configuration")) {
+				toast.error(
+					"Stripe Customer Portal is not configured. Please contact support or configure it in your Stripe Dashboard.",
+				);
+			} else {
+				toast.error(
+					t(
+						"settings.billing.createCustomerPortal.notifications.error.title",
+					),
+				);
+			}
 		}
 	};
 

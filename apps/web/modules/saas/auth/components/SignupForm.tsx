@@ -60,7 +60,9 @@ export function SignupForm({ prefillEmail }: { prefillEmail?: string }) {
 
 	const form = useForm<FormValues>({
 		resolver: zodResolver(formSchema, {
+			path: [],
 			errorMap: zodErrorMap,
+			async: false,
 		}),
 		values: {
 			name: "",

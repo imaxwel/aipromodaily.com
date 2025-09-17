@@ -43,6 +43,13 @@ model User {
   purchases          Purchase[]
   memberships        Member[]
   aiChats            AiChat[]
+  
+  // 添加订阅相关
+  subscriptions      UserSubscription[]
+  blogPosts          BlogPost[]
+  
+  // 添加用户等级
+  membershipLevel    MembershipLevel @default(FREE)
 
   @@unique([email])
   @@unique([username])
@@ -199,4 +206,146 @@ model AiChat {
   updatedAt      DateTime      @updatedAt
 
   @@map("ai_chat")
+}
+
+// ==================== 博客订阅系统模型 ====================
+
+// 博客文章模型
+model BlogPost {
+  id            String          @id @default(cuid())
+  slug          String          @unique
+  title         String
+  excerpt       String?
+  content       String          @db.Text
+  image         String?
+  authorId      String
+  author        User            @relation(fields: [authorId], references: [id])
+  
+  // 权限控制字段
+  accessLevel   AccessLevel     @default(PUBLIC)
+  
+  // 付费内容预览
+  previewContent String?         @db.Text // 付费内容的预览部分
+  
+  // 元数据
+  tags          String[]
+  published     Boolean         @default(false)
+  publishedAt   DateTime?
+  viewCount     Int             @default(0)
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  
+  // 关联
+  categories    BlogCategory[]
+  
+  @@index([slug])
+  @@index([authorId])
+  @@index([accessLevel])
+  @@index([published, publishedAt])
+  @@map("blog_post")
+}
+
+// 访问级别枚举
+enum AccessLevel {
+  PUBLIC      // 公开
+  REGISTERED  // 注册用户
+  PREMIUM     // 付费订阅
+}
+
+// 订阅计划模型
+model SubscriptionPlan {
+  id            String          @id @default(cuid())
+  name          String          // 计划名称：月度、年度、终身
+  slug          String          @unique
+  description   String?
+  
+  // 价格信息
+  price         Decimal         @db.Decimal(10, 2)
+  currency      String          @default("CNY")
+  
+  // 计划类型
+  interval      PlanInterval    // MONTH, YEAR, LIFETIME
+  intervalCount Int             @default(1)
+  
+  // 功能权限
+  features      Json            // 存储计划包含的功能列表
+  
+  active        Boolean         @default(true)
+  
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  
+  // 关联
+  subscriptions UserSubscription[]
+  
+  @@map("subscription_plan")
+}
+
+enum PlanInterval {
+  MONTH
+  YEAR
+  LIFETIME
+}
+
+// 用户订阅模型
+model UserSubscription {
+  id               String           @id @default(cuid())
+  userId           String
+  user             User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  planId           String
+  plan             SubscriptionPlan @relation(fields: [planId], references: [id])
+  
+  // 订阅状态
+  status           SubscriptionStatus
+  
+  // 时间管理
+  startDate        DateTime         @default(now())
+  endDate          DateTime?        // null表示终身
+  cancelledAt      DateTime?
+  
+  // 支付信息
+  paymentId        String?          // 外部支付系统ID
+  paymentMethod    String?          // 支付方式
+  amount           Decimal          @db.Decimal(10, 2)
+  
+  // 自动续费
+  autoRenew        Boolean          @default(true)
+  nextBillingDate  DateTime?
+  
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+  
+  @@unique([userId, planId, status])
+  @@index([userId])
+  @@index([status])
+  @@index([endDate])
+  @@map("user_subscription")
+}
+
+enum SubscriptionStatus {
+  ACTIVE      // 活跃
+  EXPIRED     // 已过期
+  CANCELLED   // 已取消
+  PENDING     // 待支付
+  TRIAL       // 试用期
+}
+
+// 博客分类
+model BlogCategory {
+  id          String      @id @default(cuid())
+  name        String
+  slug        String      @unique
+  description String?
+  posts       BlogPost[]
+  
+  @@map("blog_category")
+}
+
+enum MembershipLevel {
+  FREE
+  BASIC
+  PREMIUM
+  LIFETIME
 }

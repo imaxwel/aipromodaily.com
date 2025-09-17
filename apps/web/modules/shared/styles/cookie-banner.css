@@ -1,0 +1,186 @@
+/* Cookie Banner Animations and Styles */
+
+/* Slide up animation for banner appearance */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Cookie banner specific styles */
+.cookie-banner {
+  /* Ensure high contrast for accessibility */
+  --banner-bg: hsl(var(--card));
+  --banner-border: hsl(var(--border));
+  --banner-text: hsl(var(--card-foreground));
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .cookie-banner {
+    --banner-bg: hsl(var(--card));
+    --banner-border: hsl(var(--border) / 0.5);
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 640px) {
+  .cookie-banner-content {
+    padding: 1rem;
+  }
+  
+  .cookie-banner-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .cookie-banner-actions button {
+    width: 100%;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .cookie-banner-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Accessibility improvements */
+.cookie-banner:focus-within {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+.cookie-banner button:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.1);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .cookie-banner {
+    border-width: 2px;
+  }
+  
+  .cookie-banner button {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up {
+    animation: none;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .cookie-banner button {
+    transition: none;
+  }
+}
+
+/* Cookie category icons styling */
+.cookie-category-icon {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.cookie-category-necessary { color: #16a34a; }
+.cookie-category-functional { color: #2563eb; }
+.cookie-category-analytics { color: #9333ea; }
+.cookie-category-marketing { color: #ea580c; }
+
+/* Checkbox custom styling for better visibility */
+.cookie-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  accent-color: hsl(var(--primary));
+}
+
+.cookie-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Banner backdrop blur for better readability */
+.cookie-banner-backdrop {
+  backdrop-filter: blur(8px);
+  background-color: hsl(var(--background) / 0.8);
+}
+
+/* Smooth transitions for interactive elements */
+.cookie-banner button,
+.cookie-banner a,
+.cookie-checkbox {
+  transition: all 0.2s ease;
+}
+
+/* Hover states for better UX */
+.cookie-banner button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.15);
+}
+
+.cookie-banner a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Print styles - hide banner when printing */
+@media print {
+  .cookie-banner {
+    display: none !important;
+  }
+}
+
+/* Loading state for async operations */
+.cookie-banner-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.cookie-banner-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid hsl(var(--primary) / 0.2);
+  border-top-color: hsl(var(--primary));
+  border-radius: 50%;
+  animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+/* Ensure proper stacking context */
+.cookie-banner-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.cookie-banner-container > * {
+  pointer-events: auto;
+}

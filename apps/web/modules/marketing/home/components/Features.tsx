@@ -114,7 +114,7 @@ import secuImage from "../../../../public/images/secu.svg";export const featureT
 		icon: HeartHandshakeIcon,
 		subtitle: "More than problem-solving - accompanying you to rediscover hope in life",
 		description:
-			"Hope.do provides not only psychological counseling but also warm companionship on your emotional growth journey. We help you find hope in despair and discover the strength to grow through difficulties.",
+			"AIPromoDaily.com provides not only psychological counseling but also warm companionship on your emotional growth journey. We help you find hope in despair and discover the strength to grow through difficulties.",
 		stack: [],
 		image: secuImage,
 		imageBorder: false,
@@ -151,7 +151,7 @@ export function Features() {
 						Professional Mental Health Support, Reigniting Hope in Life
 					</h2>
 					<p className="mt-6 text-balance text-lg opacity-50">
-						When feeling lost, chat your way back at HOPE.DO. Our AI counselors are available 24/7 to help you overcome challenges and rediscover meaning in life.
+						When feeling lost, chat your way back at AIPROMODAILY.COM. Our AI counselors are available 24/7 to help you overcome challenges and rediscover meaning in life.
 					</p>
 				</div>
 

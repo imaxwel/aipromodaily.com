@@ -5,6 +5,7 @@ import { getBaseUrl } from "@repo/utils";
 import { getActivePathFromUrlParam } from "@shared/lib/content";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import { ContentGate } from "../../../../../components/blog/ContentGate";
 
 type Params = {
 	path: string;
@@ -50,7 +51,7 @@ export default async function BlogPostPage(props: { params: Promise<Params> }) {
 		return localeRedirect({ href: "/blog", locale });
 	}
 
-	const { title, date, authorName, authorImage, tags, image, body } = post;
+	const { title, date, authorName, authorImage, tags, image, body, accessLevel = "PUBLIC", previewContent } = post;
 
 	return (
 		<div className="container max-w-6xl pt-32 pb-24">
@@ -120,9 +121,22 @@ export default async function BlogPostPage(props: { params: Promise<Params> }) {
 				</div>
 			)}
 
-			<div className="pb-8">
-				<PostContent content={body} />
-			</div>
+			{/* 内容权限控制 */}
+			<ContentGate
+				accessLevel={accessLevel}
+				previewContent={
+					previewContent && (
+						<div className="pb-8">
+							<PostContent content={previewContent} />
+						</div>
+					)
+				}
+				postTitle={title}
+			>
+				<div className="pb-8">
+					<PostContent content={body} />
+				</div>
+			</ContentGate>
 		</div>
 	);
 }
