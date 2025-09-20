@@ -11,7 +11,10 @@ import { config } from "../../config";
 
 function sanitizePath(path: string) {
 	return path
-		.replace(/(\.[a-zA-Z-]{2,5})$/, "")
+		// Remove ".<locale>.<ext>" like ".ru.mdx" or ".ja.mdx"
+		.replace(/\.[a-zA-Z-]{2,5}\.(md|mdx|json)$/i, "")
+		// Fallback: remove plain extension like ".mdx" or ".md" or ".json"
+		.replace(/\.(md|mdx|json)$/i, "")
 		.replace(/^\//, "")
 		.replace(/\/$/, "")
 		.replace(/index$/, "");
