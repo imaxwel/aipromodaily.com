@@ -8,7 +8,7 @@ test.describe("home page", () => {
 
 			await expect(
 				page.getByRole("heading", {
-					name: "Feeling lost? Chat your way back at AIPROMODAILY.COM",
+					name: /Feeling lost\? Chat your way back at/,
 				}),
 			).toBeVisible();
 		});

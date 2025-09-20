@@ -90,7 +90,7 @@ export class IpGeolocationService {
 				`http://ip-api.com/json/${ip}?fields=status,country,countryCode,region,regionName,city,timezone,query`,
 				{
 					headers: {
-						'User-Agent': 'aipromodaily.com-Geolocation/1.0',
+						'User-Agent': `${process.env.SITE_DOMAIN_NAME}-Geolocation/1.0`,
 					},
 					next: { revalidate: 3600 }, // 缓存1小时
 				}

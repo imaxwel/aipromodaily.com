@@ -5,9 +5,9 @@ import "cropperjs/dist/cropper.css";
 
 export const metadata: Metadata = {
 	title: {
-		absolute: "aipromodaily.com - Application",
-		default: "aipromodaily.com- Application",
-		template: "%s | aipromodaily.com - Application",
+		absolute: `${process.env.SITE_DOMAIN_NAME} - Application`,
+		default: `${process.env.SITE_DOMAIN_NAME} - Application`,
+		template: `%s | ${process.env.SITE_DOMAIN_NAME} - Application`,
 	},
 };
 

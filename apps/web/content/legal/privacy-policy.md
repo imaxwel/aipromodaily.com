@@ -5,7 +5,7 @@ title: Privacy Policy
 
 ## 1. Introduction
 
-Welcome to **aipromodaily.com**. We are committed to protecting your personal information and your right to privacy. This Privacy Policy outlines how we collect, use, share, and safeguard your information when you use our website and services.
+Welcome to our website. We are committed to protecting your personal information and your right to privacy. This Privacy Policy outlines how we collect, use, share, and safeguard your information when you use our website and services.
 
 ## 2. Information We Collect
 

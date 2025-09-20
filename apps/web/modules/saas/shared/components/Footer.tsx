@@ -9,7 +9,7 @@ export function Footer() {
 			)}
 		>
 			<span>
-				<a href="https://aipromodaily.com">Built with passion!</a>
+				<a href={`https://${process.env.SITE_DOMAIN_NAME}`}>Built with passion!</a>
 			</span>
 			<span className="opacity-50"> | </span>
 			<LocaleLink href="/legal/privacy-policy">Privacy policy</LocaleLink>

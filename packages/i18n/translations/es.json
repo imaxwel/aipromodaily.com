@@ -270,17 +270,17 @@
 			"subject": "Restablece tu contraseña"
 		},
 		"magicLink": {
-			"body": "Hola,\nsolicitaste un correo de inicio de sesión de aipromodaily.com.\n\nHaz clic en el enlace de abajo para iniciar sesión.",
+			"body": "Hola,\nsolicitaste un correo de inicio de sesión de {{domain}}.\n\nHaz clic en el enlace de abajo para iniciar sesión.",
 			"login": "Iniciar sesión",
-			"subject": "Inicia sesión en aipromodaily.com"
+			"subject": "Inicia sesión en {{domain}}"
 		},
 		"newUser": {
-			"body": "Hola,\ngracias por registrarte en aipromodaily.com.\n\nPara empezar a usar la app, confirma tu correo haciendo clic en el enlace de abajo.",
+			"body": "Hola,\ngracias por registrarte en {{domain}}.\n\nPara empezar a usar la app, confirma tu correo haciendo clic en el enlace de abajo.",
 			"confirmEmail": "Confirmar correo",
 			"subject": "Confirma tu correo"
 		},
 		"newsletterSignup": {
-			"body": "Gracias por suscribirte al boletín de aipromodaily.com. Te mantendremos al tanto de las últimas novedades y actualizaciones.",
+			"body": "Gracias por suscribirte al boletín de {{domain}}. Te mantendremos al tanto de las últimas novedades y actualizaciones.",
 			"subject": "Bienvenido a nuestro boletín"
 		},
 		"organizationInvitation": {
@@ -302,7 +302,7 @@
 			}
 		},
 		"submit": "Suscribirse",
-		"subtitle": "Sé de los primeros en acceder a las nuevas funciones de aipromodaily.com.",
+		"subtitle": "Sé de los primeros en acceder a las nuevas funciones de {{domain}}.",
 		"title": "Obtén acceso anticipado"
 	},
 	"onboarding": {

@@ -270,17 +270,17 @@
 			"subject": "重置您的密码"
 		},
 		"magicLink": {
-			"body": "您好，\n您请求从 aipromodaily.com 接收一封登录邮件。\n\n请点击下方链接登录。",
+			"body": "您好，\n您请求从 {{domain}} 接收一封登录邮件。\n\n请点击下方链接登录。",
 			"login": "登录",
-			"subject": "登录 aipromodaily.com"
+			"subject": "登录 {{domain}}"
 		},
 		"newUser": {
-			"body": "您好，\n感谢您注册 aipromodaily.com。\n\n要开始使用我们的应用，请点击下方链接确认您的邮箱地址。",
+			"body": "您好，\n感谢您注册 {{domain}}。\n\n要开始使用我们的应用，请点击下方链接确认您的邮箱地址。",
 			"confirmEmail": "确认邮箱",
 			"subject": "确认您的邮箱"
 		},
 		"newsletterSignup": {
-			"body": "感谢您订阅 aipromodaily.com 的新闻邮件。我们会为您推送最新资讯和更新。",
+			"body": "感谢您订阅 {{domain}} 的新闻邮件。我们会为您推送最新资讯和更新。",
 			"subject": "欢迎订阅我们的新闻邮件"
 		},
 		"organizationInvitation": {
@@ -302,7 +302,7 @@
 			}
 		},
 		"submit": "订阅",
-		"subtitle": "抢先体验 aipromodaily.com 的新功能。",
+		"subtitle": "抢先体验 {{domain}} 的新功能。",
 		"title": "抢先获取"
 	},
 	"onboarding": {

@@ -270,17 +270,17 @@
 			"subject": "Réinitialisez votre mot de passe"
 		},
 		"magicLink": {
-			"body": "Bonjour,\nvous avez demandé un e-mail de connexion de aipromodaily.com.\n\nCliquez sur le lien ci-dessous pour vous connecter.",
+			"body": "Bonjour,\nvous avez demandé un e-mail de connexion de {{domain}}.\n\nCliquez sur le lien ci-dessous pour vous connecter.",
 			"login": "Se connecter",
-			"subject": "Connexion à aipromodaily.com"
+			"subject": "Connexion à {{domain}}"
 		},
 		"newUser": {
-			"body": "Bonjour,\nmerci de vous être inscrit sur aipromodaily.com.\n\nPour commencer à utiliser notre application, veuillez confirmer votre adresse e-mail en cliquant sur le lien ci-dessous.",
+			"body": "Bonjour,\nmerci de vous être inscrit sur {{domain}}.\n\nPour commencer à utiliser notre application, veuillez confirmer votre adresse e-mail en cliquant sur le lien ci-dessous.",
 			"confirmEmail": "Confirmer l'e-mail",
 			"subject": "Confirmez votre e-mail"
 		},
 		"newsletterSignup": {
-			"body": "Merci de vous être inscrit à la newsletter aipromodaily.com. Nous vous tiendrons informé des dernières nouvelles et mises à jour.",
+			"body": "Merci de vous être inscrit à la newsletter {{domain}}. Nous vous tiendrons informé des dernières nouvelles et mises à jour.",
 			"subject": "Bienvenue dans notre newsletter"
 		},
 		"organizationInvitation": {
@@ -302,7 +302,7 @@
 			}
 		},
 		"submit": "S'abonner",
-		"subtitle": "Soyez parmi les premiers à accéder aux nouvelles fonctionnalités de aipromodaily.com.",
+		"subtitle": "Soyez parmi les premiers à accéder aux nouvelles fonctionnalités de {{domain}}.",
 		"title": "Accès anticipé"
 	},
 	"onboarding": {

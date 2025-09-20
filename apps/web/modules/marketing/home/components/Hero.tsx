@@ -24,7 +24,7 @@ export function Hero() {
 				</div>
 
 				<h1 className="mx-auto max-w-3xl text-balance font-bold text-3xl lg:text-7xl">
-					Feeling lost? Chat your way back at  <span className="text-primary"> AIPROMODAILY.COM</span>
+					Feeling lost? Chat your way back at  <span className="text-primary"> {process.env.SITE_DOMAIN_NAME?.toUpperCase()}</span>
 				</h1>
 
 				{/* <p className="mx-auto mt-4 max-w-lg text-balance text-foreground/60 text-lg">
