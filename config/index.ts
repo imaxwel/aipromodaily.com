@@ -101,7 +101,7 @@ export const config = {
 		// Whether users should be able to sign in with a password
 		enablePasswordLogin: true,
 		// where users should be redirected after the sign in
-		redirectAfterSignIn: "/app/chatbot",
+		redirectAfterSignIn: "/app",
 		// where users should be redirected after logout
 		redirectAfterLogout: "/",
 		// how long a session should be valid
