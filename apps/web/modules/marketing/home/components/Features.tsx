@@ -114,7 +114,7 @@ import secuImage from "../../../../public/images/secu.svg";export const featureT
 		icon: HeartHandshakeIcon,
 		subtitle: "More than problem-solving - accompanying you to rediscover hope in life",
 		description:
-			"AIPromoDaily.com provides not only psychological counseling but also warm companionship on your emotional growth journey. We help you find hope in despair and discover the strength to grow through difficulties.",
+			"aipromodaily.com provides not only psychological counseling but also warm companionship on your emotional growth journey. We help you find hope in despair and discover the strength to grow through difficulties.",
 		stack: [],
 		image: secuImage,
 		imageBorder: false,
