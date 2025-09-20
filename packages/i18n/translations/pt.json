@@ -1,0 +1,40 @@
+{
+  "blog": {
+    "title": "AI Promo Daily",
+    "description": "Atualizações diárias de ferramentas e serviços de IA: convites, códigos de registro, códigos estudantis, descontos e ofertas exclusivas no mundo todo.",
+    "back": "Voltar ao blog",
+    "noArticlesFound": "Nenhum artigo encontrado.",
+    "loginRequired": {
+      "title": "Entrar para continuar lendo",
+      "description": "Este conteúdo requer autenticação. Faça login ou crie uma conta para continuar."
+    },
+    "premium": {
+      "badge": "Conteúdo Premium",
+      "title": "Desbloquear Conteúdo Premium",
+      "loginTitle": "Apenas para membros Premium",
+      "loginDescription": "Entre para verificar seu status de assinatura",
+      "articleTitle": "Você está tentando acessar",
+      "upgradeCTA": "Atualizar para Premium",
+      "comparePlans": "Comparar planos",
+      "activeSubscription": "Você tem uma assinatura {plan} ativa",
+      "pricing": "A partir de {price}/mês",
+      "benefits": {
+        "unlimited": "Acesso Ilimitado",
+        "unlimitedDesc": "Leia todos os artigos e tutoriais premium",
+        "exclusive": "Conteúdo Exclusivo",
+        "exclusiveDesc": "Acesse recursos somente para membros",
+        "priority": "Suporte Prioritário",
+        "priorityDesc": "Receba resposta e resolução mais rápidas",
+        "resources": "Baixar Recursos",
+        "resourcesDesc": "Acesse exemplos de código e ferramentas"
+      }
+    }
+  },
+  "common": {
+    "menu": {
+      "blog": "Blog"
+    }
+  }
+}
+
+

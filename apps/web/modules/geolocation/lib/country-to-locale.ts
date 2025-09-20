@@ -24,8 +24,8 @@ const COUNTRY_TO_LOCALE_MAP: Record<string, Locale> = {
 	'IN': 'en', // 印度（英语为官方语言之一）
 	'MY': 'en', // 马来西亚
 	'PH': 'en', // 菲律宾
-	'JP': 'en', // 日本（未提供日语，回退到 en）
-	'KR': 'en', // 韩国（未提供韩语，回退到 en）
+    'JP': 'ja', // 日本
+    'KR': 'ko', // 韩国
 
 	// 德语
 	'DE': 'de', // 德国
@@ -62,6 +62,10 @@ const COUNTRY_TO_LOCALE_MAP: Record<string, Locale> = {
 	'CR': 'es', // 哥斯达黎加
 	'PA': 'es', // 巴拿马
 	'UY': 'es', // 乌拉圭
+
+	// 葡萄牙语
+	'PT': 'pt', // 葡萄牙
+	'BR': 'pt', // 巴西
 
 	// 俄语
 	'RU': 'ru', // 俄罗斯
@@ -154,8 +158,9 @@ function getLocaleFromTimezone(timezone: string, availableLocales: Locale[]): Lo
 		'Asia/Beijing': 'zh',
 		'Asia/Hong_Kong': 'zh',
 		'Asia/Taipei': 'zh',
-		'Asia/Tokyo': 'en',
-		'Asia/Seoul': 'en',
+        'Asia/Tokyo': 'ja',
+        'Asia/Seoul': 'ko',
+        'America/Sao_Paulo': 'pt',
 		'Asia/Bangkok': 'en',
 		'Asia/Ho_Chi_Minh': 'en',
 		'Asia/Jakarta': 'en',
@@ -166,6 +171,7 @@ function getLocaleFromTimezone(timezone: string, availableLocales: Locale[]): Lo
 		'Europe/Berlin': 'de',
 		'Europe/Paris': 'fr',
 		'Europe/Madrid': 'es',
+		'Europe/Lisbon': 'pt',
 		'Europe/Moscow': 'ru',
 
 		// 美洲时区

@@ -53,6 +53,11 @@ export const config = {
 				label: "한국어",
 				direction: "ltr",
 			},
+            pt: {
+                currency: "BRL",
+                label: "Português",
+                direction: "ltr",
+            },
 		},
 		// The default locale is used if no locale is provided
 		defaultLocale: "en",
