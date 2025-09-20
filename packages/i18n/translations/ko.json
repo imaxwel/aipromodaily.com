@@ -1,0 +1,830 @@
+{
+	"admin": {
+		"menu": {
+			"organizations": "조직",
+			"users": "사용자"
+		},
+		"organizations": {
+			"backToList": "조직 목록으로 돌아가기",
+			"confirmDelete": {
+				"confirm": "삭제",
+				"message": "이 조직을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.",
+				"title": "조직 삭제"
+			},
+			"create": "생성",
+			"delete": "삭제",
+			"deleteOrganization": {
+				"deleted": "조직이 성공적으로 삭제되었습니다!",
+				"deleting": "조직 삭제 중...",
+				"notDeleted": "조직을 삭제할 수 없습니다. 다시 시도해 주세요."
+			},
+			"edit": "편집",
+			"form": {
+				"createTitle": "조직 생성",
+				"name": "조직명",
+				"notifications": {
+					"error": "조직을 저장할 수 없습니다. 나중에 다시 시도해 주세요.",
+					"success": "조직이 저장되었습니다."
+				},
+				"save": "저장",
+				"updateTitle": "조직 편집"
+			},
+			"loading": "조직 로딩 중...",
+			"membersCount": "{count}명의 멤버",
+			"search": "조직 검색...",
+			"title": "조직 관리"
+		},
+		"title": "관리",
+		"users": {
+			"confirmDelete": {
+				"confirm": "삭제",
+				"message": "이 사용자를 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.",
+				"title": "사용자 삭제"
+			},
+			"delete": "삭제",
+			"deleteUser": {
+				"deleted": "사용자가 성공적으로 삭제되었습니다!",
+				"deleting": "사용자 삭제 중...",
+				"notDeleted": "사용자를 삭제할 수 없습니다. 다시 시도해 주세요."
+			},
+			"emailVerified": {
+				"verified": "이메일 인증됨",
+				"waiting": "이메일 인증 대기 중"
+			},
+			"impersonate": "사칭",
+			"impersonation": {
+				"impersonating": "{name}로 사칭 중..."
+			},
+			"loading": "사용자 로딩 중...",
+			"resendVerificationMail": {
+				"error": "인증 메일을 다시 보낼 수 없습니다. 다시 시도해 주세요.",
+				"submitting": "인증 메일 재전송 중...",
+				"success": "인증 메일이 전송되었습니다.",
+				"title": "인증 메일 재전송"
+			},
+			"search": "이름 또는 이메일로 검색...",
+			"title": "사용자 관리",
+			"assignAdminRole": "관리자 권한 부여",
+			"removeAdminRole": "관리자 권한 제거"
+		},
+		"description": "애플리케이션을 관리합니다."
+	},
+	"app": {
+		"menu": {
+			"accountSettings": "계정 설정",
+			"admin": "관리",
+			"aiChatbot": "케어링 어시스턴트",
+			"organizationSettings": "조직 설정",
+			"start": "시작"
+		},
+		"userMenu": {
+			"accountSettings": "계정 설정",
+			"colorMode": "색상 모드",
+			"documentation": "문서",
+			"home": "홈",
+			"logout": "로그아웃"
+		}
+	},
+	"auth": {
+		"errors": {
+			"invalidEmailOrPassword": "입력한 인증 정보가 유효하지 않습니다. 확인하고 다시 시도해 주세요.",
+			"unknown": "문제가 발생했습니다. 다시 시도해 주세요.",
+			"userNotFound": "이 사용자는 존재하지 않습니다",
+			"failedToCreateUser": "사용자를 생성할 수 없습니다. 다시 시도해 주세요.",
+			"failedToCreateSession": "세션을 생성할 수 없습니다. 다시 시도해 주세요.",
+			"failedToUpdateUser": "사용자를 업데이트할 수 없습니다. 다시 시도해 주세요.",
+			"failedToGetSession": "세션을 가져올 수 없습니다.",
+			"invalidPassword": "입력한 비밀번호가 올바르지 않습니다.",
+			"invalidEmail": "입력한 이메일이 유효하지 않습니다.",
+			"invalidToken": "입력한 토큰이 유효하지 않거나 만료되었습니다.",
+			"credentialAccountNotFound": "계정을 찾을 수 없습니다.",
+			"emailCanNotBeUpdated": "이메일을 업데이트할 수 없습니다. 다시 시도해 주세요.",
+			"emailNotVerified": "로그인하기 전에 먼저 이메일을 인증해 주세요.",
+			"failedToGetUserInfo": "사용자 정보를 로드할 수 없습니다.",
+			"idTokenNotSupported": "ID 토큰은 지원되지 않습니다.",
+			"passwordTooLong": "비밀번호가 너무 깁니다.",
+			"passwordTooShort": "비밀번호가 너무 짧습니다.",
+			"providerNotFound": "이 제공업체는 지원되지 않습니다.",
+			"socialAccountAlreadyLinked": "이 계정은 이미 사용자에게 연결되어 있습니다.",
+			"userEmailNotFound": "이메일을 찾을 수 없습니다.",
+			"userAlreadyExists": "이 사용자는 이미 존재합니다.",
+			"invalidInvitation": "초대가 유효하지 않거나 만료되었습니다.",
+			"sessionExpired": "세션이 만료되었습니다.",
+			"failedToUnlinkLastAccount": "계정 연결 해제에 실패했습니다",
+			"accountNotFound": "계정을 찾을 수 없습니다"
+		},
+		"forgotPassword": {
+			"backToSignin": "로그인으로 돌아가기",
+			"email": "이메일",
+			"hints": {
+				"linkNotSent": {
+					"message": "죄송합니다. 비밀번호 재설정 링크를 보낼 수 없습니다. 나중에 다시 시도해 주세요.",
+					"title": "링크가 전송되지 않음"
+				},
+				"linkSent": {
+					"message": "계속하기 위한 링크를 보냈습니다. 받은 편지함을 확인해 주세요.",
+					"title": "링크 전송됨"
+				}
+			},
+			"message": "이메일 주소를 입력해 주세요. 비밀번호 재설정 링크를 보내드립니다.",
+			"submit": "링크 전송",
+			"title": "비밀번호를 잊으셨나요?"
+		},
+		"login": {
+			"continueWith": "또는 다음으로 계속",
+			"createAnAccount": "계정 생성",
+			"dontHaveAnAccount": "아직 계정이 없으신가요?",
+			"forgotPassword": "비밀번호를 잊으셨나요?",
+			"hints": {
+				"invalidCredentials": "입력한 이메일 또는 비밀번호가 유효하지 않습니다. 다시 시도해 주세요.",
+				"linkSent": {
+					"message": "계속하기 위한 링크를 보냈습니다. 받은 편지함을 확인해 주세요.",
+					"title": "링크 전송됨"
+				}
+			},
+			"loginWithPasskey": "패스키로 로그인",
+			"modes": {
+				"magicLink": "매직 링크",
+				"password": "비밀번호"
+			},
+			"submit": "로그인",
+			"subtitle": "로그인하려면 인증 정보를 입력해 주세요.",
+			"title": "다시 오신 것을 환영합니다",
+			"sendMagicLink": "매직 링크 전송"
+		},
+		"resetPassword": {
+			"backToSignin": "로그인으로 돌아가기",
+			"hints": {
+				"error": "죄송합니다. 비밀번호를 재설정할 수 없습니다. 다시 시도해 주세요.",
+				"success": "비밀번호가 성공적으로 재설정되었습니다."
+			},
+			"message": "새 비밀번호를 입력해 주세요.",
+			"newPassword": "새 비밀번호",
+			"submit": "비밀번호 재설정",
+			"title": "비밀번호 재설정"
+		},
+		"signup": {
+			"alreadyHaveAccount": "이미 계정이 있으신가요?",
+			"email": "이메일",
+			"hints": {
+				"signupFailed": "죄송합니다. 계정을 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
+				"verifyEmail": "이메일 인증 링크를 보냈습니다. 받은 편지함을 확인해 주세요."
+			},
+			"message": "저희와 함께하게 되어 기쁩니다. 계정을 생성하려면 아래 양식을 작성해 주세요.",
+			"name": "이름",
+			"password": "비밀번호",
+			"signIn": "로그인",
+			"submit": "계정 생성",
+			"title": "계정 생성"
+		}
+	},
+	"blog": {
+		"description": "AI 도구 및 서비스 일일 업데이트: 초대 및 등록 코드, 학생 프로모 코드, 할인, 전 세계 독점 제안.",
+		"title": "AI Promo Daily",
+		"back": "블로그로 돌아가기",
+		"noArticlesFound": "기사를 찾을 수 없습니다.",
+		"loginRequired": {
+			"title": "계속 읽으려면 로그인하세요",
+			"description": "이 콘텐츠는 인증이 필요합니다. 계속하려면 로그인하거나 계정을 생성해 주세요."
+		},
+		"premium": {
+			"badge": "프리미엄 콘텐츠",
+			"title": "프리미엄 콘텐츠 잠금 해제",
+			"loginTitle": "프리미엄 멤버 전용",
+			"loginDescription": "멤버십 상태를 확인하려면 로그인하세요",
+			"articleTitle": "다음에 액세스하려고 합니다",
+			"upgradeCTA": "프리미엄으로 업그레이드",
+			"comparePlans": "플랜 비교",
+			"activeSubscription": "활성 {plan} 구독이 있습니다",
+			"pricing": "월 {price}부터",
+			"benefits": {
+				"unlimited": "무제한 액세스",
+				"unlimitedDesc": "모든 프리미엄 기사 및 튜토리얼 읽기",
+				"exclusive": "독점 콘텐츠",
+				"exclusiveDesc": "멤버 전용 리소스에 액세스",
+				"priority": "우선 지원",
+				"priorityDesc": "더 빠른 응답 및 해결책 받기",
+				"resources": "리소스 다운로드",
+				"resourcesDesc": "코드 샘플 및 도구에 액세스"
+			}
+		}
+	},
+	"changelog": {
+		"description": "제품의 최신 변경 사항을 항상 확인하세요.",
+		"title": "변경 로그"
+	},
+	"common": {
+		"cancel": "취소",
+		"confirmation": {
+			"cancel": "취소",
+			"confirm": "확인"
+		},
+		"menu": {
+			"blog": "블로그",
+			"changelog": "변경 로그",
+			"contact": "문의",
+			"dashboard": "대시보드",
+			"docs": "문서",
+			"faq": "자주 묻는 질문",
+			"login": "로그인",
+			"pricing": "가격"
+		},
+		"tableOfContents": {
+			"title": "이 페이지에서"
+		}
+	},
+	"contact": {
+		"description": "도움을 드리겠습니다. 아래 양식을 사용하여 문의해 주세요.",
+		"form": {
+			"email": "이메일",
+			"message": "메시지",
+			"name": "이름",
+			"notifications": {
+				"error": "죄송합니다. 메시지를 보낼 수 없습니다. 나중에 다시 시도해 주세요.",
+				"success": "메시지가 성공적으로 전송되었습니다. 가능한 한 빨리 답변드리겠습니다."
+			},
+			"submit": "메시지 전송"
+		},
+		"title": "문의하기"
+	},
+	"documentation": {
+		"title": "문서"
+	},
+	"faq": {
+		"description": "질문이 있으신가요? 저희가 도와드리겠습니다.",
+		"title": "자주 묻는 질문"
+	},
+	"mail": {
+		"common": {
+			"openLinkInBrowser": "기본 브라우저가 아닌 다른 브라우저에서 링크를 열려면 이 링크를 복사하여 붙여넣으세요:",
+			"otp": "일회용 비밀번호",
+			"useLink": "또는 다음 링크를 사용하세요:"
+		},
+		"emailVerification": {
+			"body": "안녕하세요,\n새 이메일 주소를 인증하려면 아래 링크를 클릭해 주세요.",
+			"confirmEmail": "이메일 인증",
+			"subject": "이메일을 인증해 주세요"
+		},
+		"forgotPassword": {
+			"body": "안녕하세요,\n비밀번호 재설정을 요청하셨습니다.\n\n비밀번호를 재설정하려면 아래 버튼을 클릭해 주세요.",
+			"resetPassword": "비밀번호 재설정",
+			"subject": "비밀번호를 재설정해 주세요"
+		},
+		"magicLink": {
+			"body": "안녕하세요,\n{{domain}}에서 로그인 이메일을 요청하셨습니다.\n\n로그인하려면 아래 링크를 클릭해 주세요.",
+			"login": "로그인",
+			"subject": "{{domain}}에 로그인"
+		},
+		"newUser": {
+			"body": "안녕하세요,\n{{domain}}에 가입해 주셔서 감사합니다.\n\n앱 사용을 시작하려면 아래 링크를 클릭하여 이메일 주소를 확인해 주세요.",
+			"confirmEmail": "이메일 확인",
+			"subject": "이메일을 확인해 주세요"
+		},
+		"newsletterSignup": {
+			"body": "{{domain}} 뉴스레터에 가입해 주셔서 감사합니다. 최신 뉴스와 업데이트를 계속 제공해 드리겠습니다.",
+			"subject": "뉴스레터에 오신 것을 환영합니다"
+		},
+		"organizationInvitation": {
+			"body": "조직 {organizationName}에 참여하도록 초대받았습니다. 아래 버튼을 클릭하거나 원하는 브라우저에 링크를 복사하여 붙여넣어 초대를 수락하고 조직에 참여하세요.",
+			"headline": "조직 {organizationName}에 참여",
+			"join": "조직 참여",
+			"subject": "조직 참여에 초대되었습니다"
+		}
+	},
+	"newsletter": {
+		"email": "이메일",
+		"hints": {
+			"error": {
+				"message": "뉴스레터에 구독할 수 없습니다. 나중에 다시 시도해 주세요."
+			},
+			"success": {
+				"message": "뉴스레터 구독에 감사드립니다. 계속 업데이트해 드리겠습니다.",
+				"title": "구독됨"
+			}
+		},
+		"submit": "구독",
+		"subtitle": "{{domain}}의 새로운 기능에 가장 먼저 액세스하세요.",
+		"title": "얼리 액세스 받기"
+	},
+	"onboarding": {
+		"account": {
+			"avatar": "아바타",
+			"avatarDescription": "아바타를 업로드하려면 원을 클릭하거나 이미지를 드롭하세요.",
+			"name": "이름"
+		},
+		"continue": "계속",
+		"message": "시작하기 위한 몇 가지 간단한 단계입니다.",
+		"notifications": {
+			"accountSetupFailed": "죄송합니다. 계정을 설정할 수 없습니다. 나중에 다시 시도해 주세요."
+		},
+		"step": "단계 {step} / {total}",
+		"title": "계정 설정"
+	},
+	"organizations": {
+		"createForm": {
+			"name": "조직명",
+			"notifications": {
+				"error": "죄송합니다. 조직을 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
+				"success": "조직이 생성되었습니다. 이제 멤버를 초대할 수 있습니다."
+			},
+			"submit": "조직 생성",
+			"subtitle": "시작하려면 조직명을 입력하세요. 조직 설정에서 나중에 이름을 변경할 수 있습니다.",
+			"title": "조직 생성"
+		},
+		"invitationAlert": {
+			"description": "조직에 참여하려면 로그인하거나 계정을 생성해야 합니다.",
+			"title": "조직 참여에 초대되었습니다."
+		},
+		"invitationModal": {
+			"accept": "수락",
+			"decline": "거절",
+			"description": "조직 {organizationName}에 참여하도록 초대받았습니다. 초대를 수락하고 조직에 참여하시겠습니까?",
+			"title": "조직 참여"
+		},
+		"organizationSelect": {
+			"createNewOrganization": "새 조직 생성",
+			"organizations": "조직",
+			"personalAccount": "개인 계정"
+		},
+		"organizationsGrid": {
+			"createNewOrganization": "새 조직 생성",
+			"title": "내 조직"
+		},
+		"roles": {
+			"admin": "관리자",
+			"member": "멤버",
+			"owner": "소유자"
+		},
+		"settings": {
+			"changeName": {
+				"title": "조직명"
+			},
+			"deleteOrganization": {
+				"confirmation": "조직을 삭제하시겠습니까?",
+				"description": "조직을 영구적으로 삭제합니다. 삭제하면 되돌릴 수 없습니다. 확인하려면 아래에 비밀번호를 입력해 주세요:",
+				"submit": "조직 삭제",
+				"title": "조직 삭제"
+			},
+			"logo": {
+				"description": "조직의 로고를 업로드하세요.",
+				"title": "조직 로고"
+			},
+			"members": {
+				"activeMembers": "활성 멤버",
+				"description": "조직의 모든 활성 멤버와 대기 중인 초대를 확인하세요.",
+				"invitations": {
+					"empty": "아직 멤버를 초대하지 않았습니다.",
+					"expiresAt": "{date}에 만료",
+					"invitationStatus": {
+						"accepted": "수락됨",
+						"canceled": "취소됨",
+						"pending": "대기 중",
+						"rejected": "거절됨"
+					},
+					"revoke": "초대 취소",
+					"resend": "초대 재전송"
+				},
+				"inviteMember": {
+					"description": "새 멤버를 초대하려면 초대를 보내세요.",
+					"email": "이메일",
+					"notifications": {
+						"error": {
+							"description": "멤버를 초대할 수 없습니다. 나중에 다시 시도해 주세요.",
+							"title": "멤버를 초대할 수 없음"
+						},
+						"success": {
+							"description": "멤버가 초대되었습니다.",
+							"title": "멤버 초대됨"
+						}
+					},
+					"role": "역할",
+					"submit": "초대",
+					"title": "멤버 초대"
+				},
+				"leaveOrganization": "조직 탈퇴",
+				"notifications": {
+					"removeMember": {
+						"error": {
+							"description": "조직에서 멤버를 제거할 수 없습니다. 다시 시도해 주세요."
+						},
+						"loading": {
+							"description": "조직에서 멤버 제거 중..."
+						},
+						"success": {
+							"description": "멤버가 조직에서 성공적으로 제거되었습니다."
+						}
+					},
+					"revokeInvitation": {
+						"error": {
+							"description": "초대를 취소할 수 없습니다. 나중에 다시 시도해 주세요."
+						},
+						"loading": {
+							"description": "초대 취소 중..."
+						},
+						"success": {
+							"description": "초대가 취소되었습니다."
+						}
+					},
+					"updateMembership": {
+						"error": {
+							"description": "조직 멤버십을 업데이트할 수 없습니다. 다시 시도해 주세요."
+						},
+						"loading": {
+							"description": "멤버십 업데이트 중..."
+						},
+						"success": {
+							"description": "멤버십이 성공적으로 업데이트되었습니다"
+						}
+					},
+					"resendInvitation": {
+						"loading": {
+							"description": "초대 재전송 중..."
+						},
+						"success": {
+							"description": "초대 전송됨"
+						},
+						"error": {
+							"description": "초대를 보낼 수 없습니다. 다시 시도해 주세요."
+						}
+					}
+				},
+				"pendingInvitations": "대기 중인 초대",
+				"removeMember": "멤버 제거",
+				"title": "멤버"
+			},
+			"notifications": {
+				"organizationDeleted": "조직이 삭제되었습니다.",
+				"organizationNameNotUpdated": "조직명을 업데이트할 수 없습니다. 나중에 다시 시도해 주세요.",
+				"organizationNameUpdated": "조직명이 업데이트되었습니다.",
+				"organizationNotDeleted": "조직을 삭제할 수 없습니다. 나중에 다시 시도해 주세요."
+			},
+			"subtitle": "조직의 설정을 관리합니다.",
+			"title": "조직",
+			"dangerZone": {
+				"title": "위험 구역"
+			}
+		},
+		"start": {
+			"subtitle": "이 조직의 시작 페이지에 오신 것을 환영합니다!"
+		}
+	},
+	"search": {
+		"button": {
+			"label": "기사 검색",
+			"text": "기사 검색..."
+		},
+		"input": {
+			"placeholder": "기사 제목, 내용, 태그 검색..."
+		},
+		"error": {
+			"failed": "검색 실패",
+			"unavailable": "검색 서비스를 일시적으로 사용할 수 없습니다"
+		},
+		"membership": {
+			"premium": "프리미엄 멤버 - 모든 콘텐츠에 대한 전체 액세스",
+			"regular": "일반 멤버 - 공개 콘텐츠에 대한 액세스"
+		},
+		"results": {
+			"count": "{count}개의 검색 결과"
+		},
+		"shortcuts": {
+			"navigate": "↑↓ 탐색",
+			"select": "↵ 선택",
+			"close": "ESC 닫기"
+		}
+	},
+	"pricing": {
+		"choosePlan": "플랜 선택",
+		"contactSales": "영업팀에 문의",
+		"description": "가장 적합한 플랜을 선택하세요.",
+		"getStarted": "시작하기",
+		"month": "{count}개월",
+		"monthly": "월간",
+		"products": {
+			"basic": {
+				"description": "소규모 팀에 완벽합니다.",
+				"features": {
+					"anotherFeature": "또 다른 놀라운 기능",
+					"limitedSupport": "제한된 지원"
+				},
+				"title": "베이직"
+			},
+			"enterprise": {
+				"description": "귀하의 요구 사항에 맞춘 사용자 정의 플랜",
+				"features": {
+					"enterpriseSupport": "엔터프라이즈 지원",
+					"unlimitedProjects": "무제한 프로젝트"
+				},
+				"title": "엔터프라이즈"
+			},
+			"free": {
+				"description": "무료로 시작하세요",
+				"features": {
+					"anotherFeature": "또 다른 놀라운 기능",
+					"limitedSupport": "제한된 지원"
+				},
+				"title": "무료"
+			},
+			"lifetime": {
+				"description": "한 번 구매하여 영원히 사용하세요.",
+				"features": {
+					"extendSupport": "확장 지원",
+					"noRecurringCosts": "반복 비용 없음"
+				},
+				"title": "라이프타임"
+			},
+			"pro": {
+				"description": "팀에 가장 적합",
+				"features": {
+					"anotherFeature": "또 다른 놀라운 기능",
+					"fiveMembers": "최대 5명의 멤버",
+					"fullSupport": "완전한 지원"
+				},
+				"title": "프로"
+			}
+		},
+		"purchase": "구매",
+		"recommended": "추천",
+		"subscribe": "구독",
+		"title": "가격",
+		"trialPeriod": "{days}일 무료 체험",
+		"year": "{count}년",
+		"yearly": "연간",
+		"perSeat": "시트"
+	},
+	"settings": {
+		"account": {
+			"avatar": {
+				"description": "아바타를 변경하려면 이 블록의 사진을 클릭하고 컴퓨터에서 업로드할 파일을 선택하세요.",
+				"notifications": {
+					"error": "아바타를 업데이트할 수 없습니다",
+					"success": "아바타가 성공적으로 업데이트되었습니다"
+				},
+				"title": "내 아바타"
+			},
+			"changeEmail": {
+				"description": "이메일을 변경하려면 새 이메일을 입력하고 저장을 클릭하세요. 활성화되기 전에 새 이메일을 확인해야 합니다.",
+				"notifications": {
+					"error": "이메일을 업데이트할 수 없습니다",
+					"success": "이메일이 성공적으로 업데이트되었습니다"
+				},
+				"title": "내 이메일"
+			},
+			"changeName": {
+				"notifications": {
+					"error": "이름을 업데이트할 수 없습니다",
+					"success": "이름이 성공적으로 업데이트되었습니다"
+				},
+				"title": "내 이름"
+			},
+			"deleteAccount": {
+				"confirmation": "계정을 삭제하시겠습니까?",
+				"description": "계정을 영구적으로 삭제합니다. 삭제하면 되돌릴 수 없습니다. 확인하려면 아래에 비밀번호를 입력해 주세요:",
+				"notifications": {
+					"error": "계정을 삭제할 수 없습니다",
+					"success": "계정이 성공적으로 삭제되었습니다"
+				},
+				"submit": "계정 삭제",
+				"title": "계정 삭제"
+			},
+			"language": {
+				"description": "계정의 앱 언어를 변경하려면 목록에서 언어를 선택하고 저장을 클릭하세요.",
+				"notifications": {
+					"error": "언어를 업데이트할 수 없습니다",
+					"success": "언어가 성공적으로 업데이트되었습니다"
+				},
+				"title": "내 언어"
+			},
+			"security": {
+				"activeSessions": {
+					"description": "이것들은 계정의 모든 활성 세션입니다. 특정 세션을 종료하려면 X를 클릭하세요.",
+					"title": "활성 세션",
+					"notifications": {
+						"revokeSession": {
+							"success": "세션이 취소되었습니다"
+						}
+					}
+				},
+				"changePassword": {
+					"currentPassword": "현재 비밀번호",
+					"newPassword": "새 비밀번호",
+					"notifications": {
+						"error": "비밀번호를 업데이트할 수 없습니다",
+						"success": "비밀번호가 성공적으로 업데이트되었습니다"
+					},
+					"title": "내 비밀번호"
+				},
+				"connectedAccounts": {
+					"connect": "연결",
+					"disconnect": "연결 해제",
+					"title": "연결된 계정"
+				},
+				"passkeys": {
+					"description": "비밀번호의 안전한 대안으로 패스키를 사용하세요.",
+					"notifications": {
+						"addPasskey": {
+							"error": {
+								"title": "패스키를 추가할 수 없습니다"
+							},
+							"success": {
+								"title": "패스키가 추가되었습니다"
+							}
+						},
+						"deletePasskey": {
+							"error": {
+								"title": "패스키를 삭제할 수 없습니다"
+							},
+							"loading": {
+								"title": "패스키 삭제 중..."
+							},
+							"success": {
+								"title": "패스키가 삭제되었습니다"
+							}
+						}
+					},
+					"title": "패스키"
+				},
+				"setPassword": {
+					"description": "아직 비밀번호를 설정하지 않았습니다. 설정하려면 비밀번호 재설정 플로우를 진행해야 합니다. 아래 버튼을 클릭하여 비밀번호 재설정 이메일을 보내고 이메일의 지침을 따르세요.",
+					"notifications": {
+						"error": "비밀번호를 설정할 수 없습니다",
+						"success": "비밀번호가 성공적으로 설정되었습니다"
+					},
+					"submit": "비밀번호 설정",
+					"title": "내 비밀번호"
+				},
+				"title": "보안"
+			},
+			"subtitle": "개인 계정의 설정을 관리합니다.",
+			"title": "계정 설정"
+		},
+		"billing": {
+			"createCustomerPortal": {
+				"label": "결제 관리",
+				"notifications": {
+					"error": {
+						"title": "고객 포털 세션을 생성할 수 없습니다. 다시 시도해 주세요."
+					}
+				}
+			},
+			"activePlan": {
+				"status": {
+					"active": "활성",
+					"canceled": "취소됨",
+					"expired": "만료됨",
+					"incomplete": "불완전",
+					"past_due": "연체",
+					"paused": "일시 정지",
+					"trialing": "체험 중",
+					"unpaid": "미지급"
+				},
+				"title": "내 플랜"
+			},
+			"changePlan": {
+				"description": "구독할 플랜을 선택하세요.",
+				"title": "플랜 변경"
+			},
+			"title": "결제"
+		},
+		"menu": {
+			"account": {
+				"billing": "결제",
+				"dangerZone": "위험 구역",
+				"general": "일반",
+				"security": "보안",
+				"title": "계정"
+			},
+			"organization": {
+				"billing": "결제",
+				"general": "일반",
+				"members": "멤버",
+				"title": "조직",
+				"dangerZone": "위험 구역"
+			}
+		},
+		"save": "저장"
+	},
+	"start": {
+		"subtitle": "멋진 비즈니스의 최신 통계를 확인하세요.",
+		"welcome": "환영합니다, {name}님!"
+	},
+	"zod": {
+		"errors": {
+			"invalid_arguments": "유효하지 않은 함수 인수",
+			"invalid_date": "유효하지 않은 날짜",
+			"invalid_enum_value": "유효하지 않은 열거 값. {- options}이 예상되었지만 '{received}'을 받았습니다",
+			"invalid_intersection_types": "교차 결과를 병합할 수 없습니다",
+			"invalid_literal": "유효하지 않은 리터럴 값, {expected}이 예상됩니다",
+			"invalid_return_type": "유효하지 않은 함수 반환 타입",
+			"invalid_string": {
+				"cuid": "유효하지 않은 {validation}",
+				"datetime": "유효하지 않은 {validation}",
+				"email": "유효하지 않은 {validation}",
+				"endsWith": "유효하지 않은 입력: \"{endsWith}\"로 끝나야 합니다",
+				"regex": "유효하지 않음",
+				"startsWith": "유효하지 않은 입력: \"{startsWith}\"로 시작해야 합니다",
+				"url": "유효하지 않은 {validation}",
+				"uuid": "유효하지 않은 {validation}"
+			},
+			"invalid_type": "{expected}이 예상되었지만 {received}을 받았습니다",
+			"invalid_type_received_undefined": "필수",
+			"invalid_union": "유효하지 않은 입력",
+			"invalid_union_discriminator": "유효하지 않은 판별 값. {- options}이 예상됩니다",
+			"not_finite": "숫자는 유한해야 합니다",
+			"not_multiple_of": "숫자는 {multipleOf}의 배수여야 합니다",
+			"too_big": {
+				"array": {
+					"exact": "배열은 정확히 {maximum}개의 요소를 포함해야 합니다",
+					"inclusive": "배열은 최대 {maximum}개의 요소를 포함해야 합니다",
+					"not_inclusive": "배열은 {maximum}개 미만의 요소를 포함해야 합니다"
+				},
+				"date": {
+					"exact": "날짜는 정확히 {- maximum, datetime}이어야 합니다",
+					"inclusive": "날짜는 {- maximum, datetime} 이하여야 합니다",
+					"not_inclusive": "날짜는 {- maximum, datetime} 미만이어야 합니다"
+				},
+				"number": {
+					"exact": "숫자는 정확히 {maximum}이어야 합니다",
+					"inclusive": "숫자는 {maximum} 이하여야 합니다",
+					"not_inclusive": "숫자는 {maximum} 미만이어야 합니다"
+				},
+				"set": {
+					"exact": "유효하지 않은 입력",
+					"inclusive": "유효하지 않은 입력",
+					"not_inclusive": "유효하지 않은 입력"
+				},
+				"string": {
+					"exact": "문자열은 정확히 {maximum}자를 포함해야 합니다",
+					"inclusive": "문자열은 최대 {maximum}자를 포함해야 합니다",
+					"not_inclusive": "문자열은 {maximum}자 미만을 포함해야 합니다"
+				}
+			},
+			"too_small": {
+				"array": {
+					"exact": "배열은 정확히 {minimum}개의 요소를 포함해야 합니다",
+					"inclusive": "배열은 최소 {minimum}개의 요소를 포함해야 합니다",
+					"not_inclusive": "배열은 {minimum}개를 초과하는 요소를 포함해야 합니다"
+				},
+				"date": {
+					"exact": "날짜는 정확히 {- minimum, datetime}이어야 합니다",
+					"inclusive": "날짜는 {- minimum, datetime} 이상이어야 합니다",
+					"not_inclusive": "날짜는 {- minimum, datetime}를 초과해야 합니다"
+				},
+				"number": {
+					"exact": "숫자는 정확히 {minimum}이어야 합니다",
+					"inclusive": "숫자는 {minimum} 이상이어야 합니다",
+					"not_inclusive": "숫자는 {minimum}를 초과해야 합니다"
+				},
+				"set": {
+					"exact": "유효하지 않은 입력",
+					"inclusive": "유효하지 않은 입력",
+					"not_inclusive": "유효하지 않은 입력"
+				},
+				"string": {
+					"exact": "문자열은 정확히 {minimum}자를 포함해야 합니다",
+					"inclusive": "문자열은 최소 {minimum}자를 포함해야 합니다",
+					"not_inclusive": "문자열은 {minimum}자를 초과해야 합니다"
+				}
+			},
+			"unrecognized_keys": "객체의 인식되지 않은 키: {- keys}"
+		},
+		"types": {
+			"array": "배열",
+			"bigint": "bigint",
+			"boolean": "불린",
+			"date": "날짜",
+			"float": "부동소수점",
+			"function": "함수",
+			"integer": "정수",
+			"map": "맵",
+			"nan": "NaN",
+			"never": "never",
+			"null": "null",
+			"number": "숫자",
+			"object": "객체",
+			"promise": "Promise",
+			"set": "세트",
+			"string": "문자열",
+			"symbol": "심볼",
+			"undefined": "undefined",
+			"unknown": "알 수 없음",
+			"void": "void"
+		},
+		"validations": {
+			"cuid": "cuid",
+			"cuid2": "cuid2",
+			"datetime": "날짜시간",
+			"email": "이메일",
+			"emoji": "이모지",
+			"ip": "IP",
+			"regex": "정규표현식",
+			"ulid": "ulid",
+			"url": "URL",
+			"uuid": "UUID"
+		}
+	},
+	"choosePlan": {
+		"title": "플랜을 선택하세요",
+		"description": "계속하려면 플랜을 선택해 주세요."
+	}
+}

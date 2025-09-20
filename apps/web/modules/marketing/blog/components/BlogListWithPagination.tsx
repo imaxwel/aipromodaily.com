@@ -88,7 +88,7 @@ export async function BlogListWithPagination({
 				</>
 			) : (
 				<div className="text-center py-12">
-					<p className="text-lg opacity-50">No articles found.</p>
+					<p className="text-lg opacity-50">{t("blog.noArticlesFound")}</p>
 				</div>
 			)}
 		</div>

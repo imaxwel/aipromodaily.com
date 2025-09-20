@@ -43,6 +43,16 @@ export const config = {
 				label: "Deutsch",
 				direction: "ltr",
 			},
+			ja: {
+				currency: "JPY",
+				label: "日本語",
+				direction: "ltr",
+			},
+			ko: {
+				currency: "KRW",
+				label: "한국어",
+				direction: "ltr",
+			},
 		},
 		// The default locale is used if no locale is provided
 		defaultLocale: "en",

@@ -1,0 +1,830 @@
+{
+	"admin": {
+		"menu": {
+			"organizations": "組織",
+			"users": "ユーザー"
+		},
+		"organizations": {
+			"backToList": "組織一覧に戻る",
+			"confirmDelete": {
+				"confirm": "削除",
+				"message": "この組織を削除してもよろしいですか？この操作は元に戻すことができません。",
+				"title": "組織を削除"
+			},
+			"create": "作成",
+			"delete": "削除",
+			"deleteOrganization": {
+				"deleted": "組織が正常に削除されました！",
+				"deleting": "組織を削除中...",
+				"notDeleted": "組織を削除できませんでした。もう一度お試しください。"
+			},
+			"edit": "編集",
+			"form": {
+				"createTitle": "組織を作成",
+				"name": "組織名",
+				"notifications": {
+					"error": "組織を保存できませんでした。後でもう一度お試しください。",
+					"success": "組織が保存されました。"
+				},
+				"save": "保存",
+				"updateTitle": "組織を編集"
+			},
+			"loading": "組織を読み込み中...",
+			"membersCount": "{count}名のメンバー",
+			"search": "組織を検索...",
+			"title": "組織管理"
+		},
+		"title": "管理",
+		"users": {
+			"confirmDelete": {
+				"confirm": "削除",
+				"message": "このユーザーを削除してもよろしいですか？この操作は元に戻すことができません。",
+				"title": "ユーザーを削除"
+			},
+			"delete": "削除",
+			"deleteUser": {
+				"deleted": "ユーザーが正常に削除されました！",
+				"deleting": "ユーザーを削除中...",
+				"notDeleted": "ユーザーを削除できませんでした。もう一度お試しください。"
+			},
+			"emailVerified": {
+				"verified": "メール認証済み",
+				"waiting": "メール認証待ち"
+			},
+			"impersonate": "なりすまし",
+			"impersonation": {
+				"impersonating": "{name}としてなりすまし中..."
+			},
+			"loading": "ユーザーを読み込み中...",
+			"resendVerificationMail": {
+				"error": "認証メールを再送信できませんでした。もう一度お試しください。",
+				"submitting": "認証メールを再送信中...",
+				"success": "認証メールが送信されました。",
+				"title": "認証メールを再送信"
+			},
+			"search": "名前またはメールアドレスで検索...",
+			"title": "ユーザー管理",
+			"assignAdminRole": "管理者権限を付与",
+			"removeAdminRole": "管理者権限を削除"
+		},
+		"description": "アプリケーションを管理します。"
+	},
+	"app": {
+		"menu": {
+			"accountSettings": "アカウント設定",
+			"admin": "管理",
+			"aiChatbot": "ケアリングアシスタント",
+			"organizationSettings": "組織設定",
+			"start": "開始"
+		},
+		"userMenu": {
+			"accountSettings": "アカウント設定",
+			"colorMode": "カラーモード",
+			"documentation": "ドキュメント",
+			"home": "ホーム",
+			"logout": "ログアウト"
+		}
+	},
+	"auth": {
+		"errors": {
+			"invalidEmailOrPassword": "入力された認証情報が無効です。確認してもう一度お試しください。",
+			"unknown": "何かが間違っています。もう一度お試しください。",
+			"userNotFound": "このユーザーは存在しません",
+			"failedToCreateUser": "ユーザーを作成できませんでした。もう一度お試しください。",
+			"failedToCreateSession": "セッションを作成できませんでした。もう一度お試しください。",
+			"failedToUpdateUser": "ユーザーを更新できませんでした。もう一度お試しください。",
+			"failedToGetSession": "セッションを取得できませんでした。",
+			"invalidPassword": "入力されたパスワードが正しくありません。",
+			"invalidEmail": "入力されたメールアドレスが無効です。",
+			"invalidToken": "入力されたトークンが無効または期限切れです。",
+			"credentialAccountNotFound": "アカウントが見つかりません。",
+			"emailCanNotBeUpdated": "メールアドレスを更新できませんでした。もう一度お試しください。",
+			"emailNotVerified": "ログインする前にメールアドレスの認証を行ってください。",
+			"failedToGetUserInfo": "ユーザー情報を読み込めませんでした。",
+			"idTokenNotSupported": "IDトークンはサポートされていません。",
+			"passwordTooLong": "パスワードが長すぎます。",
+			"passwordTooShort": "パスワードが短すぎます。",
+			"providerNotFound": "このプロバイダーはサポートされていません。",
+			"socialAccountAlreadyLinked": "このアカウントは既にユーザーにリンクされています。",
+			"userEmailNotFound": "メールアドレスが見つかりません。",
+			"userAlreadyExists": "このユーザーは既に存在します。",
+			"invalidInvitation": "招待が無効または期限切れです。",
+			"sessionExpired": "セッションが期限切れです。",
+			"failedToUnlinkLastAccount": "アカウントのリンク解除に失敗しました",
+			"accountNotFound": "アカウントが見つかりません"
+		},
+		"forgotPassword": {
+			"backToSignin": "サインインに戻る",
+			"email": "メールアドレス",
+			"hints": {
+				"linkNotSent": {
+					"message": "申し訳ございませんが、パスワードリセット用のリンクを送信できませんでした。後でもう一度お試しください。",
+					"title": "リンクが送信されませんでした"
+				},
+				"linkSent": {
+					"message": "続行するためのリンクを送信しました。受信トレイをご確認ください。",
+					"title": "リンクを送信しました"
+				}
+			},
+			"message": "メールアドレスを入力してください。パスワードリセット用のリンクを送信します。",
+			"submit": "リンクを送信",
+			"title": "パスワードをお忘れですか？"
+		},
+		"login": {
+			"continueWith": "または続行する",
+			"createAnAccount": "アカウントを作成",
+			"dontHaveAnAccount": "まだアカウントをお持ちでないですか？",
+			"forgotPassword": "パスワードを忘れましたか？",
+			"hints": {
+				"invalidCredentials": "入力されたメールアドレスまたはパスワードが無効です。もう一度お試しください。",
+				"linkSent": {
+					"message": "続行するためのリンクを送信しました。受信トレイをご確認ください。",
+					"title": "リンクを送信しました"
+				}
+			},
+			"loginWithPasskey": "パスキーでログイン",
+			"modes": {
+				"magicLink": "マジックリンク",
+				"password": "パスワード"
+			},
+			"submit": "サインイン",
+			"subtitle": "サインインするには認証情報を入力してください。",
+			"title": "おかえりなさい",
+			"sendMagicLink": "マジックリンクを送信"
+		},
+		"resetPassword": {
+			"backToSignin": "サインインに戻る",
+			"hints": {
+				"error": "申し訳ございませんが、パスワードをリセットできませんでした。もう一度お試しください。",
+				"success": "パスワードが正常にリセットされました。"
+			},
+			"message": "新しいパスワードを入力してください。",
+			"newPassword": "新しいパスワード",
+			"submit": "パスワードをリセット",
+			"title": "パスワードをリセット"
+		},
+		"signup": {
+			"alreadyHaveAccount": "既にアカウントをお持ちですか？",
+			"email": "メールアドレス",
+			"hints": {
+				"signupFailed": "申し訳ございませんが、アカウントを作成できませんでした。後でもう一度お試しください。",
+				"verifyEmail": "メールアドレス認証用のリンクを送信しました。受信トレイをご確認ください。"
+			},
+			"message": "ご参加いただきありがとうございます。アカウントを作成するため、以下のフォームにご記入ください。",
+			"name": "名前",
+			"password": "パスワード",
+			"signIn": "サインイン",
+			"submit": "アカウントを作成",
+			"title": "アカウントを作成"
+		}
+	},
+	"blog": {
+		"description": "AIツールとサービスの日次更新：招待・登録コード、学生プロモコード、割引、世界限定オファー。",
+		"title": "AI Promo Daily",
+		"back": "ブログに戻る",
+		"noArticlesFound": "記事が見つかりません。",
+		"loginRequired": {
+			"title": "続きを読むにはサインインしてください",
+			"description": "このコンテンツには認証が必要です。続行するにはサインインまたはアカウントを作成してください。"
+		},
+		"premium": {
+			"badge": "プレミアムコンテンツ",
+			"title": "プレミアムコンテンツのロック解除",
+			"loginTitle": "プレミアムメンバー限定",
+			"loginDescription": "メンバーシップステータスを確認するためにサインインしてください",
+			"articleTitle": "アクセスしようとしています",
+			"upgradeCTA": "プレミアムにアップグレード",
+			"comparePlans": "プランを比較",
+			"activeSubscription": "アクティブな{plan}サブスクリプションをお持ちです",
+			"pricing": "{price}/月から",
+			"benefits": {
+				"unlimited": "無制限アクセス",
+				"unlimitedDesc": "すべてのプレミアム記事とチュートリアルを読める",
+				"exclusive": "限定コンテンツ",
+				"exclusiveDesc": "メンバー限定リソースにアクセス",
+				"priority": "優先サポート",
+				"priorityDesc": "より迅速な対応と解決を取得",
+				"resources": "リソースダウンロード",
+				"resourcesDesc": "コードサンプルとツールにアクセス"
+			}
+		}
+	},
+	"changelog": {
+		"description": "製品の最新変更点を常に把握できます。",
+		"title": "チェンジログ"
+	},
+	"common": {
+		"cancel": "キャンセル",
+		"confirmation": {
+			"cancel": "キャンセル",
+			"confirm": "確認"
+		},
+		"menu": {
+			"blog": "ブログ",
+			"changelog": "チェンジログ",
+			"contact": "お問い合わせ",
+			"dashboard": "ダッシュボード",
+			"docs": "ドキュメント",
+			"faq": "よくある質問",
+			"login": "ログイン",
+			"pricing": "料金"
+		},
+		"tableOfContents": {
+			"title": "このページの内容"
+		}
+	},
+	"contact": {
+		"description": "お手伝いいたします。以下のフォームからお気軽にお問い合わせください。",
+		"form": {
+			"email": "メールアドレス",
+			"message": "メッセージ",
+			"name": "名前",
+			"notifications": {
+				"error": "申し訳ございませんが、メッセージを送信できませんでした。後でもう一度お試しください。",
+				"success": "メッセージが正常に送信されました。可能な限り早急にご返信いたします。"
+			},
+			"submit": "メッセージを送信"
+		},
+		"title": "お問い合わせ"
+	},
+	"documentation": {
+		"title": "ドキュメント"
+	},
+	"faq": {
+		"description": "ご質問がございますか？サポートいたします。",
+		"title": "よくある質問"
+	},
+	"mail": {
+		"common": {
+			"openLinkInBrowser": "デフォルト以外のブラウザでリンクを開きたい場合は、このリンクをコピーして貼り付けてください：",
+			"otp": "ワンタイムパスワード",
+			"useLink": "または以下のリンクを使用してください："
+		},
+		"emailVerification": {
+			"body": "こんにちは、\n新しいメールアドレスを認証するため、以下のリンクをクリックしてください。",
+			"confirmEmail": "メールアドレスを認証",
+			"subject": "メールアドレスを認証してください"
+		},
+		"forgotPassword": {
+			"body": "こんにちは、\nパスワードリセットをリクエストされました。\n\n以下のボタンをクリックしてパスワードをリセットしてください。",
+			"resetPassword": "パスワードをリセット",
+			"subject": "パスワードをリセットしてください"
+		},
+		"magicLink": {
+			"body": "こんにちは、\n{{domain}}からのログインメールをリクエストされました。\n\n以下のリンクをクリックしてログインしてください。",
+			"login": "ログイン",
+			"subject": "{{domain}}にログイン"
+		},
+		"newUser": {
+			"body": "こんにちは、\n{{domain}}にご登録いただきありがとうございます。\n\nアプリの使用を開始するため、以下のリンクをクリックしてメールアドレスを確認してください。",
+			"confirmEmail": "メールアドレスを確認",
+			"subject": "メールアドレスを確認してください"
+		},
+		"newsletterSignup": {
+			"body": "{{domain}}のニュースレターにご登録いただきありがとうございます。最新ニュースと更新情報をお届けします。",
+			"subject": "ニュースレターへようこそ"
+		},
+		"organizationInvitation": {
+			"body": "組織{organizationName}への参加に招待されました。以下のボタンをクリックするか、お好みのブラウザにリンクをコピーして貼り付けて、招待を受け入れて組織に参加してください。",
+			"headline": "組織{organizationName}に参加",
+			"join": "組織に参加",
+			"subject": "組織への参加に招待されました"
+		}
+	},
+	"newsletter": {
+		"email": "メールアドレス",
+		"hints": {
+			"error": {
+				"message": "ニュースレターに登録できませんでした。後でもう一度お試しください。"
+			},
+			"success": {
+				"message": "ニュースレターにご登録いただきありがとうございます。最新情報をお届けします。",
+				"title": "登録完了"
+			}
+		},
+		"submit": "登録する",
+		"subtitle": "{{domain}}の新機能への早期アクセスを最初に取得しましょう。",
+		"title": "早期アクセスを取得"
+	},
+	"onboarding": {
+		"account": {
+			"avatar": "アバター",
+			"avatarDescription": "アバターをアップロードするには、円をクリックするか画像をドロップしてください。",
+			"name": "名前"
+		},
+		"continue": "続行",
+		"message": "開始するためのいくつかの簡単なステップです。",
+		"notifications": {
+			"accountSetupFailed": "申し訳ございませんが、アカウントをセットアップできませんでした。後でもう一度お試しください。"
+		},
+		"step": "ステップ{step} / {total}",
+		"title": "アカウントをセットアップ"
+	},
+	"organizations": {
+		"createForm": {
+			"name": "組織名",
+			"notifications": {
+				"error": "申し訳ございませんが、組織を作成できませんでした。後でもう一度お試しください。",
+				"success": "組織が作成されました。これでメンバーを招待できます。"
+			},
+			"submit": "組織を作成",
+			"subtitle": "開始するために組織名を入力してください。組織設定で後から名前を変更できます。",
+			"title": "組織を作成"
+		},
+		"invitationAlert": {
+			"description": "組織に参加するにはサインインまたはアカウントを作成する必要があります。",
+			"title": "組織への参加に招待されました。"
+		},
+		"invitationModal": {
+			"accept": "受け入れ",
+			"decline": "辞退",
+			"description": "組織{organizationName}への参加に招待されました。招待を受け入れて組織に参加しますか？",
+			"title": "組織に参加"
+		},
+		"organizationSelect": {
+			"createNewOrganization": "新しい組織を作成",
+			"organizations": "組織",
+			"personalAccount": "個人アカウント"
+		},
+		"organizationsGrid": {
+			"createNewOrganization": "新しい組織を作成",
+			"title": "あなたの組織"
+		},
+		"roles": {
+			"admin": "管理者",
+			"member": "メンバー",
+			"owner": "オーナー"
+		},
+		"settings": {
+			"changeName": {
+				"title": "組織名"
+			},
+			"deleteOrganization": {
+				"confirmation": "組織を削除してもよろしいですか？",
+				"description": "組織を完全に削除します。削除すると元に戻すことはできません。確認するため、以下にパスワードを入力してください：",
+				"submit": "組織を削除",
+				"title": "組織を削除"
+			},
+			"logo": {
+				"description": "組織のロゴをアップロードしてください。",
+				"title": "組織ロゴ"
+			},
+			"members": {
+				"activeMembers": "アクティブメンバー",
+				"description": "組織のすべてのアクティブメンバーと保留中の招待を確認できます。",
+				"invitations": {
+					"empty": "まだメンバーを招待していません。",
+					"expiresAt": "{date}に期限切れ",
+					"invitationStatus": {
+						"accepted": "受け入れ済み",
+						"canceled": "キャンセル済み",
+						"pending": "保留中",
+						"rejected": "拒否済み"
+					},
+					"revoke": "招待を取り消し",
+					"resend": "招待を再送信"
+				},
+				"inviteMember": {
+					"description": "新しいメンバーを招待するには、招待を送信してください。",
+					"email": "メールアドレス",
+					"notifications": {
+						"error": {
+							"description": "メンバーを招待できませんでした。後でもう一度お試しください。",
+							"title": "メンバーを招待できませんでした"
+						},
+						"success": {
+							"description": "メンバーが招待されました。",
+							"title": "メンバーを招待しました"
+						}
+					},
+					"role": "役割",
+					"submit": "招待",
+					"title": "メンバーを招待"
+				},
+				"leaveOrganization": "組織を退会",
+				"notifications": {
+					"removeMember": {
+						"error": {
+							"description": "組織からメンバーを削除できませんでした。もう一度お試しください。"
+						},
+						"loading": {
+							"description": "組織からメンバーを削除中..."
+						},
+						"success": {
+							"description": "メンバーが正常に組織から削除されました。"
+						}
+					},
+					"revokeInvitation": {
+						"error": {
+							"description": "招待を取り消すことができませんでした。後でもう一度お試しください。"
+						},
+						"loading": {
+							"description": "招待を取り消し中..."
+						},
+						"success": {
+							"description": "招待が取り消されました。"
+						}
+					},
+					"updateMembership": {
+						"error": {
+							"description": "組織メンバーシップを更新できませんでした。もう一度お試しください。"
+						},
+						"loading": {
+							"description": "メンバーシップを更新中..."
+						},
+						"success": {
+							"description": "メンバーシップが正常に更新されました"
+						}
+					},
+					"resendInvitation": {
+						"loading": {
+							"description": "招待を再送信中..."
+						},
+						"success": {
+							"description": "招待を送信しました"
+						},
+						"error": {
+							"description": "招待を送信できませんでした。もう一度お試しください。"
+						}
+					}
+				},
+				"pendingInvitations": "保留中の招待",
+				"removeMember": "メンバーを削除",
+				"title": "メンバー"
+			},
+			"notifications": {
+				"organizationDeleted": "組織が削除されました。",
+				"organizationNameNotUpdated": "組織名を更新できませんでした。後でもう一度お試しください。",
+				"organizationNameUpdated": "組織名が更新されました。",
+				"organizationNotDeleted": "組織を削除できませんでした。後でもう一度お試しください。"
+			},
+			"subtitle": "組織の設定を管理します。",
+			"title": "組織",
+			"dangerZone": {
+				"title": "危険ゾーン"
+			}
+		},
+		"start": {
+			"subtitle": "この組織のスタートページへようこそ！"
+		}
+	},
+	"search": {
+		"button": {
+			"label": "記事を検索",
+			"text": "記事を検索..."
+		},
+		"input": {
+			"placeholder": "記事タイトル、内容、タグを検索..."
+		},
+		"error": {
+			"failed": "検索に失敗しました",
+			"unavailable": "検索サービスは一時的に利用できません"
+		},
+		"membership": {
+			"premium": "プレミアムメンバー - すべてのコンテンツへのフルアクセス",
+			"regular": "通常メンバー - 公開コンテンツへのアクセス"
+		},
+		"results": {
+			"count": "{count}件の検索結果"
+		},
+		"shortcuts": {
+			"navigate": "↑↓ ナビゲート",
+			"select": "↵ 選択",
+			"close": "ESC 閉じる"
+		}
+	},
+	"pricing": {
+		"choosePlan": "プランを選択",
+		"contactSales": "営業に問い合わせ",
+		"description": "最適なプランを選択してください。",
+		"getStarted": "始める",
+		"month": "{count}ヶ月",
+		"monthly": "月額",
+		"products": {
+			"basic": {
+				"description": "小さなチームに最適。",
+				"features": {
+					"anotherFeature": "その他の素晴らしい機能",
+					"limitedSupport": "限定サポート"
+				},
+				"title": "ベーシック"
+			},
+			"enterprise": {
+				"description": "お客様の要件に合わせたカスタムプラン",
+				"features": {
+					"enterpriseSupport": "エンタープライズサポート",
+					"unlimitedProjects": "無制限プロジェクト"
+				},
+				"title": "エンタープライズ"
+			},
+			"free": {
+				"description": "無料で始める",
+				"features": {
+					"anotherFeature": "その他の素晴らしい機能",
+					"limitedSupport": "限定サポート"
+				},
+				"title": "無料"
+			},
+			"lifetime": {
+				"description": "一度購入すれば永久に使用可能。",
+				"features": {
+					"extendSupport": "拡張サポート",
+					"noRecurringCosts": "継続費用なし"
+				},
+				"title": "ライフタイム"
+			},
+			"pro": {
+				"description": "チームに最適",
+				"features": {
+					"anotherFeature": "その他の素晴らしい機能",
+					"fiveMembers": "最大5名のメンバー",
+					"fullSupport": "フルサポート"
+				},
+				"title": "プロ"
+			}
+		},
+		"purchase": "購入",
+		"recommended": "おすすめ",
+		"subscribe": "登録",
+		"title": "料金",
+		"trialPeriod": "{days}日間無料トライアル",
+		"year": "{count}年",
+		"yearly": "年額",
+		"perSeat": "シート"
+	},
+	"settings": {
+		"account": {
+			"avatar": {
+				"description": "アバターを変更するには、このブロックの画像をクリックして、アップロードするファイルをコンピューターから選択してください。",
+				"notifications": {
+					"error": "アバターを更新できませんでした",
+					"success": "アバターが正常に更新されました"
+				},
+				"title": "あなたのアバター"
+			},
+			"changeEmail": {
+				"description": "メールアドレスを変更するには、新しいメールアドレスを入力して保存をクリックしてください。アクティブになる前に新しいメールアドレスを確認する必要があります。",
+				"notifications": {
+					"error": "メールアドレスを更新できませんでした",
+					"success": "メールアドレスが正常に更新されました"
+				},
+				"title": "あなたのメールアドレス"
+			},
+			"changeName": {
+				"notifications": {
+					"error": "名前を更新できませんでした",
+					"success": "名前が正常に更新されました"
+				},
+				"title": "あなたの名前"
+			},
+			"deleteAccount": {
+				"confirmation": "アカウントを削除してもよろしいですか？",
+				"description": "アカウントを完全に削除します。削除すると元に戻すことはできません。確認するため、以下にパスワードを入力してください：",
+				"notifications": {
+					"error": "アカウントを削除できませんでした",
+					"success": "アカウントが正常に削除されました"
+				},
+				"submit": "アカウントを削除",
+				"title": "アカウントを削除"
+			},
+			"language": {
+				"description": "アカウントのアプリの言語を変更するには、リストから言語を選択して保存をクリックしてください。",
+				"notifications": {
+					"error": "言語を更新できませんでした",
+					"success": "言語が正常に更新されました"
+				},
+				"title": "あなたの言語"
+			},
+			"security": {
+				"activeSessions": {
+					"description": "これらはアカウントのすべてのアクティブセッションです。特定のセッションを終了するにはXをクリックしてください。",
+					"title": "アクティブセッション",
+					"notifications": {
+						"revokeSession": {
+							"success": "セッションが取り消されました"
+						}
+					}
+				},
+				"changePassword": {
+					"currentPassword": "現在のパスワード",
+					"newPassword": "新しいパスワード",
+					"notifications": {
+						"error": "パスワードを更新できませんでした",
+						"success": "パスワードが正常に更新されました"
+					},
+					"title": "あなたのパスワード"
+				},
+				"connectedAccounts": {
+					"connect": "接続",
+					"disconnect": "切断",
+					"title": "接続されたアカウント"
+				},
+				"passkeys": {
+					"description": "パスワードの代替としてパスキーを安全に使用してください。",
+					"notifications": {
+						"addPasskey": {
+							"error": {
+								"title": "パスキーを追加できませんでした"
+							},
+							"success": {
+								"title": "パスキーが追加されました"
+							}
+						},
+						"deletePasskey": {
+							"error": {
+								"title": "パスキーを削除できませんでした"
+							},
+							"loading": {
+								"title": "パスキーを削除中..."
+							},
+							"success": {
+								"title": "パスキーが削除されました"
+							}
+						}
+					},
+					"title": "パスキー"
+				},
+				"setPassword": {
+					"description": "まだパスワードを設定していません。設定するには、パスワードリセットフローを実行する必要があります。以下のボタンをクリックしてパスワードリセット用のメールを送信し、メールの指示に従ってください。",
+					"notifications": {
+						"error": "パスワードを設定できませんでした",
+						"success": "パスワードが正常に設定されました"
+					},
+					"submit": "パスワードを設定",
+					"title": "あなたのパスワード"
+				},
+				"title": "セキュリティ"
+			},
+			"subtitle": "個人アカウントの設定を管理します。",
+			"title": "アカウント設定"
+		},
+		"billing": {
+			"createCustomerPortal": {
+				"label": "請求を管理",
+				"notifications": {
+					"error": {
+						"title": "カスタマーポータルセッションを作成できませんでした。もう一度お試しください。"
+					}
+				}
+			},
+			"activePlan": {
+				"status": {
+					"active": "アクティブ",
+					"canceled": "キャンセル済み",
+					"expired": "期限切れ",
+					"incomplete": "不完全",
+					"past_due": "支払い遅延",
+					"paused": "一時停止",
+					"trialing": "トライアル中",
+					"unpaid": "未払い"
+				},
+				"title": "あなたのプラン"
+			},
+			"changePlan": {
+				"description": "登録するプランを選択してください。",
+				"title": "プランを変更"
+			},
+			"title": "請求"
+		},
+		"menu": {
+			"account": {
+				"billing": "請求",
+				"dangerZone": "危険ゾーン",
+				"general": "一般",
+				"security": "セキュリティ",
+				"title": "アカウント"
+			},
+			"organization": {
+				"billing": "請求",
+				"general": "一般",
+				"members": "メンバー",
+				"title": "組織",
+				"dangerZone": "危険ゾーン"
+			}
+		},
+		"save": "保存"
+	},
+	"start": {
+		"subtitle": "素晴らしいビジネスの最新統計をご覧ください。",
+		"welcome": "ようこそ{name}さん！"
+	},
+	"zod": {
+		"errors": {
+			"invalid_arguments": "無効な関数引数",
+			"invalid_date": "無効な日付",
+			"invalid_enum_value": "無効な列挙値。{- options}が期待されていましたが、'{received}'を受信しました",
+			"invalid_intersection_types": "交差結果をマージできませんでした",
+			"invalid_literal": "無効なリテラル値、{expected}が期待されています",
+			"invalid_return_type": "無効な関数戻り値型",
+			"invalid_string": {
+				"cuid": "無効な{validation}",
+				"datetime": "無効な{validation}",
+				"email": "無効な{validation}",
+				"endsWith": "無効な入力：\"{endsWith}\"で終わる必要があります",
+				"regex": "無効",
+				"startsWith": "無効な入力：\"{startsWith}\"で始まる必要があります",
+				"url": "無効な{validation}",
+				"uuid": "無効な{validation}"
+			},
+			"invalid_type": "{expected}が期待されていましたが、{received}を受信しました",
+			"invalid_type_received_undefined": "必須",
+			"invalid_union": "無効な入力",
+			"invalid_union_discriminator": "無効な判別値。{- options}が期待されています",
+			"not_finite": "数値は有限である必要があります",
+			"not_multiple_of": "数値は{multipleOf}の倍数である必要があります",
+			"too_big": {
+				"array": {
+					"exact": "配列は正確に{maximum}個の要素を含む必要があります",
+					"inclusive": "配列は最大{maximum}個の要素を含む必要があります",
+					"not_inclusive": "配列は{maximum}個未満の要素を含む必要があります"
+				},
+				"date": {
+					"exact": "日付は正確に{- maximum, datetime}である必要があります",
+					"inclusive": "日付は{- maximum, datetime}以下である必要があります",
+					"not_inclusive": "日付は{- maximum, datetime}未満である必要があります"
+				},
+				"number": {
+					"exact": "数値は正確に{maximum}である必要があります",
+					"inclusive": "数値は{maximum}以下である必要があります",
+					"not_inclusive": "数値は{maximum}未満である必要があります"
+				},
+				"set": {
+					"exact": "無効な入力",
+					"inclusive": "無効な入力",
+					"not_inclusive": "無効な入力"
+				},
+				"string": {
+					"exact": "文字列は正確に{maximum}文字を含む必要があります",
+					"inclusive": "文字列は最大{maximum}文字を含む必要があります",
+					"not_inclusive": "文字列は{maximum}文字未満を含む必要があります"
+				}
+			},
+			"too_small": {
+				"array": {
+					"exact": "配列は正確に{minimum}個の要素を含む必要があります",
+					"inclusive": "配列は最小{minimum}個の要素を含む必要があります",
+					"not_inclusive": "配列は{minimum}個を超える要素を含む必要があります"
+				},
+				"date": {
+					"exact": "日付は正確に{- minimum, datetime}である必要があります",
+					"inclusive": "日付は{- minimum, datetime}以上である必要があります",
+					"not_inclusive": "日付は{- minimum, datetime}を超える必要があります"
+				},
+				"number": {
+					"exact": "数値は正確に{minimum}である必要があります",
+					"inclusive": "数値は{minimum}以上である必要があります",
+					"not_inclusive": "数値は{minimum}を超える必要があります"
+				},
+				"set": {
+					"exact": "無効な入力",
+					"inclusive": "無効な入力",
+					"not_inclusive": "無効な入力"
+				},
+				"string": {
+					"exact": "文字列は正確に{minimum}文字を含む必要があります",
+					"inclusive": "文字列は最小{minimum}文字を含む必要があります",
+					"not_inclusive": "文字列は{minimum}文字を超える必要があります"
+				}
+			},
+			"unrecognized_keys": "オブジェクト内の認識されないキー：{- keys}"
+		},
+		"types": {
+			"array": "配列",
+			"bigint": "bigint",
+			"boolean": "真偽値",
+			"date": "日付",
+			"float": "浮動小数点",
+			"function": "関数",
+			"integer": "整数",
+			"map": "マップ",
+			"nan": "NaN",
+			"never": "never",
+			"null": "null",
+			"number": "数値",
+			"object": "オブジェクト",
+			"promise": "Promise",
+			"set": "セット",
+			"string": "文字列",
+			"symbol": "シンボル",
+			"undefined": "undefined",
+			"unknown": "不明",
+			"void": "void"
+		},
+		"validations": {
+			"cuid": "cuid",
+			"cuid2": "cuid2",
+			"datetime": "日時",
+			"email": "メール",
+			"emoji": "絵文字",
+			"ip": "IP",
+			"regex": "正規表現",
+			"ulid": "ulid",
+			"url": "URL",
+			"uuid": "UUID"
+		}
+	},
+	"choosePlan": {
+		"title": "プランを選択してください",
+		"description": "続行するには、プランを選択してください。"
+	}
+}

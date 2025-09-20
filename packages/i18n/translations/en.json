@@ -182,6 +182,7 @@
 		"description": "Daily updates on AI tools and services: invitation and registration codes, student promo codes, discounts, and exclusive offers worldwide.",
 		"title": "AI Promo Daily",
 		"back": "Back to blog",
+		"noArticlesFound": "No articles found.",
 		"loginRequired": {
 			"title": "Sign in to continue reading",
 			"description": "This content requires authentication. Please sign in or create an account to continue."

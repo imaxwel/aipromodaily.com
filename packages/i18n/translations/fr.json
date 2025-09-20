@@ -182,6 +182,7 @@
 		"description": "Mises à jour quotidiennes sur les outils et services d'IA : codes d'invitation et d'inscription, offres étudiant, réductions et offres exclusives dans le monde entier.",
 		"title": "AI Promo Daily",
 		"back": "Retour au blog",
+		"noArticlesFound": "Aucun article trouvé.",
 		"loginRequired": {
 			"title": "Connectez-vous pour continuer la lecture",
 			"description": "Ce contenu nécessite une authentification. Veuillez vous connecter ou créer un compte pour continuer."

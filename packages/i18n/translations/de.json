@@ -182,6 +182,7 @@
 		"description": "Tägliche Updates zu KI-Tools und -Diensten: Einladungs- und Registrierungscodes, Studentenrabatte, Preisnachlässe und exklusive Angebote weltweit.",
 		"title": "AI Promo Daily",
 		"back": "Zurück zum Blog",
+		"noArticlesFound": "Keine Artikel gefunden.",
 		"loginRequired": {
 			"title": "Zum Weiterlesen bitte anmelden",
 			"description": "Dieser Inhalt erfordert eine Anmeldung. Bitte melde dich an oder erstelle ein Konto, um fortzufahren."

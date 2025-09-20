@@ -182,6 +182,7 @@
 		"description": "每日更新 AI 工具和服务：邀请码与注册代码、学生优惠码、折扣，以及全球独家优惠。",
 		"title": "AI Promo Daily",
 		"back": "返回博客",
+		"noArticlesFound": "未找到文章。",
 		"loginRequired": {
 			"title": "登录后继续阅读",
 			"description": "该内容需要认证。请登录或创建账户以继续。"
