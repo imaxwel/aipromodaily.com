@@ -10,14 +10,26 @@ import { remarkImage } from "fumadocs-core/mdx-plugins";
 import { config } from "../../config";
 
 function sanitizePath(path: string) {
-	return path
-		// Remove ".<locale>.<ext>" like ".ru.mdx" or ".ja.mdx"
-		.replace(/\.[a-zA-Z-]{2,5}\.(md|mdx|json)$/i, "")
-		// Fallback: remove plain extension like ".mdx" or ".md" or ".json"
-		.replace(/\.(md|mdx|json)$/i, "")
-		.replace(/^\//, "")
-		.replace(/\/$/, "")
-		.replace(/index$/, "");
+	// First, check if path has a locale extension
+	const localeMatch = path.match(/\.[a-zA-Z-]{2,5}\.(md|mdx|json)$/i);
+	
+	if (localeMatch) {
+		// If it has a locale extension, keep the locale part in the path
+		// e.g., "post.de.mdx" -> "post.de"
+		return path
+			.replace(/\.(md|mdx|json)$/i, "")
+			.replace(/^\//, "")
+			.replace(/\/$/, "")
+			.replace(/index$/, "");
+	} else {
+		// If it doesn't have a locale extension, remove the extension completely
+		// e.g., "post.mdx" -> "post"
+		return path
+			.replace(/\.(md|mdx|json)$/i, "")
+			.replace(/^\//, "")
+			.replace(/\/$/, "")
+			.replace(/index$/, "");
+	}
 }
 
 function getLocaleFromFilePath(path: string) {

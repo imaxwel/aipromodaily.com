@@ -177,10 +177,13 @@ export function NavBar() {
 										href={user ? "/app" : "/auth/login"}
 										className="block px-3 py-2 text-base"
 										prefetch={!user}
+										suppressHydrationWarning
 									>
-										{user
-											? t("common.menu.dashboard")
-											: t("common.menu.login")}
+										<span suppressHydrationWarning>
+											{user
+												? t("common.menu.dashboard")
+												: t("common.menu.login")}
+										</span>
 									</NextLink>
 								</div>
 							</SheetContent>
@@ -204,8 +207,9 @@ export function NavBar() {
 									className="hidden lg:flex"
 									asChild
 									variant="secondary"
+									suppressHydrationWarning
 								>
-									<NextLink href="/auth/login">
+									<NextLink href="/auth/login" suppressHydrationWarning>
 										{t("common.menu.login")}
 									</NextLink>
 								</Button>
